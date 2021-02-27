@@ -78,37 +78,37 @@ const styles = () => {
 		precss,
 		//uncss,
 		cssnano({preset: `default`, }),
-		doiuse({
-			browsers: [
-				"> .5% and last 1 versions",
-				"not dead",
-				"not OperaMini all",
-				"not IE 11",
-				"Edge >= 12"
-			],
-			ignore: [
-				`background`,
-				`appearance`,
-				`will-change`,
-				`object-fit`,],
-			onFeatureUsage: (info) => {
-				const selector = info.usage.parent.selector;
-				const property = `${info.usage.prop}: ${info.usage.value}`;
-
-				let status = info.featureData.caniuseData.status.toUpperCase();
-
-				if (info.featureData.missing) {
-					status = `NOT SUPPORTED`.red;
-				} else if (info.featureData.partial) {
-					status = `PARTIAL SUPPORT`.yellow;
-				} else if (info.featureData.partial == `WD`) {
-					status = `working draft`.yellow;
-				}
-				// console.log(info.featureData)
-				console.log(`\n${status}:\n\n    ${selector} {\n        ${property};\n    }\n`);
-			},
-		}),
 	];
+		// doiuse({
+		//     browsers: [
+		//         "> .5% and last 1 versions",
+		//         "not dead",
+		//         "not OperaMini all",
+		//         "not IE 11",
+		//         "Edge >= 12"
+		//     ],
+		//     ignore: [
+		//         `background`,
+		//         `appearance`,
+		//         `will-change`,
+		//         `object-fit`,],
+		//     onFeatureUsage: (info) => {
+		//         const selector = info.usage.parent.selector;
+		//         const property = `${info.usage.prop}: ${info.usage.value}`;
+        //
+		//         let status = info.featureData.caniuseData.status.toUpperCase();
+        //
+		//         if (info.featureData.missing) {
+		//             status = `NOT SUPPORTED`.red;
+		//         } else if (info.featureData.partial) {
+		//             status = `PARTIAL SUPPORT`.yellow;
+		//         } else if (info.featureData.partial == `WD`) {
+		//             status = `working draft`.yellow;
+		//         }
+		//         // console.log(info.featureData)
+		//         console.log(`\n${status}:\n\n    ${selector} {\n        ${property};\n    }\n`);
+		//     },
+		// }),
 
 		// .pipe(concat(`style.css`))
 	return gulp.src(`./dev/styles/style.css`)
@@ -355,7 +355,7 @@ exports.loadFtp = loadFtp
 
 // ==== FONTS ====
 const convertFonts = async () => {
-	return gulp.src(`dev/fonts/*`)
+	return gulp.src(`dev/fonts/**/*.*`)
 		.pipe(convertAllFonts({
 			pathIn: `./dev/fonts`,
 			pathOut: `./build/fonts/`,
@@ -363,7 +363,7 @@ const convertFonts = async () => {
 			inputFormats: [`.ttf`, `.otf`],
 			debug: false
 		}))
-		.pipe(gulp.dest(`build/fonts`))
+		.pipe(gulp.dest(`build/fonts/`))
 		.pipe(sync.stream({
 			once: true
 		}))

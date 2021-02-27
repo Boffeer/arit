@@ -3,11 +3,570 @@ include common/mixins
 
 block content
 	main
-		button.pop-opener open
-		button not me
-		button.pop-opener open
-		.pop-wrap
-			button.pop-closer x
-			.pop-aligner
-				.pop
-					h1 Hello
+		.header-wrapper
+			.container
+
+				header.header
+					.header__logo
+						img(src="img/0-common/logo.svg", alt="logo")
+					.header-search
+						input(
+							type="text"
+							placeholder="Поиск").header__search
+					.socials
+						p.header__name Соцсети
+						div.socials-list
+							a.socials-item(href=`${vk}`)
+								img.socials-item__img(src="img/0-common/vk.svg", alt="vk")
+							a.socials-item(href=`${instagram}`)
+								img.socials-item__img(src="img/0-common/instagram.svg", alt="instagram")
+							a.socials-item(href=`${facebook}`)
+								img.socials-item__img(src="img/0-common/facebook.svg", alt="facebook")
+					.header-email
+						p.header__name Наша почта
+						a(href=`mailto:${email}`).header__contact #{email}
+					.header-phone
+						p.header__name Наш телефон
+						a(href=`${phoneLnk}`).header__contact #{phone}
+					button.header_get-consult.secondary-button Получить консультацию 
+
+				nav.nav
+					.nav-list
+						a(href="#about").nav-list-item
+							.nav-list-item__text Об академии
+						a(href="#seminars").nav-list-item
+							.nav-list-item__text Семинары
+						a(href="#webinars").nav-list-item
+							.nav-list-item__text Вебинары
+						a(href="#learning").nav-list-item
+							.nav-list-item__text Обучение
+						a(href="#media").nav-list-item
+							.nav-list-item__text Медиа
+						a(href="#news").nav-list-item
+							.nav-list-item__text Новости
+						a(href="#testimonials").nav-list-item
+							.nav-list-item__text Отзывы
+						a(href="#partners").nav-list-item
+							.nav-list-item__text Партнеры
+						a(href="#contacts").nav-list-item
+							.nav-list-item__text Контакты
+
+
+
+			.hero-wrapper
+				.hero-container.container
+					.hero
+						h1.section__title.section__title--left Стань востребованным специалистом в сжатые сроки, не отрываясь от работы
+						ul.hero-bullets
+							li.hero-bullet Выбери одно из 
+								span.text-bold  40 направлений
+								|  переподготовки и повышения квалификации
+							li.hero-bullet Пройди теорию
+								span.text-bold  удаленно
+								| , а практику очно (в&nbsp;высокотехнологичных классах)
+							li.hero-bullet Получи
+								span.text-bold  поддержку 24/7 и диплом
+								|  по&nbsp;окончании
+						button.primary-button.hero-cta Получить консультацию
+
+
+
+
+		.learning
+			.container
+				h2.section__title Направления обучения в АРИТ
+
+				.learning-tabbar
+					button.learing-tab__control Профессиональная переподготовка
+					button.learing-tab__control Повышение квалификации 
+				.learning-tab
+					ul.learning-tab-list
+						li.learning-tab-list-item Master of Business Administration (MBA)
+						li.learning-tab-list-item АвиаГСМ 
+						li.learning-tab-list-item Агрономия 
+						li.learning-tab-list-item Архитектура и дизайн
+						li.learning-tab-list-item Бухгалтерское дело
+						li.learning-tab-list-item Ветеринария
+						li.learning-tab-list-item Горная промышленность и маркшейдерское дело
+						li.learning-tab-list-item Государственное и муниципальное управление
+						li.learning-tab-list-item Государственные закупки
+						li.learning-tab-list-item Железнодорожный транспорт
+						li.learning-tab-list-item Землеустройство и кадастр
+						li.learning-tab-list-item Инженерные изыскания
+						li.learning-tab-list-item Инженерные системы
+					ul.learning-tab-list
+						li.learning-tab-list-item Кадровое делопроизводство
+						li.learning-tab-list-item Косметология
+						li.learning-tab-list-item Лаборатории
+						li.learning-tab-list-item Медицина
+						li.learning-tab-list-item Менеджмент
+						li.learning-tab-list-item Металлургия
+						li.learning-tab-list-item Метрологический контроль
+						li.learning-tab-list-item Нефтегазовое дело
+						li.learning-tab-list-item Охрана труда. Специальная оценка условий труда (СОУТ)
+						li.learning-tab-list-item Оценочная деятельность
+						li.learning-tab-list-item Педагогика
+						li.learning-tab-list-item Подъемные сооружения и лифты
+						li.learning-tab-list-item Пожарно-технический минимум
+					ul.learning-tab-list
+						li.learning-tab-list-item Проектирование
+						li.learning-tab-list-item Реставрация
+						li.learning-tab-list-item Спорт и фитнес
+						li.learning-tab-list-item Строительство
+						li.learning-tab-list-item Техническое обслуживание медицинской техники (ТОМТ)
+						li.learning-tab-list-item Транспортная безопасность
+						li.learning-tab-list-item Фармация 
+						li.learning-tab-list-item Холодильное оборудование
+						li.learning-tab-list-item Экология
+						li.learning-tab-list-item Экономика и финансы
+						li.learning-tab-list-item Энергетика
+						li.learning-tab-list-item Юриспруденция
+		
+
+
+		.about-wrap
+			.about-container.container
+				.about
+					h2.section__title.section__title--left О нашей академии
+					p.regular-text Академия развития инновационных технологий (АРИТ). АРИТ — это место, где помогают людям разных профессий повысить квалификацию или пройти полную профессиональную переподготовку. В академии свои знания и опыт  передают команда профессоров, докторов наук, специалистов практиков с выдающимися результатами в своих областях. 
+					p.regular-text.text-bold Достаточно выбрать одно из 100 направлений.
+					p.regular-text Теоретические знания вы можете получать дистанционно, в удобнÐ¾е для Вас время. А практика всегда проходит в оборудованных высокотехнологичных классах. Поэтому у вас нет необходимости надолго отрываться от работы ради обучения.
+					p.regular-text Врачи, геодезисты, строители, проектировщики, педагоги, средний медÐ¿ерсонал и люди других профессий, — получают дополнительное образование в нашей Академии.
+						span.text-bold На базе АРИТ обучаются до 15 тысяч специалистов ежемесячно со всей России. 
+					p.regular-text Если у вас уже есть базовое образование, но вы хотите стать более востребованным специалистом ,то мы ждем вас в АРИТ. 
+				+pic({
+					pictureClass: 'about-picture',
+					ext: 'png',
+					src: 'img/3-about/handsome'
+				})
+			+pic({
+				pictureClass: 'about-picture__left',
+				ext: 'png',
+				src: 'img/3-about/horse-l'
+			})
+			+pic({
+				pictureClass: 'about-picture__right',
+				ext: 'png',
+				src: 'img/3-about/apolo-r'
+			})
+			+pic({
+				pictureClass: 'about-picture__right-2',
+				ext: 'png',
+				src: 'img/3-about/microscope'
+			})
+
+
+
+
+
+
+
+
+		.features-wrapper
+			.features-container.container
+				.features
+					h2.section__title Преимущества
+					ol.features-list
+						li.features-list-item
+							p.features-itet__text 
+								span.text-bold Индивидуальный подход 
+								|  и модульная система обучения 
+							+pic({
+								pictureClass: 'features-pic',
+								ext: 'png',
+								src: 'img/4-features/cubes'
+							})
+							h3.features-item__number 01
+						li.features-list-item
+							p.features-itet__text 
+								span.text-bold Сотни
+								|  направлений обучения
+							+pic({
+								pictureClass: 'features-pic',
+								ext: 'png',
+								src: 'img/4-features/microscope'
+							})
+							h3.features-item__number 02
+						li.features-list-item
+							p.features-itet__text Поддержка кураторов 
+								span.text-bold 24/7
+							+pic({
+								pictureClass: 'features-pic',
+								ext: 'png',
+								src: 'img/4-features/shield'
+							})
+							h3.features-item__number 03
+						li.features-list-item
+							p.features-itet__text Все преподаватели действующие 
+								span.text-bold практики
+							+pic({
+								pictureClass: 'features-pic',
+								ext: 'png',
+								src: 'img/4-features/helmet'
+							})
+							h3.features-item__number 04
+						li.features-list-item
+							p.features-itet__text Учебные программы соответствуют
+								span.text-bold государственным стандартам (ФГОС) 
+							+pic({
+								pictureClass: 'features-pic',
+								ext: 'png',
+								src: 'img/4-features/book'
+							})
+							h3.features-item__number 05
+						li.features-list-item 
+							p.features-itet__text Доставка документов
+								span.text-bold по всей России
+							+pic({
+								pictureClass: 'features-pic',
+								ext: 'png',
+								src: 'img/4-features/box'
+							})
+							h3.features-item__number 06
+
+						li.features-list-item
+							p.features-itet__text Документы установленного образца
+							+pic({
+								pictureClass: 'features-pic',
+								ext: 'png',
+								src: 'img/4-features/document'
+							})
+							h3.features-item__number 07
+
+						li.features-list-item
+							p.features-itet__text Доступ к учебным материалам 
+								span.text-bold в любое время
+							+pic({
+								pictureClass: 'features-pic',
+								ext: 'png',
+								src: 'img/4-features/safe'
+							})
+							h3.features-item__number 08
+
+						li.features-list-item
+							p.features-itet__text Доступные цены
+							+pic({
+								pictureClass: 'features-pic',
+								ext: 'png',
+								src: 'img/4-features/piggy'
+							})
+							h3.features-item__number 09
+		.teachers-wrap
+			.teachers-container.container
+				.teachers
+					h2.section__title Наши преподаватели
+					.teacheeers-slider-wrap
+						.teachers-slider
+							div.teachers-slide
+								h3.teachers__title Агафонов Николай Владимирович
+								p.teacher__descr Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет
+							div.teachers-slide
+								h3.teachers__title Бахтияров  Камиль Рафаэльевич
+								p.tacher__descr Доктор медицинских наук, профессор, врач акушер-гинеколог
+							div.teachers-slide
+								h3.teachers__title Быков  Алексей Юрьевич
+								p.teacher__descr Врач-нейрохирург, член Европейской аcсоциации клинической гипертермии, эксперт по радиохирургическим методам лечения, продакт-менеджер компании Zerts
+
+
+
+
+
+
+		.meetups-wrapper
+			.meetups-container.container
+				.meetups
+					h2.section__title Семинары
+					.meetups-item
+						+pic({
+							pictureClass: 'meetups__picture',
+							ext: 'png',
+							src: 'img/6-meetups/seminar'
+						})
+						h3.meetup__title Название мероприятия
+						.meetup-location
+							img(src="img/0-common/geo.svg", alt="geo-icon")
+							p г. Санкт-Петербург, ул. 50 лет ВЛКСМ д.22, офис 351
+						button.button-primary.seminar__button-cta
+						button.button-thirdly.seminar__button-more
+
+					.meetups-item
+						+pic({
+							pictureClass: 'meetups__picture',
+							ext: 'png',
+							src: 'img/6-meetups/webinar'
+						})
+						h3.meetup__title Название мероприятия
+						.meetup-location
+							img(src="img/0-common/geo.svg", alt="geo-icon")
+							p г. Санкт-Петербург, ул. 50 лет ВЛКСМ д.22, офис 351
+						button.button-primary.webinar__button-cta
+						button.button-thirdly.webinar__button-more
+
+
+
+		.news-wrapper
+			.news-container.container
+				.news
+					h2.section__title
+					.news-slider-wrapper
+						.news-slider
+							div.news-item
+								+pic({
+									pictureClass: 'news__picture',
+									ext: 'png',
+									src: 'img/7-news/news-1'
+								})
+								h3.news-item__title Заголовок новости
+								p.news-item__descr Текст описания в 2 строчки, чтобы набить обхем текста
+								div.news-bottom
+									button.news-button Подробнее
+									span.news-date 02.06.20
+							div.news-item
+								+pic({
+									pictureClass: 'news__picture',
+									ext: 'png',
+									src: 'img/7-news/news-2'
+								})
+								h3.news-item__title Заголовок новости
+								p.news-item__descr Текст описания в 2 строчки, чтобы набить обхем текста
+								div.news-bottom
+									button.news-button Подробнее
+									span.news-date 02.06.20
+							div.news-item
+								+pic({
+									pictureClass: 'news__picture',
+									ext: 'png',
+									src: 'img/7-news/news-3'
+								})
+								h3.news-item__title Заголовок новости
+								p.news-item__descr Текст описания в 2 строчки, чтобы набить обхем текста
+								div.news-bottom
+									button.news-button Подробнее
+									span.news-date 02.06.20
+
+
+
+
+
+
+
+		.partners-wrapper
+			.partners-container.container
+				.partners
+					h2.section-title Партенры
+					.partners-slider-wrap
+						.partners-slider
+							div.partners-item
+								+pic({
+									pictureClass: 'partners__picture',
+									ext: 'png',
+									src: 'img/8-partners/gbuzvookb'
+								})
+							div.partners-item
+								+pic({
+									pictureClass: 'partners__picture',
+									ext: 'png',
+									src: 'img/8-partners/gedeon'
+								})
+							div.partners-item
+								+pic({
+									pictureClass: 'partners__picture',
+									ext: 'png',
+									src: 'img/8-partners/gkb'
+								})
+							div.partners-item
+								+pic({
+									pictureClass: 'partners__picture',
+									ext: 'png',
+									src: 'img/8-partners/sergiev-posad'
+								})
+							div.partners-item
+								+pic({
+									pictureClass: 'partners__picture',
+									ext: 'png',
+									src: 'img/8-partners/atoms'
+								})
+
+
+
+
+
+		.resourses-wrapper
+			.resourses-container.container
+				.resourses
+					h2.section__title Ресурсы
+					ul.resourses-list
+						li.resourses-item
+							div.resourses-item-info
+								h3.resourses__title Электронно-библиотечная система
+								p.resourses__size 1 Мб
+							button.resourses-download
+								span Скачать PDF
+								img(src="img/0-common/pdf.svg", alt="")
+						li.resourses-item
+							div.resourses-item-info
+								h3.resourses__title Федеральное медико-биологическое агентство
+								p.resourses__size 1 Мб
+							button.resourses-download
+								span Скачать PDF
+								img(src="img/0-common/pdf.svg", alt="")
+						li.resourses-item
+							div.resourses-item-info
+								h3.resourses__title Портал непрерывного медицинского образования
+								p.resourses__size 1 Мб
+							button.resourses-download
+								span Скачать PDF
+								img(src="img/0-common/pdf.svg", alt="")
+						li.resourses-item
+							div.resourses-item-info
+								h3.resourses__title Центральная научная медицинская библиотека
+								p.resourses__size 1 Мб
+							button.resourses-download
+								span Скачать PDF
+								img(src="img/0-common/pdf.svg", alt="")
+						li.resourses-item
+							div.resourses-item-info
+								h3.resourses__title Электронная медицинская библиотека
+								p.resourses__size 1 Мб
+							button.resourses-download
+								span Скачать PDF
+								img(src="img/0-common/pdf.svg", alt="")
+						li.resourses-item
+							div.resourses-item-info
+								h3.resourses__title Фундаментальная медицинская библиотека
+								p.resourses__size 1 Мб
+							button.resourses-download
+								span Скачать PDF
+								img(src="img/0-common/pdf.svg", alt="")
+						li.resourses-item
+							div.resourses-item-info
+								h3.resourses__title Медицинская энциклопедия
+								p.resourses__size 1 Мб
+							button.resourses-download
+								span Скачать PDF
+								img(src="img/0-common/pdf.svg", alt="")
+						li.resourses-item
+							div.resourses-item-info
+								h3.resourses__title Единое окно доступа к информационным ресурсам
+								p.resourses__size 1 Мб
+							button.resourses-download
+								span Скачать PDF
+								img(src="img/0-common/pdf.svg", alt="")
+					button.resourses-more Показать еще
+
+
+
+
+
+
+
+		.testimonials-wrapper
+			.testimonials-container.container
+				.testimonials
+					h2.section__title Отзывы
+					ul.testimonials-list
+						li.testimonial
+							+pic({
+								pictureClass: 'testimonial__picture',
+								ext: 'png',
+								src: 'img/10-testimonials/gedeon'
+							})
+							div.testimonial-message
+								div.testimonial-message-info
+									div.testimonial-who
+										h3.testimonial-who__name Оксана Иванова
+										p.testimonials-who__position Директор MacDonalds
+									div.testimonial__date 02.06.20
+								p.testimonial__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.
+						li.testimonial
+							+pic({
+								pictureClass: 'testimonial__picture',
+								ext: 'png',
+								src: 'img/10-testimonials/gedeon'
+							})
+							div.testimonial-message
+								div.testimonial-message-info
+									div.testimonial-who
+										h3.testimonial-who__name Оксана Иванова
+										p.testimonials-who__position Директор MacDonalds
+									div.testimonial__date 21.06.20
+								p.testimonial__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.
+						li.testimonial
+							+pic({
+								pictureClass: 'testimonial__picture',
+								ext: 'png',
+								src: 'img/10-testimonials/gedeon'
+							})
+							div.testimonial-message
+								div.testimonial-message-info
+									div.testimonial-who
+										h3.testimonial-who__name Артем Репин
+										p.testimonials-who__position Основатель Apple
+									div.testimonial__date 12.06.20
+								p.testimonial__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.
+					button.button-primary.testimonials-more Показать еще
+
+
+
+
+		.form-wrapper
+			.map
+			.container
+				form.form(action="")
+					h2.form__title
+					div.form-fields
+						div.form-input-wrap
+							input(type="hidden", name="fomrname")
+						div.form-input-wrap
+							input.form__input(type="type")
+						div.form-input-wrap
+							input.form__input(type="type")
+						div.form-input-wrap
+							input.form__input(type="type")
+						div.form-input-wrap
+							button.button-primary.form__button Отправить заявку
+					.gdpr Нажимая на эту кнопку, Вы даетÐµ согласие 
+						button.gdpr__button на обработку персональных данных
+
+
+
+
+
+
+		footer.footer-wrapper
+			.container
+				.footer
+					.footer__logo
+						img(src="img/0-common/logo-solid.svg", alt="logo")
+					nav.footer-nav
+						h3.footer-nav-title Разделы
+						ul.footer-nav-list
+							li.footer-nav-list-item
+								a.footer-nav-list-item__text(href="#about") Об академии
+							li.footer-nav-list-item
+								a.footer-nav-list-item__text(href="#seminars") Семинары
+							li.footer-nav-list-item
+								a.footer-nav-list-item__text(href="#webinars") Вебинары
+							li.footer-nav-list-item
+								a.footer-nav-list-item__text(href="#learning") Обучение
+							li.footer-nav-list-item
+								a.footer-nav-list-item__text(href="#media") Медиа
+							li.footer-nav-list-item
+								a.footer-nav-list-item__text(href="#news") Новости
+							li.footer-nav-list-item
+								a.footer-nav-list-item__text(href="#testimonials") Отзывы
+							li.footer-nav-list-item
+								a.footer-nav-list-item__text(href="#partners") Партнеры
+							li.footer-nav-list-item
+								a.nav-list-item__text(href="#contacts") Контакты
+					.footer-contacts
+						.footer-contact.footer-contact--geo
+							img(src="img/0-common/geo-footer.svg", alt="geo")
+							p.footer-contacts__text #{geo}
+						a(href=`${phoneLnk}`).footer-contact.footer-contact--phone
+							img(src="img/0-common/phone.svg", alt="phone")
+							p.footer-contacts__text #{phone}
+						a(href=`mailto:${mail}`).footer-contact.footer-contact--mail
+							img(src="img/0-common/mail.svg", alt="mail")
+							.footer-contacts__text #{mail}
+						button.footer_get-contalst.secondary-button

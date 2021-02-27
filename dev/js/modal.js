@@ -24,39 +24,14 @@ function popa(data){
 	data.popCloser.addEventListener('click', () => closePop(data.popWrap, data.pop));
 }
 
-const btn = document.querySelector('.pop-opener');
-const closeBtn = document.querySelector('.pop-closer');
-const popWrap = document.querySelector('.pop-wrap');
-const pop = document.querySelector('.pop');
-
-popa({
-	clickTrigger: btn,
-	popWrap: popWrap,
-	pop: pop,
-	popCloser: closeBtn,
-})
-
-// btn.addEventListener("click", () => popToggle(popWrap, pop));
-//// create the container div
-var newWrapper = document.createElement('div');
-// get all divs
-var divs = document.querySelectorAll('.pop-opener');
-// get the body element
-var body = document.getElementsByTagName('body')[0];
-
-// apply class to container div
-newWrapper.setAttribute('class', 'container');
-
-// find out all those divs having class C
-for(var i = 0; i < divs.length; i++)
-{
-   if (divs[i].getAttribute('class') === 'C')
-   {
-      // put the divs having class C inside container div
-      newWrapper.appendChild(divs[i]);
-   }
-}
-
-// finally append the container div to body
-body.appendChild(newWrapper);
-
+// const btn = document.querySelector('.pop-opener');
+// const closeBtn = document.querySelector('.pop-closer');
+// const popWrap = document.querySelector('.pop-wrap');
+// const pop = document.querySelector('.pop');
+//
+// popa({
+//     clickTrigger: btn,
+//     popWrap: popWrap,
+//     pop: pop,
+//     popCloser: closeBtn,
+// })

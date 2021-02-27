@@ -1,10 +1,142 @@
+@font-face {
+    font-family: 'Geometria';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Geometria.woff2') format('woff2');
+    src: url('../fonts/Geometria.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Geometria-Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Geometria-Italic.woff2') format('woff2');
+    src: url('../fonts/Geometria-Italic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Geometria-Thin';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Geometria-Thin.woff2') format('woff2');
+    src: url('../fonts/Geometria-Thin.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Geometria-ThinItalic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Geometria-ThinItalic.woff2') format('woff2');
+    src: url('../fonts/Geometria-ThinItalic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Geometria-ExtraLight';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Geometria-ExtraLight.woff2') format('woff2');
+    src: url('../fonts/Geometria-ExtraLight.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Geometria-ExtraLightItalic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Geometria-ExtraLightItalic.woff2') format('woff2');
+    src: url('../fonts/Geometria-ExtraLightItalic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Geometria-Light';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Geometria-Light.woff2') format('woff2');
+    src: url('../fonts/Geometria-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Geometria-LightItalic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Geometria-LightItalic.woff2') format('woff2');
+    src: url('../fonts/Geometria-LightItalic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Geometria-Medium';
+    font-style: normal;
+    font-weight: normal;
+    src:  url('../fonts/Geometria-Medium.woff2') format('woff2');
+    src:  url('../fonts/Geometria-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Geometria-MediumItalic';
+    font-style: normal;
+    font-weight: normal;
+    src:  url('../fonts/Geometria-MediumItalic.woff2') format('woff2');
+    src:  url('../fonts/Geometria-MediumItalic.woff') format('woff');
+}
+    
+
+@font-face {
+    font-family: 'Geometria-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Geometria-Bold.woff2') format('woff2');
+    src: url('../fonts/Geometria-Bold.woff') format('woff');
+}
+    
+
+@font-face {
+    font-family: 'Geometria-BoldItalic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Geometria-BoldItalic.woff2') format('woff2');
+    src: url('../fonts/Geometria-BoldItalic.woff') format('woff');
+}
+    
+
+@font-face {
+    font-family: 'Geometria-ExtraBold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/Geometria-ExtraBold.woff2') format('woff2');
+    src: url('../fonts/Geometria-ExtraBold.woff') format('woff');
+}
+    
+
+@font-face {
+    font-family: 'Geometria-ExtraBoldItalic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Geometria-ExtraBoldItalic.woff2') format('woff2');
+    src: url('../fonts/Geometria-ExtraBoldItalic.woff') format('woff');
+}
+    
+
+@font-face {
+    font-family: 'Geometria-Heavy';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Geometria-Heavy.woff2') format('woff2');
+    src: url('../fonts/Geometria-Heavy.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Geometria-HeavyItalic';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Geometria-HeavyItalic.woff2') format('woff2');
+    src: url('../fonts/Geometria-HeavyItalic.woff') format('woff');
+}
 @import 'modal/modal.css';
 /* 
  * === Table of content ===
  *
  * 1. Globals
  *
- * 2. 
+ * 2. Components
  *
  * */
 
@@ -16,9 +148,23 @@
  * */
 :root {
     --c-font: #333;
-    --c-font-2: #b9b9b9;
-    --c-prim: #2475d6;
-    --grad-btn: linear-gradient(132.85deg, #4875e8 1.56%, #2475d6 100%);
+	--gradient-main: linear-gradient(142.3deg, #1D54A9 4.7%, #0F3F8A 97.22%);
+
+	--color-text-regular: #333333;
+	--color-text-secondary: #808080;
+	--color-text-thirdly: #B1B1B1;
+	--color-primary: #1D53A9;
+	--color-footer: #2B313F;
+	--color-font-footer: #ffffff;
+
+	--f-header: 16px;
+	--f-regular: 18px;
+	--f-title: 36px;
+
+	--ff-light: 'Geometria-Light', sans-serif;
+	--ff-regular: 'Geometria', sans-serif;
+	--ff-bold: 'Geometria-Bold', sans-serif;
+	--ff-extra: 'Geometria-ExtraBold', sans-serif;
 
     margin: 0;
     padding: 0;
@@ -27,8 +173,9 @@
 body {
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: var(--f-regular);
     color: var(--c-font);
+	font-family: var(--ff-regular);
 }
 
 p, ul, h1, h2, h3, h4, h5, h6 {
@@ -36,6 +183,9 @@ p, ul, h1, h2, h3, h4, h5, h6 {
     padding: 0;
 }
 
+ul, ol {
+	list-style: none;
+}
 picture {
     display: flex;
     justify-content: center;
@@ -55,23 +205,177 @@ picture img {
 
 button {
     cursor: pointer;
+	font-family: var(--ff-bold);
+	font-size: var(--f-header);
 }
-.btn-prim {
+.primary-button {
     box-sizing: border-box;
     border: none;
     transition: all 0.3s;
+	background-color: var(--color-primary);
+	color: #fff;
+	padding: 20px 30px;
+	border-radius: 5px;
+	font-size: 14px;
 }
 
-.btn-prim:focus,
-.btn-prim:hover {
+.primary-button:focus,
+.primary-button:hover {
 }
+
+.secondary-button {
+	font-size: 14px;
+	padding: 18px 20px;
+	line-height: 1;
+	border: 1px solid var(--color-text-secondary);
+	border-radius: 5px;
+	background: transparent;
+	color: var(--color-text-regular);
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+p {
+	font-size: var(--f-regular);
+}
+.section__title {
+	font-size: var(--f-title);
+	font-family: var(--ff-extra);
+	text-align: center;
+	margin-bottom: 40px;
+}
+.section__title--left {
+	text-align: left;
+	max-width: 600px;
+}
+
 
 /* 
  * ==========
- * 2. 
+ * 2. Components
  * ==========
  * */
 
+.text-bold {
+	font-family: var(--ff-extra);
+	font-weight: 700;
+}
 
+
+/* 
+ * ==========
+ * 3. Header
+ * ==========
+ * */
+
+	.header {
+		padding: 20px 7px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.header-search {
+		position: relative;
+	}
+	.header-search:before {
+		content: url('../img/0-common/search.svg');
+		position: absolute;
+		bottom: 8px;
+		left: 20px;
+	}
+	.header__search {
+		font-size: var(--f-header);
+		border: 1px solid var(--color-text-secondary);
+		color: var(--color-text-thirdly);
+		padding: 10px 10px 10px 50px
+	}
+
+	.socials,
+	.header-email,
+	.header-phone {
+		padding-top: 5px;
+	}
+	.socials-item {
+		margin-right: 8px;
+	}
+	.header__name {
+		font-size: 14px;
+		line-height: 1;
+		margin-bottom: 8px;
+	}
+	.header__contact {
+		font-family: var(--ff-bold);
+	}
+
+
+
+	.nav-list {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	.nav-list-item {
+		padding: 12px;
+		display: block;
+		box-sizing: border-box;
+	}
+
+
+	.nav-list-item__text {
+		font-size: var(--f-header);
+		width: 100%;
+	}
+	.nav-list-item:hover {
+		background-color: var(--color-primary);
+		color: #fff;
+	}
+
+
+	.header-wrapper {
+		background-image: url(../img/1-hero/hero-bg.png);
+		background-size: cover;
+	}	
+	.hero-wrapper {
+		height: 680px;
+		margin-bottom: 80px;
+	}
+	.hero-container {
+		height: 100%;
+	}
+	.hero {
+		padding-top: 90px;
+		background: url(../img/1-hero/hero-1.png);
+		background-position: 550% -5%;
+		background-repeat: no-repeat;
+		height: 100%;
+	}
+	.hero-bullets {
+		max-width: 440px;
+		padding-left: 50px;
+		margin-bottom: 30px;
+	}
+	.hero-bullet {
+		margin-bottom: 20px;
+		line-height: 1.35;
+		position: relative;
+	}
+
+	.hero-bullet:before {
+		content: '';
+		position: absolute;
+		left: -40px;
+		top: 14px;
+		display: block;
+		border-radius: 10px;
+		width: 10px;
+		height: 10px;
+		background-color: var(--color-primary);
+		box-shadow: 0 0 0 2pt var(--color-primary);
+		margin: 5px;
+		border: 2px solid white;
+	}
 
 @import './m480.css';
