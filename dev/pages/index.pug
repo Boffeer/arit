@@ -54,6 +54,16 @@ block content
 
 
 			.hero-wrapper
+				+pic({
+					pictureClass: 'hero__picture-left',
+					ext: 'png',
+					src: 'img/1-hero/chess'
+				})
+				+pic({
+					pictureClass: 'hero__picture-right',
+					ext: 'png',
+					src: 'img/1-hero/cap'
+				})
 				.hero-container.container
 					.hero
 						h1.section__title.section__title--left Стань востребованным специалистом в сжатые сроки, не отрываясь от работы
@@ -77,11 +87,11 @@ block content
 				h2.section__title Направления обучения в АРИТ
 
 				.learning-tabbar
-					button.learing-tab__control Профессиональная переподготовка
-					button.learing-tab__control Повышение квалификации 
+					button.learning-tab__control.learning-tab__control--active Профессиональная переподготовка
+					button.learning-tab__control Повышение квалификации 
 				.learning-tab
 					ul.learning-tab-list
-						li.learning-tab-list-item Master of Business Administration (MBA)
+						li.learning-tab-list-item Master of Business Administration&nbsp;(MBA)
 						li.learning-tab-list-item АвиаГСМ 
 						li.learning-tab-list-item Агрономия 
 						li.learning-tab-list-item Архитектура и дизайн
@@ -127,13 +137,13 @@ block content
 		.about-wrap
 			.about-container.container
 				.about
-					h2.section__title.section__title--left О нашей академии
-					p.regular-text Академия развития инновационных технологий (АРИТ). АРИТ — это место, где помогают людям разных профессий повысить квалификацию или пройти полную профессиональную переподготовку. В академии свои знания и опыт  передают команда профессоров, докторов наук, специалистов практиков с выдающимися результатами в своих областях. 
-					p.regular-text.text-bold Достаточно выбрать одно из 100 направлений.
-					p.regular-text Теоретические знания вы можете получать дистанционно, в удобнÐ¾е для Вас время. А практика всегда проходит в оборудованных высокотехнологичных классах. Поэтому у вас нет необходимости надолго отрываться от работы ради обучения.
-					p.regular-text Врачи, геодезисты, строители, проектировщики, педагоги, средний медÐ¿ерсонал и люди других профессий, — получают дополнительное образование в нашей Академии.
-						span.text-bold На базе АРИТ обучаются до 15 тысяч специалистов ежемесячно со всей России. 
-					p.regular-text Если у вас уже есть базовое образование, но вы хотите стать более востребованным специалистом ,то мы ждем вас в АРИТ. 
+					h2.section__title.section__title--left.about__title О нашей академии
+					p.regular-text.about__text Академия развития инновационных технологий (АРИТ). АРИТ — это место, где помогают людям разных профессий повысить квалификацию или пройти полную профессиональную переподготовку. В академии свои знания и опыт  передают команда профессоров, докторов наук, специалистов практиков с выдающимися результатами в своих областях. 
+					p.regular-text.about__text.text-bold Достаточно выбрать одно из 100 направлений.
+					p.regular-text.about__text Теоретические знания вы можете получать дистанционно, в удобное для Вас время. А практика всегда проходит в оборудованных высокотехнологичных классах. Поэтому у вас нет необходимости надолго отрываться от работы ради обучения.
+					p.regular-text.about__text Врачи, геодезисты, строители, проектировщики, педагоги, средний медперсонал и люди других профессий, — получают дополнительное образование в нашей Академии.
+						span.text-bold  На базе АРИТ обучаются до 15 тысяч специалистов ежемесячно со всей России. 
+					p.regular-text.about__text Если у вас уже есть базовое образование, но вы хотите стать более востребованным специалистом ,то мы ждем вас в АРИТ. 
 				+pic({
 					pictureClass: 'about-picture',
 					ext: 'png',
@@ -165,12 +175,12 @@ block content
 		.features-wrapper
 			.features-container.container
 				.features
-					h2.section__title Преимущества
+					h2.section__title.features__title Преимущества
 					ol.features-list
 						li.features-list-item
-							p.features-itet__text 
+							p.features-item__text 
 								span.text-bold Индивидуальный подход 
-								|  и модульная система обучения 
+								|  и&nbsp;модульная система обучения 
 							+pic({
 								pictureClass: 'features-pic',
 								ext: 'png',
@@ -178,7 +188,7 @@ block content
 							})
 							h3.features-item__number 01
 						li.features-list-item
-							p.features-itet__text 
+							p.features-item__text 
 								span.text-bold Сотни
 								|  направлений обучения
 							+pic({
@@ -188,7 +198,7 @@ block content
 							})
 							h3.features-item__number 02
 						li.features-list-item
-							p.features-itet__text Поддержка кураторов 
+							p.features-item__text Поддержка кураторов 
 								span.text-bold 24/7
 							+pic({
 								pictureClass: 'features-pic',
@@ -197,7 +207,7 @@ block content
 							})
 							h3.features-item__number 03
 						li.features-list-item
-							p.features-itet__text Все преподаватели действующие 
+							p.features-item__text Все преподаватели<br>действующие 
 								span.text-bold практики
 							+pic({
 								pictureClass: 'features-pic',
@@ -206,8 +216,8 @@ block content
 							})
 							h3.features-item__number 04
 						li.features-list-item
-							p.features-itet__text Учебные программы соответствуют
-								span.text-bold государственным стандартам (ФГОС) 
+							p.features-item__text.features-item__text--single-row Учебные программы соответствуют
+								span.text-bold  государственным стандартам (ФГОС) 
 							+pic({
 								pictureClass: 'features-pic',
 								ext: 'png',
@@ -215,8 +225,8 @@ block content
 							})
 							h3.features-item__number 05
 						li.features-list-item 
-							p.features-itet__text Доставка документов
-								span.text-bold по всей России
+							p.features-item__text.features-item__text--single-row Доставка документов
+								span.text-bold  по всей России
 							+pic({
 								pictureClass: 'features-pic',
 								ext: 'png',
@@ -225,7 +235,7 @@ block content
 							h3.features-item__number 06
 
 						li.features-list-item
-							p.features-itet__text Документы установленного образца
+							p.features-item__text.features-item__text--single-row Документы установленного образца
 							+pic({
 								pictureClass: 'features-pic',
 								ext: 'png',
@@ -234,8 +244,8 @@ block content
 							h3.features-item__number 07
 
 						li.features-list-item
-							p.features-itet__text Доступ к учебным материалам 
-								span.text-bold в любое время
+							p.features-item__text Доступ к учебным материалам 
+								span.text-bold в&nbsp;любое время
 							+pic({
 								pictureClass: 'features-pic',
 								ext: 'png',
@@ -244,28 +254,82 @@ block content
 							h3.features-item__number 08
 
 						li.features-list-item
-							p.features-itet__text Доступные цены
+							p.features-item__text Доступные цены
 							+pic({
 								pictureClass: 'features-pic',
 								ext: 'png',
 								src: 'img/4-features/piggy'
 							})
 							h3.features-item__number 09
+
+
+
+
+
+
 		.teachers-wrap
 			.teachers-container.container
 				.teachers
-					h2.section__title Наши преподаватели
-					.teacheeers-slider-wrap
-						.teachers-slider
-							div.teachers-slide
-								h3.teachers__title Агафонов Николай Владимирович
-								p.teacher__descr Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет
-							div.teachers-slide
-								h3.teachers__title Бахтияров  Камиль Рафаэльевич
-								p.tacher__descr Доктор медицинских наук, профессор, врач акушер-гинеколог
-							div.teachers-slide
-								h3.teachers__title Быков  Алексей Юрьевич
-								p.teacher__descr Врач-нейрохирург, член Европейской аcсоциации клинической гипертермии, эксперт по радиохирургическим методам лечения, продакт-менеджер компании Zerts
+					h2.section__title.teachers__title Наши преподаватели
+					.teachers-slider-wrap.swiper-container
+						.teachers-slider.swiper-wrapper
+							mixin teacherSlide(data)
+								div.teachers-slide.swiper-slide
+									- var src = data.src
+									+pic({
+										pictureClass: 'teachers__pic',
+										ext: 'png',
+										src: src
+									})
+									h3.teachers-slide__title= data.title
+									p.teachers-slide__descr= data.descr
+
+							div.teachers-slide.swiper-slide
+								+pic({
+									pictureClass: 'teachers__pic',
+									ext: 'png',
+									src: 'img/5-teachers/agafonov'
+								})
+								h3.teachers-slide__title Агафонов Николай Владимирович
+								p.teachers-slide__descr Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет
+							div.teachers-slide.swiper-slide
+								+pic({
+									pictureClass: 'teachers__pic',
+									ext: 'png',
+									src: 'img/5-teachers/bahtiyarov'
+								})
+								h3.teachers-slide__title Бахтияров Камиль Рафаэльевич
+								p.teachers-slide__descr Доктор медицинских наук, профессор, врач акушер-гинеколог
+							div.teachers-slide.swiper-slide
+								+pic({
+									pictureClass: 'teachers__pic',
+									ext: 'png',
+									src: 'img/5-teachers/bikov'
+								})
+								h3.teachers-slide__title Быков  Алексей Юрьевич
+								p.teachers-slide__descr Врач-нейрохирург, член Европейской аcсоциации клинической гипертермии, эксперт по радиохирургическим методам лечения, продакт-менеджер компании Zerts
+	
+							+teacherSlide({
+								src: 'img/5-teachers/agafonov',
+								title: 'Агафонов Николай Владимирович',
+								descr: 'Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет'
+							})
+							+teacherSlide({
+								src: 'img/5-teachers/agafonov',
+								title: 'Агафонов Николай Владимирович',
+								descr: 'Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет'
+							})
+							+teacherSlide({
+								src: 'img/5-teachers/agafonov',
+								title: 'Агафонов Николай Владимирович',
+								descr: 'Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет'
+							})
+						.teachers-slider-scrollbar.slider-scrollbar
+						.teachers-slider-prev.slider-button
+							img(src="img/0-common/arrow-left.svg", alt="")
+						.teachers-slider-next.slider-button
+							img(src="img/0-common/arrow-right.svg", alt="")
+							
 
 
 
@@ -275,32 +339,43 @@ block content
 		.meetups-wrapper
 			.meetups-container.container
 				.meetups
-					h2.section__title Семинары
 					.meetups-item
+						h2.section__title Семинары
 						+pic({
 							pictureClass: 'meetups__picture',
 							ext: 'png',
 							src: 'img/6-meetups/seminar'
 						})
-						h3.meetup__title Название мероприятия
-						.meetup-location
-							img(src="img/0-common/geo.svg", alt="geo-icon")
-							p г. Санкт-Петербург, ул. 50 лет ВЛКСМ д.22, офис 351
-						button.button-primary.seminar__button-cta
-						button.button-thirdly.seminar__button-more
+						.meetup-info
+							h3.meetup__title Название мероприятия
+							.meetup-about
+								.meetup-location
+									img(src="img/0-common/geo.svg", alt="geo-icon")
+									p г. Санкт-Петербург, ул. 50 лет ВЛКСМ д.22, офис 351
+								.meetup-time
+									img(src="img/0-common/time.svg")
+									p 26.03.21
+							button.button-primary.seminar__button-cta Принять участие
+							button.button-thirdly.seminar__button-more Подробнее
 
 					.meetups-item
+						h2.section__title Вебинары
 						+pic({
 							pictureClass: 'meetups__picture',
 							ext: 'png',
 							src: 'img/6-meetups/webinar'
 						})
-						h3.meetup__title Название мероприятия
-						.meetup-location
-							img(src="img/0-common/geo.svg", alt="geo-icon")
-							p г. Санкт-Петербург, ул. 50 лет ВЛКСМ д.22, офис 351
-						button.button-primary.webinar__button-cta
-						button.button-thirdly.webinar__button-more
+						.meetup-info
+							h3.meetup__title Название мероприятия
+							.meetup-about
+								.meetup-location
+									img(src="img/0-common/geo.svg", alt="geo-icon")
+									p г. Санкт-Петербург, ул. 50 лет ВЛКСМ д.22, офис 351
+								.meetup-time
+									img(src="img/0-common/time.svg")
+									p 26.03.21
+							button.button-primary.webinar__button-cta Принять участие
+							button.button-thirdly.webinar__button-more Подробнее
 
 
 
