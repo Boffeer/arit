@@ -31,14 +31,14 @@
         </div>
         <nav class="nav container">
           <div class="nav-list"><a class="nav-list-item nav-list-item--dropdown" href="#about">
-              <div class="nav-list-item__text">Об академии</div></a><a class="nav-list-item" href="#seminars">
-              <div class="nav-list-item__text">Семинары</div></a><a class="nav-list-item" href="#webinars">
+              <div class="nav-list-item__text">Об академии</div></a><a class="nav-list-item" href="#meetups">
+              <div class="nav-list-item__text">Семинары</div></a><a class="nav-list-item" href="#meetups">
               <div class="nav-list-item__text">Вебинары</div></a><a class="nav-list-item" href="#learning">
               <div class="nav-list-item__text">Обучение</div></a><a class="nav-list-item nav-list-item--dropdown" href="#media">
               <div class="nav-list-item__text">Медиа</div></a><a class="nav-list-item" href="#news">
               <div class="nav-list-item__text">Новости</div></a><a class="nav-list-item" href="#testimonials">
               <div class="nav-list-item__text">Отзывы</div></a><a class="nav-list-item" href="#partners">
-              <div class="nav-list-item__text">Партнеры</div></a><a class="nav-list-item" href="#contacts">
+              <div class="nav-list-item__text">Партнеры</div></a><a class="nav-list-item" href="#footer">
               <div class="nav-list-item__text">Контакты</div></a></div>
         </nav>
         <div class="hero-wrapper">
@@ -69,7 +69,7 @@
               <button class="learning-tab__control learning-tab__control--skillup learning-tab__control--active">Профессиональная переподготовка</button>
               <button class="learning-tab__control learning-tab__control--retrain">Повышение квалификации </button>
             </div>
-            <div class="learning-tab--skillup">
+            <div class="learning-tab--retrain">
               <div class="learning-tab">
                 <ul class="learning-tab-list">
                   <li class="learning-tab-list-item">АвиаГСМ</li>
@@ -118,7 +118,7 @@
                 </ul>
               </div>
             </div>
-            <div class="learning-tab--retrain learning-tab--active">
+            <div class="learning-tab--skillup learning-tab--active">
               <div class="learning-tab">
                 <ul class="learning-tab-list">
                   <li class="learning-tab-list-item">Master of Business Administration&nbsp;(MBA)</li>
@@ -169,7 +169,7 @@
           </div>
         </div>
       </div>
-      <div class="about-wrap">
+      <div class="about-wrap" id="about">
         <div class="about-container container">
           <div class="about">
             <h2 class="section__title section__title--left about__title">О нашей академии</h2>
@@ -324,7 +324,7 @@
           </div>
         </div>
       </div>
-      <div class="meetups-wrapper">
+      <div class="meetups-wrapper" id="meetups">
         <div class="meetups-container container">
           <div class="meetups">
             <div class="meetups-category">
@@ -635,7 +635,7 @@
           </div>
         </div>
       </div>
-      <div class="partners-wrapper">
+      <div class="partners-wrapper" id="partners">
         <div class="partners-container container">
           <div class="partners">
             <h2 class="section__title partners__title">Партенры</h2>
@@ -733,7 +733,7 @@
           </div>
         </div>
       </section>
-      <div class="testimonials-wrapper">
+      <div class="testimonials-wrapper" id="testimonials">
         <div class="testimonials-container container">
           <div class="testimonials">
             <h2 class="section__title testimonials__title">Отзывы</h2>
@@ -848,7 +848,9 @@
         </div>
       </div>
       <div class="form-wrapper">
-        <div class="form-map"></div>
+        <div class="form-map">
+          <script class="ym-lazy" type="text/javascript" charset="utf-8" async data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4e0949e6941d52d78f94a84b1d3430955dacdefab8154e7ad5c100bae25f7aa5&amp;amp;width=100%25&amp;amp;lang=ru_RU&amp;amp;scroll=true"></script>
+        </div>
         <div class="container">
           <form class="form" action="">
             <div class="form__border">
@@ -877,7 +879,7 @@
           </form>
         </div>
       </div>
-      <footer class="footer-wrapper">
+      <footer class="footer-wrapper" id="footer">
         <div class="container">
           <div class="footer">
             <div class="footer__logo"><img src="img/0-common/logo-solid.svg" alt="logo">
