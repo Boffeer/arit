@@ -1,4 +1,17 @@
-//
+// const smooth croll = () => {
+//     let anchors = document.querySelectorAll('a[href*="#"]');
+//     anchors.map(item => {
+//         item.addEventListener('click', function(){
+//             this.scrollIntoView({
+//                 behavior: 'smooth',
+//                 alignToTop: true,
+//                 block: 'start'
+//             })
+//         })
+//     })
+// }
+// smoothScroll()
+
 // Learning tabs
 //
 const skillupTabHandler = document.querySelector('.learning-tab__control--skillup');
@@ -116,7 +129,7 @@ const showInitialItems = ($) => {
 
 let seminars = {
 	items: '.meetups-item--seminar',
-	initialShow: 2,
+	initialShow: 1,
 	itemsToShow: 2,
 	currentItem: 0,
 	clickHandler: '.meetups-more'
@@ -124,7 +137,7 @@ let seminars = {
 }
 let webinars = {
 	items: '.meetups-item--webinar',
-	initialShow: 2,
+	initialShow: 1,
 	itemsToShow: 2,
 	currentItem: 0,
 	clickHandler: '.meetups-more'
@@ -133,3 +146,30 @@ let webinars = {
 showInitialItems(testimonials)
 showInitialItems(seminars)
 showInitialItems(webinars)
+
+
+const lazyYmap = () => {
+	let mapContainer = document.querySelector('.form-map');
+	let optionsMap = {
+		once: true,
+		passive: true,
+		capture: true
+	};
+	// mapContainer.addEventListener('click')
+
+	let mapLoaded = false;
+	function startLazyMap(){
+		if (!mapLoaded) {
+			let mapBlock = document.querySelector('.ym-lazy');
+			mapLoaded = true;
+			mapBlock.setAttribute('src', mapBlock.getAttribute('data-src'));
+			mapBlock.removeAttribute('data_src');
+			console.log('Ym loaded')
+		}
+	}
+	startLazyMap()
+}
+
+setTimeout(function(){
+	lazyYmap()
+},10000)

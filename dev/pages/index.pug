@@ -34,9 +34,9 @@ block content
 				.nav-list
 					a(href="#about").nav-list-item.nav-list-item--dropdown
 						.nav-list-item__text Об академии
-					a(href="#seminars").nav-list-item
+					a(href="#meetups").nav-list-item
 						.nav-list-item__text Семинары
-					a(href="#webinars").nav-list-item
+					a(href="#meetups").nav-list-item
 						.nav-list-item__text Вебинары
 					a(href="#learning").nav-list-item
 						.nav-list-item__text Обучение
@@ -48,7 +48,7 @@ block content
 						.nav-list-item__text Отзывы
 					a(href="#partners").nav-list-item
 						.nav-list-item__text Партнеры
-					a(href="#contacts").nav-list-item
+					a(href="#footer").nav-list-item
 						.nav-list-item__text Контакты
 
 
@@ -89,7 +89,7 @@ block content
 					.learning-tabbar
 						button.learning-tab__control.learning-tab__control--skillup.learning-tab__control--active Профессиональная переподготовка
 						button.learning-tab__control.learning-tab__control--retrain Повышение квалификации 
-					.learning-tab--skillup
+					.learning-tab--retrain
 						div.learning-tab
 							ul.learning-tab-list
 								li.learning-tab-list-item АвиаГСМ
@@ -133,7 +133,7 @@ block content
 								li.learning-tab-list-item Электробезопасность
 								li.learning-tab-list-item Энергетика
 								li.learning-tab-list-item Юриспруденция
-					.learning-tab--retrain.learning-tab--active
+					.learning-tab--skillup.learning-tab--active
 						.learning-tab
 							ul.learning-tab-list
 								li.learning-tab-list-item Master of Business Administration&nbsp;(MBA)
@@ -179,7 +179,7 @@ block content
 			
 
 
-		.about-wrap
+		.about-wrap#about
 			.about-container.container
 				.about
 					h2.section__title.section__title--left.about__title О нашей академии
@@ -384,7 +384,7 @@ block content
 
 
 
-		.meetups-wrapper
+		.meetups-wrapper#meetups
 			.meetups-container.container
 				.meetups
 					.meetups-category
@@ -502,7 +502,7 @@ block content
 
 
 
-		.partners-wrapper
+		.partners-wrapper#partners
 			.partners-container.container
 				.partners
 					h2.section__title.partners__title Партенры
@@ -628,7 +628,7 @@ block content
 
 
 
-		.testimonials-wrapper
+		.testimonials-wrapper#testimonials
 			.testimonials-container.container
 				.testimonials
 					h2.section__title.testimonials__title Отзывы
@@ -690,7 +690,7 @@ block content
 
 		.form-wrapper
 			.form-map
-				//- script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4e0949e6941d52d78f94a84b1d3430955dacdefab8154e7ad5c100bae25f7aa5&amp;width=100%25&amp;lang=ru_RU&amp;scroll=true")
+				script(class="ym-lazy" type="text/javascript" charset="utf-8" async data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4e0949e6941d52d78f94a84b1d3430955dacdefab8154e7ad5c100bae25f7aa5&amp;width=100%25&amp;lang=ru_RU&amp;scroll=true")
 			.container
 				form.form(action="")
 					.form__border
@@ -720,7 +720,7 @@ block content
 
 
 
-		footer.footer-wrapper
+		footer.footer-wrapper#footer
 			.container
 				.footer
 					.footer__logo

@@ -238,6 +238,7 @@ button {
 
 .primary-button:focus,
 .primary-button:hover {
+	transform: translateY(-3px)
 }
 
 .secondary-button {
@@ -249,11 +250,27 @@ button {
 	background: transparent;
 	color: var(--color-text-regular);
 	width: 230px;
+	transition: all 0.2s
 }
+
+.secondary-button:focus,
+.secondary-button:hover {
+	color: #fff;
+	background: var(--color-text-regular);
+	transition: all 0.3s
+}
+
+.thirdly-button:hover {
+	color: var(--color-primary)
+}
+
 
 a {
 	text-decoration: none;
 	color: inherit;
+}
+a:hover {
+	color: var(--color-primary);
 }
 p {
 	font-size: var(--f-regular);
@@ -280,9 +297,18 @@ p {
 	justify-content: center;
 	align-items: center;
 	z-index: var(--z-contorls);
+	transition: all 0.3s;
 }
 .slider-button:hover {
 	cursor: pointer;
+	transform: scale(1.15);
+	transition: all 0.3s;
+}
+.swiper-button-disabled {
+	opacity: 0.3;
+}
+.swiper-button-disabled:hover {
+	transform: scale(1);
 }
 
 .slider-scrollbar {
@@ -299,9 +325,6 @@ p {
 	bottom: -3px;
 	z-index: -2;
 	background-color: var(--color-lines);
-}
-.swiper-button-disabled {
-	opacity: 0.3;
 }
 .swiper-scrollbar-drag {
 	max-width: 80px !important;
@@ -391,6 +414,7 @@ p {
 	
 	.nav-list-item {
 		padding: 12px;
+		text-align: center;
 		display: flex;
 		box-sizing: border-box;
 		align-items: center;
@@ -398,6 +422,17 @@ p {
 
 	.nav-list-item--dropdown {
 		position: relative;
+		padding-right: 17px;
+	}
+	.nav-list-item--dropdown:first-child:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: -10px;
+		display: block;
+		height: 90%;
+		width: 1px;
+		background-color: var(--color-lines);
 	}
 	.nav-list-item--dropdown:after {
 		position: relative;
@@ -417,10 +452,16 @@ p {
 	}
 	.nav-list-item:hover {
 		background-color: var(--color-primary);
+		/* box-shadow: 0 0 2px black; */
 		color: #fff;
-		font-family: var(--ff-extra);
+		/* text-shadow: 1px 0 0 #fff, 0 1px 0 #fff; */
+		/* font-family: var(--ff-extra); */
+		/* padding: 12px 11.8px; */
 	}
 
+	.nav-list-item:hover.nav-list-item--dropdown:after{
+		background-color: #fff;
+	}
 
 	.header-wrapper {
 		background-image: url(../img/1-hero/hero-bg.png);
@@ -523,15 +564,19 @@ p {
 		font-family: var(--ff-bold);
 		color:#fff;
 	}
+
 	.learning-tab__control--skillup.learning-tab__control--active {
 		clip-path: polygon(0% 0,95% 0,100% 100%,0 100%);
 		-webkit-clip-path: polygon(0% 0,95% 0,100% 100%,0 100%);
 		border-radius: 10px 0 0 10px;
+		position: relative;
 	}
+
 	.learning-tab__control--retrain.learning-tab__control--active {
 		clip-path: polygon(0 0,100% 0,100% 100%,5% 100%);
 		-webkit-clip-path: polygon(0 0,100% 0,100% 100%,5% 100%);
 		border-radius: 0 10px 10px 0;
+		position: relative;
 	}
 
 
@@ -1361,4 +1406,8 @@ p {
 		max-width: auto;
 		width: 360px;
 	}
+
+.thirdly-button:hover:after{
+	background-color: var(--color-primary);
+}
 @import './m480.css';

@@ -3,6 +3,7 @@
 	margin-right: 15px;
 }
 .pop-wrap {
+	opacity: 0;
 	visibility: hidden;
 	position: fixed;
 	top: 0;
@@ -11,7 +12,6 @@
 	height: 100vh;
 	background-color: rgba(0,0,0,0.3);
 	transition: all 0.3s;
-	opacity: 0;
 }
 .pop-wrap--opened {
 	visibility: visible;
@@ -41,9 +41,11 @@
 
 /* TEMP */
 .pop {
+	display: none;
 	transform: scale(0.2);
 	transition: all 0.3s;
 }
 .pop--opened {
+	display: block;
 	transform: scale(1);
 }
