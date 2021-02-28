@@ -846,6 +846,11 @@ p {
   top: 5px;
 }
 
+.learning-more--retrain,
+.learning-more--skillup {
+  display: none;
+}
+
 .about-wrap {
   position: relative;
   margin-bottom: 40px;
@@ -1698,6 +1703,10 @@ p {
     width: 100%;
   }
 
+  .secondary-button {
+    width: 100%;
+  }
+
   .header {
     padding: 15px 0;
   }
@@ -1839,6 +1848,11 @@ p {
   .learning-tab-list-item {
     margin-bottom: 22px;
     font-size: 14px;
+  }
+
+  .learning-more--retrain,
+  .learning-more--skillup {
+    display: block;
   }
 }
 /*# sourceMappingURL=style.css.map */
