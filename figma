@@ -1,0 +1,21 @@
+--bs-form: 
+	background: #F6F6F8;
+	border: 1px solid #F6F6F8;
+	box-sizing: border-box;
+	box-shadow: inset 0px 4px 4px #EAEAEF;
+	border-radius: 2px;
+
+primary-button
+	background: linear-gradient(142.3deg, #1D54A9 4.7%, #0F3F8A 97.22%);
+	border-radius: 5px;
+	width230px
+
+gdpr-color #0064CB
+
+
+
+--search
+background: #FAFAFA;
+border: 1px solid #EDEDED;
+box-sizing: border-box;
+border-radius: 5px;

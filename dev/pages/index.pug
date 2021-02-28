@@ -4,7 +4,7 @@ include common/mixins
 block content
 	main
 		.header-wrapper
-			.container
+			.container.header-container
 
 				header.header
 					.header__logo
@@ -30,26 +30,26 @@ block content
 						a(href=`${phoneLnk}`).header__contact #{phone}
 					button.header_get-consult.secondary-button Получить консультацию 
 
-				nav.nav
-					.nav-list
-						a(href="#about").nav-list-item
-							.nav-list-item__text Об академии
-						a(href="#seminars").nav-list-item
-							.nav-list-item__text Семинары
-						a(href="#webinars").nav-list-item
-							.nav-list-item__text Вебинары
-						a(href="#learning").nav-list-item
-							.nav-list-item__text Обучение
-						a(href="#media").nav-list-item
-							.nav-list-item__text Медиа
-						a(href="#news").nav-list-item
-							.nav-list-item__text Новости
-						a(href="#testimonials").nav-list-item
-							.nav-list-item__text Отзывы
-						a(href="#partners").nav-list-item
-							.nav-list-item__text Партнеры
-						a(href="#contacts").nav-list-item
-							.nav-list-item__text Контакты
+			nav.nav.container
+				.nav-list
+					a(href="#about").nav-list-item.nav-list-item--dropdown
+						.nav-list-item__text Об академии
+					a(href="#seminars").nav-list-item
+						.nav-list-item__text Семинары
+					a(href="#webinars").nav-list-item
+						.nav-list-item__text Вебинары
+					a(href="#learning").nav-list-item
+						.nav-list-item__text Обучение
+					a(href="#media").nav-list-item.nav-list-item--dropdown
+						.nav-list-item__text Медиа
+					a(href="#news").nav-list-item
+						.nav-list-item__text Новости
+					a(href="#testimonials").nav-list-item
+						.nav-list-item__text Отзывы
+					a(href="#partners").nav-list-item
+						.nav-list-item__text Партнеры
+					a(href="#contacts").nav-list-item
+						.nav-list-item__text Контакты
 
 
 
@@ -87,51 +87,96 @@ block content
 				h2.section__title Направления обучения в АРИТ
 				.learning-tabs-wrap
 					.learning-tabbar
-						button.learning-tab__control.learning-tab__control--active Профессиональная переподготовка
-						button.learning-tab__control Повышение квалификации 
-					.learning-tab
-						ul.learning-tab-list
-							li.learning-tab-list-item Master of Business Administration&nbsp;(MBA)
-							li.learning-tab-list-item АвиаГСМ 
-							li.learning-tab-list-item Агрономия 
-							li.learning-tab-list-item Архитектура и дизайн
-							li.learning-tab-list-item Бухгалтерское дело
-							li.learning-tab-list-item Ветеринария
-							li.learning-tab-list-item Горная промышленность и маркшейдерское дело
-							li.learning-tab-list-item Государственное и муниципальное управление
-							li.learning-tab-list-item Государственные закупки
-							li.learning-tab-list-item Железнодорожный транспорт
-							li.learning-tab-list-item Землеустройство и кадастр
-							li.learning-tab-list-item Инженерные изыскания
-							li.learning-tab-list-item Инженерные системы
-						ul.learning-tab-list
-							li.learning-tab-list-item Кадровое делопроизводство
-							li.learning-tab-list-item Косметология
-							li.learning-tab-list-item Лаборатории
-							li.learning-tab-list-item Медицина
-							li.learning-tab-list-item Менеджмент
-							li.learning-tab-list-item Металлургия
-							li.learning-tab-list-item Метрологический контроль
-							li.learning-tab-list-item Нефтегазовое дело
-							li.learning-tab-list-item Охрана труда. Специальная оценка условий труда (СОУТ)
-							li.learning-tab-list-item Оценочная деятельность
-							li.learning-tab-list-item Педагогика
-							li.learning-tab-list-item Подъемные сооружения и лифты
-							li.learning-tab-list-item Пожарно-технический минимум
-						ul.learning-tab-list
-							li.learning-tab-list-item Проектирование
-							li.learning-tab-list-item Реставрация
-							li.learning-tab-list-item Спорт и фитнес
-							li.learning-tab-list-item Строительство
-							li.learning-tab-list-item Техническое обслуживание медицинской техники (ТОМТ)
-							li.learning-tab-list-item Транспортная безопасность
-							li.learning-tab-list-item Фармация 
-							li.learning-tab-list-item Холодильное оборудование
-							li.learning-tab-list-item Экология
-							li.learning-tab-list-item Экономика и финансы
-							li.learning-tab-list-item Энергетика
-							li.learning-tab-list-item Юриспруденция
-		
+						button.learning-tab__control.learning-tab__control--skillup.learning-tab__control--active Профессиональная переподготовка
+						button.learning-tab__control.learning-tab__control--retrain Повышение квалификации 
+					.learning-tab--skillup
+						div.learning-tab
+							ul.learning-tab-list
+								li.learning-tab-list-item АвиаГСМ
+								li.learning-tab-list-item Агрономия
+								li.learning-tab-list-item Архитектура и дизайн
+								li.learning-tab-list-item Бухгалтерское дело
+								li.learning-tab-list-item Ветеринария
+								li.learning-tab-list-item Горная промышленность и маркшейдерское дело
+								li.learning-tab-list-item Государственное и муниципальное управление
+								li.learning-tab-list-item Государственные закупки
+								li.learning-tab-list-item Железнодорожный транспорт
+								li.learning-tab-list-item Землеустройство и кадастр
+								li.learning-tab-list-item Инженерные изыскания
+								li.learning-tab-list-item Инженерные системы
+								li.learning-tab-list-item Кадровое делопроизводство
+							ul.learning-tab-list
+								li.learning-tab-list-item Косметология
+								li.learning-tab-list-item Лаборатории
+								li.learning-tab-list-item Медицина
+								li.learning-tab-list-item Менеджмент
+								li.learning-tab-list-item Металлургия
+								li.learning-tab-list-item Метрологический контроль
+								li.learning-tab-list-item Нефтегазовое дело
+								li.learning-tab-list-item Охрана труда. Специальная оценка условий труда (СОУТ)
+								li.learning-tab-list-item Оценочная деятельность
+								li.learning-tab-list-item Педагогика
+								li.learning-tab-list-item Подъемные сооружения и лифты
+								li.learning-tab-list-item Пожарно-технический минимум
+								li.learning-tab-list-item Проектирование 
+							ul.learning-tab-list
+								li.learning-tab-list-item Радиационная безопасность
+								li.learning-tab-list-item Реставрация
+								li.learning-tab-list-item Спорт и фитнес
+								li.learning-tab-list-item Строительство
+								li.learning-tab-list-item Техническое обслуживание медицинской техники (ТОМТ)
+								li.learning-tab-list-item Транспортная безопасность
+								li.learning-tab-list-item Фармация
+								li.learning-tab-list-item Холодильное оборудование
+								li.learning-tab-list-item Экология
+								li.learning-tab-list-item Экономика и финансы
+								li.learning-tab-list-item Электробезопасность
+								li.learning-tab-list-item Энергетика
+								li.learning-tab-list-item Юриспруденция
+					.learning-tab--retrain.learning-tab--active
+						.learning-tab
+							ul.learning-tab-list
+								li.learning-tab-list-item Master of Business Administration&nbsp;(MBA)
+								li.learning-tab-list-item АвиаГСМ 
+								li.learning-tab-list-item Агрономия 
+								li.learning-tab-list-item Архитектура и дизайн
+								li.learning-tab-list-item Бухгалтерское дело
+								li.learning-tab-list-item Ветеринария
+								li.learning-tab-list-item Горная промышленность и маркшейдерское дело
+								li.learning-tab-list-item Государственное и муниципальное управление
+								li.learning-tab-list-item Государственные закупки
+								li.learning-tab-list-item Железнодорожный транспорт
+								li.learning-tab-list-item Землеустройство и кадастр
+								li.learning-tab-list-item Инженерные изыскания
+								li.learning-tab-list-item Инженерные системы
+							ul.learning-tab-list
+								li.learning-tab-list-item Кадровое делопроизводство
+								li.learning-tab-list-item Косметология
+								li.learning-tab-list-item Лаборатории
+								li.learning-tab-list-item Медицина
+								li.learning-tab-list-item Менеджмент
+								li.learning-tab-list-item Металлургия
+								li.learning-tab-list-item Метрологический контроль
+								li.learning-tab-list-item Нефтегазовое дело
+								li.learning-tab-list-item Охрана труда. Специальная оценка условий труда (СОУТ)
+								li.learning-tab-list-item Оценочная деятельность
+								li.learning-tab-list-item Педагогика
+								li.learning-tab-list-item Подъемные сооружения и лифты
+								li.learning-tab-list-item Пожарно-технический минимум
+							ul.learning-tab-list
+								li.learning-tab-list-item Проектирование
+								li.learning-tab-list-item Реставрация
+								li.learning-tab-list-item Спорт и фитнес
+								li.learning-tab-list-item Строительство
+								li.learning-tab-list-item Техническое обслуживание медицинской техники (ТОМТ)
+								li.learning-tab-list-item Транспортная безопасность
+								li.learning-tab-list-item Фармация 
+								li.learning-tab-list-item Холодильное оборудование
+								li.learning-tab-list-item Экология
+								li.learning-tab-list-item Экономика и финансы
+								li.learning-tab-list-item Энергетика
+								li.learning-tab-list-item Юриспруденция
+			
 
 
 		.about-wrap
@@ -271,64 +316,67 @@ block content
 			.teachers-container.container
 				.teachers
 					h2.section__title.teachers__title Наши преподаватели
-					.teachers-slider-wrap.swiper-container
-						.teachers-slider.swiper-wrapper
-							mixin teacherSlide(data)
+					.teachers-slider-outer
+						.teachers-slider-wrap.swiper-container
+							.teachers-slider.swiper-wrapper
+								mixin teacherSlide(data)
+									div.teachers-slide.swiper-slide
+										- var src = data.src
+										+pic({
+											pictureClass: 'teachers__pic',
+											ext: 'png',
+											src: src
+										})
+										h3.teachers-slide__title= data.title
+										p.teachers-slide__descr= data.descr
+
 								div.teachers-slide.swiper-slide
-									- var src = data.src
 									+pic({
 										pictureClass: 'teachers__pic',
 										ext: 'png',
-										src: src
+										src: 'img/5-teachers/agafonov'
 									})
-									h3.teachers-slide__title= data.title
-									p.teachers-slide__descr= data.descr
-
-							div.teachers-slide.swiper-slide
-								+pic({
-									pictureClass: 'teachers__pic',
-									ext: 'png',
-									src: 'img/5-teachers/agafonov'
+									h3.teachers-slide__title Агафонов Николай Владимирович
+									p.teachers-slide__descr Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет
+								div.teachers-slide.swiper-slide
+									+pic({
+										pictureClass: 'teachers__pic',
+										ext: 'png',
+										src: 'img/5-teachers/bahtiyarov'
+									})
+									h3.teachers-slide__title Бахтияров Камиль Рафаэльевич
+									p.teachers-slide__descr Доктор медицинских наук, профессор, врач акушер-гинеколог
+								div.teachers-slide.swiper-slide
+									+pic({
+										pictureClass: 'teachers__pic',
+										ext: 'png',
+										src: 'img/5-teachers/bikov'
+									})
+									h3.teachers-slide__title Быков  Алексей Юрьевич
+									p.teachers-slide__descr Врач-нейрохирург, член Европейской аcсоциации клинической гипертермии, эксперт по радиохирургическим методам лечения, продакт-менеджер компании Zerts
+		
+								+teacherSlide({
+									src: 'img/5-teachers/agafonov',
+									title: 'Агафонов Николай Владимирович',
+									descr: 'Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет'
 								})
-								h3.teachers-slide__title Агафонов Николай Владимирович
-								p.teachers-slide__descr Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет
-							div.teachers-slide.swiper-slide
-								+pic({
-									pictureClass: 'teachers__pic',
-									ext: 'png',
-									src: 'img/5-teachers/bahtiyarov'
+								+teacherSlide({
+									src: 'img/5-teachers/agafonov',
+									title: 'Агафонов Николай Владимирович',
+									descr: 'Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет'
 								})
-								h3.teachers-slide__title Бахтияров Камиль Рафаэльевич
-								p.teachers-slide__descr Доктор медицинских наук, профессор, врач акушер-гинеколог
-							div.teachers-slide.swiper-slide
-								+pic({
-									pictureClass: 'teachers__pic',
-									ext: 'png',
-									src: 'img/5-teachers/bikov'
-								})
-								h3.teachers-slide__title Быков  Алексей Юрьевич
-								p.teachers-slide__descr Врач-нейрохирург, член Европейской аcсоциации клинической гипертермии, эксперт по радиохирургическим методам лечения, продакт-менеджер компании Zerts
-	
-							+teacherSlide({
-								src: 'img/5-teachers/agafonov',
-								title: 'Агафонов Николай Владимирович',
-								descr: 'Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет'
-							})
-							+teacherSlide({
-								src: 'img/5-teachers/agafonov',
-								title: 'Агафонов Николай Владимирович',
-								descr: 'Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет'
-							})
-							+teacherSlide({
-								src: 'img/5-teachers/agafonov',
-								title: 'Агафонов Николай Владимирович',
-								descr: 'Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет'
-							})
+								//- +teacherSlide({
+								//-     src: 'img/5-teachers/agafonov',
+								//-     title: 'Агафонов Николай Владимирович',
+								//-     descr: 'Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет'
+								//- })
 						.teachers-slider-scrollbar.slider-scrollbar
 						.teachers-slider-prev.slider-button
-							img(src="img/0-common/arrow-left.svg", alt="")
+							+leftArrow('news-slider__arrow')
+							//- img(src="img/0-common/arrow-left.svg", alt="")
 						.teachers-slider-next.slider-button
-							img(src="img/0-common/arrow-right.svg", alt="")
+							+rightArrow('news-slider__arrow')
+							//- img(src="img/0-common/arrow-right.svg", alt="")
 							
 
 
@@ -379,70 +427,99 @@ block content
 								button.meetup__primary-button.primary-button.webinar__button-cta Принять участие
 								button.meetup__secondary-button.thirdly-button.webinar__button-more Подробнее
 
+			.meetups-more-wrapper
+				button.secondary-button.meetup-more Показать еще
 
 
-	.news-wrapper
+	.news-wrapper#news
 		.news-container.container
 			.news
 				h2.section__title.news__title Новости
-				.news-slider-wrapper.swiper-container
-					.news-slider.swiper-wrapper
-						div.news-item.swiper-slide
-							+pic({
-								pictureClass: 'news__picture',
-								ext: 'png',
-								src: 'img/7-news/news-1'
-							})
-							.news-info
-								h3.news-item__title Заголовок новости
-								p.news-item__descr Текст описания в 2 строчки, чтобы набить обхем текста
-								div.news-bottom
-									button.news-button Подробнее
-									span.news-date 02.06.20
+				.news-slider-outer
+					.news-slider-wrapper.swiper-container
+						.news-slider.swiper-wrapper
+							div.news-item.swiper-slide
+								+pic({
+									pictureClass: 'news__picture',
+									ext: 'png',
+									src: 'img/7-news/news-1'
+								})
+								.news-info
+									h3.news-item__title Заголовок новости
+									p.news-item__descr Текст описания в 2 строчки, чтобы набить обхем текста
+									div.news-bottom
+										button.news-button Подробнее
+										span.news-date 02.06.20
+							div.news-item.swiper-slide
+								+pic({
+									pictureClass: 'news__picture',
+									ext: 'png',
+									src: 'img/7-news/news-1'
+								})
+								.news-info
+									h3.news-item__title Заголовок новости
+									p.news-item__descr Текст описания в 2 строчки, чтобы набить обхем текста
+									div.news-bottom
+										button.news-button Подробнее
+										span.news-date 02.06.20
+							div.news-item.swiper-slide
+								+pic({
+									pictureClass: 'news__picture',
+									ext: 'png',
+									src: 'img/7-news/news-1'
+								})
+								.news-info
+									h3.news-item__title Заголовок новости
+									p.news-item__descr Текст описания в 2 строчки, чтобы набить обхем текста
+									div.news-bottom
+										button.news-button Подробнее
+										span.news-date 02.06.20
 
-						div.news-item.swiper-slide
-							+pic({
-								pictureClass: 'news__picture',
-								ext: 'png',
-								src: 'img/7-news/news-2'
-							})
-							.news-info
-								h3.news-item__title Заголовок новости
-								p.news-item__descr Текст описания в 2 строчки, чтобы набить обхем текста
-								div.news-bottom
-									button.news-button Подробнее
-									span.news-date 02.06.20
+							div.news-item.swiper-slide
+								+pic({
+									pictureClass: 'news__picture',
+									ext: 'png',
+									src: 'img/7-news/news-2'
+								})
+								.news-info
+									h3.news-item__title Заголовок новости
+									p.news-item__descr Текст описания в 2 строчки, чтобы набить обхем текста
+									div.news-bottom
+										button.news-button Подробнее
+										span.news-date 02.06.20
 
-						div.news-item.swiper-slide
-							+pic({
-								pictureClass: 'news__picture',
-								ext: 'png',
-								src: 'img/7-news/news-2'
-							})
-							.news-info
-								h3.news-item__title Заголовок новости
-								p.news-item__descr Текст описания в 2 строчки, чтобы набить обхем текста
-								div.news-bottom
-									button.news-button Подробнее
-									span.news-date 02.06.20
+							div.news-item.swiper-slide
+								+pic({
+									pictureClass: 'news__picture',
+									ext: 'png',
+									src: 'img/7-news/news-2'
+								})
+								.news-info
+									h3.news-item__title Заголовок новости
+									p.news-item__descr Текст описания в 2 строчки, чтобы набить обхем текста
+									div.news-bottom
+										button.news-button Подробнее
+										span.news-date 02.06.20
 
-						div.news-item.swiper-slide
-							+pic({
-								pictureClass: 'news__picture',
-								ext: 'png',
-								src: 'img/7-news/news-2'
-							})
-							.news-info
-								h3.news-item__title Заголовок новости
-								p.news-item__descr Текст описания в 2 строчки, чтобы набить обхем текста
-								div.news-bottom
-									button.news-button Подробнее
-									span.news-date 02.06.20
+							div.news-item.swiper-slide
+								+pic({
+									pictureClass: 'news__picture',
+									ext: 'png',
+									src: 'img/7-news/news-2'
+								})
+								.news-info
+									h3.news-item__title Заголовок новости
+									p.news-item__descr Текст описания в 2 строчки, чтобы набить обхем текста
+									div.news-bottom
+										button.news-button Подробнее
+										span.news-date 02.06.20
 					.news-slider-scrollbar.slider-scrollbar
 					.news-slider-prev.slider-button
-						img(src="img/0-common/arrow-left.svg", alt="")
+						//- img(src="img/0-common/arrow-left.svg", alt="")
+						+leftArrow('news-slider__arrow')
 					.news-slider-next.slider-button
-						img(src="img/0-common/arrow-right.svg", alt="")
+						+rightArrow('news-slider__arrow')
+						//- img(src="img/0-common/arrow-right.svg", alt="")
 
 
 
@@ -454,130 +531,121 @@ block content
 			.partners-container.container
 				.partners
 					h2.section__title.partners__title Партенры
-					.partners-slider-wrap.swiper-container
-						.partners-slider.swiper-wrapper
-							div.partners-item.swiper-slide
-								div.partners-item__border
-									+pic({
-										pictureClass: 'partners__picture',
-										ext: 'png',
-										src: 'img/8-partners/gbuzvookb'
-									})
-							div.partners-item.swiper-slide
-								div.partners-item__border
-									+pic({
-										pictureClass: 'partners__picture',
-										ext: 'png',
-										src: 'img/8-partners/gedeon'
-									})
-							div.partners-item.swiper-slide
-								div.partners-item__border
-									+pic({
-										pictureClass: 'partners__picture',
-										ext: 'png',
-										src: 'img/8-partners/gkb'
-									})
-							div.partners-item.swiper-slide
-								div.partners-item__border
-									+pic({
-										pictureClass: 'partners__picture',
-										ext: 'png',
-										src: 'img/8-partners/sergiev-posad'
-									})
-							div.partners-item.swiper-slide
-								div.partners-item__border
-									+pic({
-										pictureClass: 'partners__picture',
-										ext: 'png',
-										src: 'img/8-partners/atmos'
-									})
-							div.partners-item.swiper-slide
-								div.partners-item__border
-									+pic({
-										pictureClass: 'partners__picture',
-										ext: 'png',
-										src: 'img/8-partners/atmos'
-									})
-							div.partners-item.swiper-slide
-								div.partners-item__border
-									+pic({
-										pictureClass: 'partners__picture',
-										ext: 'png',
-										src: 'img/8-partners/atmos'
-									})
+					.partners-slider-outer
+						.partners-slider-wrap.swiper-container
+							.partners-slider.swiper-wrapper
+								div.partners-item.swiper-slide
+									div.partners-item__border
+										+pic({
+											pictureClass: 'partners__picture',
+											ext: 'png',
+											src: 'img/8-partners/gbuzvookb'
+										})
+								div.partners-item.swiper-slide
+									div.partners-item__border
+										+pic({
+											pictureClass: 'partners__picture',
+											ext: 'png',
+											src: 'img/8-partners/gedeon'
+										})
+								div.partners-item.swiper-slide
+									div.partners-item__border
+										+pic({
+											pictureClass: 'partners__picture',
+											ext: 'png',
+											src: 'img/8-partners/gkb'
+										})
+								div.partners-item.swiper-slide
+									div.partners-item__border
+										+pic({
+											pictureClass: 'partners__picture',
+											ext: 'png',
+											src: 'img/8-partners/sergiev-posad'
+										})
+								div.partners-item.swiper-slide
+									div.partners-item__border
+										+pic({
+											pictureClass: 'partners__picture',
+											ext: 'png',
+											src: 'img/8-partners/atmos'
+										})
+								div.partners-item.swiper-slide
+									div.partners-item__border
+										+pic({
+											pictureClass: 'partners__picture',
+											ext: 'png',
+											src: 'img/8-partners/atmos'
+										})
+								div.partners-item.swiper-slide
+									div.partners-item__border
+										+pic({
+											pictureClass: 'partners__picture',
+											ext: 'png',
+											src: 'img/8-partners/atmos'
+										})
 						.partners-slider-scrollbar.slider-scrollbar
 						.partners-slider-prev.slider-button
-							img(src="img/0-common/arrow-left.svg", alt="")
+							+leftArrow('news-slider__arrow')
+							//- img(src="img/0-common/arrow-left.svg", alt="")
 						.partners-slider-next.slider-button
-							img(src="img/0-common/arrow-right.svg", alt="")
+							+rightArrow('news-slider__arrow')
+							//- img(src="img/0-common/arrow-right.svg", alt="")
+
+		mixin oldResourcesItem()
+			li.resourses-item
+					div.resourses-item-info
+						h3.resourses-item__title Электронно-библиотечная система
+						p.resourses__size 1 Мб
+					button.resourses-download
+						span Скачать PDF
+						img(src="img/0-common/pdf.svg", alt="")
+
+		mixin ResoursesItem(data)
+			li.resourses-item
+				a(href="#").resourses-item__link
+					img(src="img/9-resources/"+data.src, alt="resourse").resourses-item__icon
+					h3.resourses-item__name= data.name
 
 
 
 
-
-		.resourses-wrapper
+		section.resourses-wrapper#resourses
 			.resourses-container.container
 				.resourses
 					h2.section__title.resourses__title Ресурсы
 					ul.resourses-list
-						li.resourses-item
-							div.resourses-item-info
-								h3.resourses-item__title Электронно-библиотечная система
-								p.resourses__size 1 Мб
-							button.resourses-download
-								span Скачать PDF
-								img(src="img/0-common/pdf.svg", alt="")
-						li.resourses-item
-							div.resourses-item-info
-								h3.resourses-item__title Федеральное медико-биологическое агентство
-								p.resourses__size 1 Мб
-							button.resourses-download
-								span Скачать PDF
-								img(src="img/0-common/pdf.svg", alt="")
-						li.resourses-item
-							div.resourses-item-info
-								h3.resourses-item__title Портал непрерывного медицинского образования
-								p.resourses__size 1 Мб
-							button.resourses-download
-								span Скачать PDF
-								img(src="img/0-common/pdf.svg", alt="")
-						li.resourses-item
-							div.resourses-item-info
-								h3.resourses-item__title Центральная научная медицинская библиотека
-								p.resourses__size 1 Мб
-							button.resourses-download
-								span Скачать PDF
-								img(src="img/0-common/pdf.svg", alt="")
-						li.resourses-item
-							div.resourses-item-info
-								h3.resourses-item__title Электронная медицинская библиотека
-								p.resourses__size 1 Мб
-							button.resourses-download
-								span Скачать PDF
-								img(src="img/0-common/pdf.svg", alt="")
-						li.resourses-item
-							div.resourses-item-info
-								h3.resourses-item__title Фундаментальная медицинская библиотека
-								p.resourses__size 1 Мб
-							button.resourses-download
-								span Скачать PDF
-								img(src="img/0-common/pdf.svg", alt="")
-						li.resourses-item
-							div.resourses-item-info
-								h3.resourses-item__title Медицинская энциклопедия
-								p.resourses__size 1 Мб
-							button.resourses-download
-								span Скачать PDF
-								img(src="img/0-common/pdf.svg", alt="")
-						li.resourses-item
-							div.resourses-item-info
-								h3.resourses-item__title Единое окно доступа к информационным ресурсам
-								p.resourses__size 1 Мб
-							button.resourses-download
-								span Скачать PDF
-								img(src="img/0-common/pdf.svg", alt="")
-					.resourses-more-wrap
-						button.primary-button.resourses-more Показать еще
+						+ResoursesItem({
+							name: 'Электронно-библиотечная система',
+							src: 'books.svg'
+						})
+						+ResoursesItem({
+							name: 'Федеральное медико-биологическое агентство',
+							src: 'pharmacy.svg'
+						})
+						+ResoursesItem({
+							name: 'Портал непрерывного медицинского образования',
+							src: 'graduate.svg'
+						})
+						+ResoursesItem({
+							name: 'Центральная научная медицинская библиотека',
+							src: 'atom.svg'
+						})
+						+ResoursesItem({
+							name: 'Электронная медицинская библиотека',
+							src: 'caduceus.svg'
+						})
+						+ResoursesItem({
+							name: 'Фундаментальная медицинская библиотека',
+							src: 'dna.svg'
+						})
+						+ResoursesItem({
+							name: 'Медицинская энциклопедия',
+							src: 'encyclopedia.svg'
+						})
+						+ResoursesItem({
+							name: 'Единое окно доступа к информационным ресурсам',
+							src: 'file.svg'
+						})
 
 
 
@@ -630,13 +698,17 @@ block content
 									div.testimonial__date 12.06.20
 								p.testimonial__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.
 					.testimonials-more-wrap
-						button.primary-button.testimonials-more Показать еще
+						button.secondary-button.testimonials-more Показать еще
 
 
 
 
 		.form-wrapper
-			.map
+			.form-map
+				script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4e0949e6941d52d78f94a84b1d3430955dacdefab8154e7ad5c100bae25f7aa5&amp;width=100%25&amp;lang=ru_RU&amp;scroll=true")
+				//- script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4e0949e6941d52d78f94a84b1d3430955dacdefab8154e7ad5c100bae25f7aa5&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=true")
+				//- script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4e0949e6941d52d78f94a84b1d3430955dacdefab8154e7ad5c100bae25f7aa5&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=true")
+				//- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4e0949e6941d52d78f94a84b1d3430955dacdefab8154e7ad5c100bae25f7aa5&amp;source=constructor" width="100%" height="600" frameborder="0"></iframe>
 			.container
 				form.form(action="")
 					.form__border
