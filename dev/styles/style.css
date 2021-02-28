@@ -1401,7 +1401,11 @@ p {
 	.footer_get-contacts {
 		color: #fff;
 	}
-
+	.footer_get-contacts:hover {
+		border-color: #fff;
+		background-color: #fff;
+		color: var(--color-text-regular);
+	}
 	.pop-form {
 		max-width: auto;
 		width: 360px;

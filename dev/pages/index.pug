@@ -3,92 +3,43 @@ include common/mixins
 
 block content
 	main
-		.header-wrapper
-			.container.header-container
-
-				header.header
-					.header__logo
-						img(src="img/0-common/logo.svg", alt="logo")
-					.header-search
-						input(
-							type="text"
-							placeholder="Поиск").header__search
-					.socials
-						p.header__name Соцсети
-						div.socials-list
-							a.socials-item(href=`${vk}`)
-								img.socials-item__img(src="img/0-common/vk.svg", alt="vk")
-							a.socials-item(href=`${instagram}`)
-								img.socials-item__img(src="img/0-common/instagram.svg", alt="instagram")
-							a.socials-item(href=`${facebook}`)
-								img.socials-item__img(src="img/0-common/facebook.svg", alt="facebook")
-					.header-email
-						p.header__name Наша почта
-						a(href=`mailto:${email}`).header__contact #{email}
-					.header-phone
-						p.header__name Наш телефон
-						a(href=`${phoneLnk}`).header__contact #{phone}
-					button.header_get-consult.secondary-button Получить консультацию 
-
-			nav.nav.container
-				.nav-list
-					a(href="#about").nav-list-item.nav-list-item--dropdown
-						.nav-list-item__text Об академии
-					a(href="#meetups").nav-list-item
-						.nav-list-item__text Семинары
-					a(href="#meetups").nav-list-item
-						.nav-list-item__text Вебинары
-					a(href="#learning").nav-list-item
-						.nav-list-item__text Обучение
-					a(href="#media").nav-list-item.nav-list-item--dropdown
-						.nav-list-item__text Медиа
-					a(href="#news").nav-list-item
-						.nav-list-item__text Новости
-					a(href="#testimonials").nav-list-item
-						.nav-list-item__text Отзывы
-					a(href="#partners").nav-list-item
-						.nav-list-item__text Партнеры
-					a(href="#footer").nav-list-item
-						.nav-list-item__text Контакты
-
-
-
-			.hero-wrapper
-				+pic({
-					pictureClass: 'hero__picture-left',
-					ext: 'png',
-					src: 'img/1-hero/chess'
-				})
-				+pic({
-					pictureClass: 'hero__picture-right',
-					ext: 'png',
-					src: 'img/1-hero/cap'
-				})
-				.hero-container.container
-					.hero
-						h1.section__title.section__title--left Стань востребованным специалистом в сжатые сроки, не отрываясь от работы
-						ul.hero-bullets
-							li.hero-bullet Выбери одно из 
-								span.text-bold  40 направлений
-								|  переподготовки и повышения квалификации
-							li.hero-bullet Пройди теорию
-								span.text-bold  удаленно
-								| , а практику очно (в&nbsp;высокотехнологичных классах)
-							li.hero-bullet Получи
-								span.text-bold  поддержку 24/7 и диплом
-								|  по&nbsp;окончании
-						button.primary-button.hero-cta Получить консультацию
+		.hero-wrapper
+			+pic({
+				pictureClass: 'hero__picture-left',
+				ext: 'png',
+				src: 'img/1-hero/chess'
+			})
+			+pic({
+				pictureClass: 'hero__picture-right',
+				ext: 'png',
+				src: 'img/1-hero/cap'
+			})
+			.hero-container.container
+				.hero
+					h1.section__title.section__title--left.hero__title Стань востребованным специалистом в сжатые сроки, не отрываясь от&nbsp;работы
+					ul.hero-bullets
+						li.hero-bullet Выбери одно из 
+							span.text-bold  40 направлений
+							|  переподготовки и повышения квалификации
+						li.hero-bullet Пройди теорию
+							span.text-bold  удаленно
+							| , а практику очно (в&nbsp;высокотехнологичных классах)
+						li.hero-bullet Получи
+							span.text-bold  поддержку 24/7 и диплом
+							|  по&nbsp;окончании
+					button.primary-button.hero-cta Получить консультацию
 
 
 
 
 		.learning#learning
 			.container
-				h2.section__title Направления обучения в АРИТ
+				h2.section__title.learning__title Направления обучения в АРИТ
 				.learning-tabs-wrap
 					.learning-tabbar
 						button.learning-tab__control.learning-tab__control--skillup.learning-tab__control--active Профессиональная переподготовка
 						button.learning-tab__control.learning-tab__control--retrain Повышение квалификации 
+
 					.learning-tab--retrain
 						div.learning-tab
 							ul.learning-tab-list
@@ -133,6 +84,7 @@ block content
 								li.learning-tab-list-item Электробезопасность
 								li.learning-tab-list-item Энергетика
 								li.learning-tab-list-item Юриспруденция
+						button.learning-more--retrain.secondary-button Показать еще
 					.learning-tab--skillup.learning-tab--active
 						.learning-tab
 							ul.learning-tab-list
@@ -176,7 +128,7 @@ block content
 								li.learning-tab-list-item Экономика и финансы
 								li.learning-tab-list-item Энергетика
 								li.learning-tab-list-item Юриспруденция
-			
+						button.learning-more--skillup.secondary-button Показать еще
 
 
 		.about-wrap#about
@@ -684,79 +636,3 @@ block content
 						//-         p.testimonial__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.
 					.testimonials-more-wrap
 						button.secondary-button.testimonials-more Показать еще
-
-
-
-
-		.form-wrapper
-			.form-map
-				script(class="ym-lazy" type="text/javascript" charset="utf-8" async data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4e0949e6941d52d78f94a84b1d3430955dacdefab8154e7ad5c100bae25f7aa5&amp;width=100%25&amp;lang=ru_RU&amp;scroll=true")
-			.container
-				form.form(action="")
-					.form__border
-						h2.form__title Оставить заявку
-						div.form-fields
-							div.form-input-wrap
-								input(type="hidden", name="fomrname")
-							div.form-input-wrap
-								input.form__input(
-									type="type"
-									placeholder="Имя")
-							div.form-input-wrap
-								input.form__input(
-									type="type"
-									placeholder="Телефон")
-							div.form-input-wrap
-								input.form__input(
-									type="type"
-									placeholder="Эл. почта")
-							div.form-input-wrap.form-input-wrap--button
-								button.primary-button.form__button Отправить заявку
-						.gdpr Нажимая на эту кнопку, Вы даете согласие 
-							button.gdpr__button на обработку персональных данных
-
-
-
-
-
-
-		footer.footer-wrapper#footer
-			.container
-				.footer
-					.footer__logo
-						img(src="img/0-common/logo-solid.svg", alt="logo")
-						p.footer-copyright Компания &laquo;Академия развития инновационных технологий&raquo;<br>Все права защищены &copy; 2010-2021
-					nav.footer-nav
-						h3.footer-title Разделы
-						ul.footer-nav-list
-							li.footer-nav-list-item
-								a.footer-nav-list-item__text(href="#about") Об академии
-							li.footer-nav-list-item
-								a.footer-nav-list-item__text(href="#seminars") Семинары
-							li.footer-nav-list-item
-								a.footer-nav-list-item__text(href="#webinars") Вебинары
-							li.footer-nav-list-item
-								a.footer-nav-list-item__text(href="#learning") Обучение
-							li.footer-nav-list-item
-								a.footer-nav-list-item__text(href="#media") Медиа
-							li.footer-nav-list-item
-								a.footer-nav-list-item__text(href="#news") Новости
-							li.footer-nav-list-item
-								a.footer-nav-list-item__text(href="#testimonials") Отзывы
-							li.footer-nav-list-item
-								a.footer-nav-list-item__text(href="#partners") Партнеры
-							li.footer-nav-list-item
-								a.footer-nav-list-item__text(href="#contacts") Контакты
-					.footer-contacts-wrap
-						h3.footer-title Контакты
-						.footer-contacts
-							.footer-contact.footer-contact--geo
-								img(src="img/0-common/geo-footer.svg", alt="geo")
-								p.footer-contacts__text #{geo}
-							a(href=`${phoneLnk}`).footer-contact.footer-contact--phone
-								img(src="img/0-common/phone.svg", alt="phone")
-								p.footer-contacts__text #{phone}
-							a(href=`mailto:${mail}`).footer-contact.footer-contact--mail
-								img(src="img/0-common/mail.svg", alt="email")
-								.footer-contacts__text #{email}
-							button.footer_get-contacts.secondary-button Получить консультацию

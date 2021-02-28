@@ -146,6 +146,20 @@ let webinars = {
 showInitialItems(testimonials)
 showInitialItems(seminars)
 showInitialItems(webinars)
+showInitialItems({
+	items: '.learning-tab--skillup .learning-tab-list-item',
+	initialShow: 6,
+	itemsToShow: 6,
+	currentItem: 0,
+	clickHandler: '.learning-more--skillup'
+})
+showInitialItems({
+	items: '.learning-tab--retrain .learning-tab-list-item',
+	initialShow: 6,
+	itemsToShow: 6,
+	currentItem: 0,
+	clickHandler: '.learning-more--retrain'
+})
 
 
 const lazyYmap = () => {

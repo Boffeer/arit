@@ -1,0 +1,50 @@
+.header-wrapper
+	.container.header-container
+
+		header.header
+			.header__logo
+				img(src="img/0-common/logo.svg", alt="logo")
+			.header-search
+				input(
+					type="text"
+					placeholder="Поиск").header__search
+			.socials
+				p.header__name Соцсети
+				div.socials-list
+					a.socials-item(href=`${vk}`)
+						img.socials-item__img(src="img/0-common/vk.svg", alt="vk")
+					a.socials-item(href=`${instagram}`)
+						img.socials-item__img(src="img/0-common/instagram.svg", alt="instagram")
+					a.socials-item(href=`${facebook}`)
+						img.socials-item__img(src="img/0-common/facebook.svg", alt="facebook")
+			.header-email
+				p.header__name Наша почта
+				a(href=`mailto:${email}`).header__contact #{email}
+			.header-phone
+				p.header__name Наш телефон
+				a(href=`${phoneLnk}`).header__contact #{phone}
+			button.header_get-consult.secondary-button Получить консультацию 
+
+	nav.nav.container
+		.nav-list
+			a(href="#about").nav-list-item.nav-list-item--dropdown
+				.nav-list-item__text Об академии
+			a(href="#meetups").nav-list-item
+				.nav-list-item__text Семинары
+			a(href="#meetups").nav-list-item
+				.nav-list-item__text Вебинары
+			a(href="#learning").nav-list-item
+				.nav-list-item__text Обучение
+			a(href="#media").nav-list-item.nav-list-item--dropdown
+				.nav-list-item__text Медиа
+			a(href="#news").nav-list-item
+				.nav-list-item__text Новости
+			a(href="#testimonials").nav-list-item
+				.nav-list-item__text Отзывы
+			a(href="#partners").nav-list-item
+				.nav-list-item__text Партнеры
+			a(href="#footer").nav-list-item
+				.nav-list-item__text Контакты
+
+
+

@@ -1,2 +1,148 @@
 @media (max-width: 480px) {
+
+	:root {
+		--f-header: 12px;
+		--f-regular: 14px;
+		--f-title: 18px;
+	}
+	.container{
+		max-width: 320px;
+	}
+	.primary-button {
+		max-width: 290px;
+		width: 100%;
+	}
+
+
+
+
+
+	.header {
+		padding: 15px 0;
+	}
+	.header__logo {
+		width: 50px;
+	}
+	.header__logo img {
+		width: 100%;
+	}
+
+	.socials,
+	.header-phone,
+	.header-email,
+	.header_get-consult {
+		display: none;
+	}
+	.header-search:before {
+		left: 5px;
+		top: 5px;
+	}
+	.header__search {
+		padding: 6px 6px 6px 30px;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		border-bottom: 1px solid var(--color-text-regular);
+		border-radius: 0;
+		max-width: 120px;
+		font-size: 14px;
+	}	
+	.nav {
+		display: none;
+	}
+
+	
+
+
+	.hero-wrapper {
+		height: 760px;
+		margin-bottom: 50px;
+	}
+	.hero {
+		padding-top: 30px;
+		background-position: 25% bottom;
+		background-size: 180%;
+	}
+	.hero-container {
+		padding-right: 10px;
+	}
+	.hero__title {
+		margin-bottom: 20px;
+		font-size: 20px;
+	}
+	.hero-bullets {
+		padding-left: 15px;
+	}
+	.hero-bullets:before {
+		left: 1px;
+		top: 10px;
+		height: 122px;
+	}
+	.hero-bullet {
+		margin-bottom: 18px;
+
+	}
+	.hero-bullet:before {
+		left: -21px;
+		top: -1px;
+		box-shadow: none;
+		width: 6px;
+		height: 6px;
+		border: none;
+	}
+	.hero__picture-left,
+	.hero__picture-right {
+		display: none;
+	}
+
+
+
+
+	.learning__title {
+		max-width: 70%;
+		margin-bottom: 30px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.learning-tabs-wrap {
+		padding: 8px;
+		position: relative;
+	}
+	.learning-tabbar {
+		flex-direction: column;
+		margin-bottom: 10px;
+		position: sticky;
+		top: 10px;
+	}
+	.learning-tab__control {
+		width: 100%;
+		box-sizing: border-box;
+		padding-left: 50px;
+		padding-right: 50px;
+		height: 65px;
+		margin-bottom: 10px;
+		background-color: var(--color-surface-dark);
+	}
+	.learning-tab__control--skillup.learning-tab__control--active {
+		-webkit-clip-path: none;
+		border-radius: 0;
+	}
+	.learning-tab__control--retrain.learning-tab__control--active {
+		-webkit-clip-path: none;
+		border-radius: 0;
+	}
+	.learning-tab {
+		flex-direction: column;
+		padding-left: 20px;
+	}
+	.learning-tab-list {
+		margin: 0;
+	}
+	.learning-tab-list:before {
+		display: none;
+	}
+	.learning-tab-list-item {
+		margin-bottom: 22px;
+		font-size: 14px;
+	}
 }

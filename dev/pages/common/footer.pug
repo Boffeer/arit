@@ -1,1 +1,72 @@
+.form-wrapper
+	.form-map
+		script(class="ym-lazy" type="text/javascript" charset="utf-8" async data-src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4e0949e6941d52d78f94a84b1d3430955dacdefab8154e7ad5c100bae25f7aa5&amp;width=100%25&amp;lang=ru_RU&amp;scroll=true")
+	.container
+		form.form(action="")
+			.form__border
+				h2.form__title Оставить заявку
+				div.form-fields
+					div.form-input-wrap
+						input(type="hidden", name="fomrname")
+					div.form-input-wrap
+						input.form__input(
+							type="type"
+							placeholder="Имя")
+					div.form-input-wrap
+						input.form__input(
+							type="type"
+							placeholder="Телефон")
+					div.form-input-wrap
+						input.form__input(
+							type="type"
+							placeholder="Эл. почта")
+					div.form-input-wrap.form-input-wrap--button
+						button.primary-button.form__button Отправить заявку
+				.gdpr Нажимая на эту кнопку, Вы даете согласие 
+					button.gdpr__button на обработку персональных данных
 
+
+
+
+
+
+footer.footer-wrapper#footer
+	.container
+		.footer
+			.footer__logo
+				img(src="img/0-common/logo-solid.svg", alt="logo")
+				p.footer-copyright Компания &laquo;Академия развития инновационных технологий&raquo;<br>Все права защищены &copy; 2010-2021
+			nav.footer-nav
+				h3.footer-title Разделы
+				ul.footer-nav-list
+					li.footer-nav-list-item
+						a.footer-nav-list-item__text(href="#about") Об академии
+					li.footer-nav-list-item
+						a.footer-nav-list-item__text(href="#seminars") Семинары
+					li.footer-nav-list-item
+						a.footer-nav-list-item__text(href="#webinars") Вебинары
+					li.footer-nav-list-item
+						a.footer-nav-list-item__text(href="#learning") Обучение
+					li.footer-nav-list-item
+						a.footer-nav-list-item__text(href="#media") Медиа
+					li.footer-nav-list-item
+						a.footer-nav-list-item__text(href="#news") Новости
+					li.footer-nav-list-item
+						a.footer-nav-list-item__text(href="#testimonials") Отзывы
+					li.footer-nav-list-item
+						a.footer-nav-list-item__text(href="#partners") Партнеры
+					li.footer-nav-list-item
+						a.footer-nav-list-item__text(href="#contacts") Контакты
+			.footer-contacts-wrap
+				h3.footer-title Контакты
+				.footer-contacts
+					.footer-contact.footer-contact--geo
+						img(src="img/0-common/geo-footer.svg", alt="geo")
+						p.footer-contacts__text #{geo}
+					a(href=`${phoneLnk}`).footer-contact.footer-contact--phone
+						img(src="img/0-common/phone.svg", alt="phone")
+						p.footer-contacts__text #{phone}
+					a(href=`mailto:${mail}`).footer-contact.footer-contact--mail
+						img(src="img/0-common/mail.svg", alt="email")
+						.footer-contacts__text #{email}
+					button.footer_get-contacts.secondary-button Получить консультацию
