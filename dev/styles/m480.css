@@ -8,12 +8,29 @@
 	.container{
 		max-width: 320px;
 	}
+	.section__title {
+		margin-bottom: 30px;
+	}
 	.primary-button {
 		max-width: 290px;
 		width: 100%;
+		padding-top: 14px;
+		padding-bottom: 14px;
 	}
 	.secondary-button {
-		width: 100%;
+		width: 85%;
+		padding: 15px;
+		margin: 0 auto;
+	}
+
+	.slider-button {
+		display: none;
+	}
+	.swiper-scrollbar-drag {
+		height: 5px;
+	}
+	.swiper-scrollbar-drag:after {
+		bottom: -1px;
 	}
 
 
@@ -73,6 +90,10 @@
 		margin-bottom: 20px;
 		font-size: 20px;
 	}
+	.hero-cta {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 	.hero-bullets {
 		padding-left: 15px;
 	}
@@ -108,7 +129,7 @@
 		margin-right: auto;
 	}
 	.learning-tabs-wrap {
-		padding: 8px;
+		padding: 8px 8px 30px;
 		position: relative;
 	}
 	.learning-tabbar {
@@ -139,6 +160,7 @@
 	.learning-tab {
 		flex-direction: column;
 		padding-left: 20px;
+		margin-bottom: 10px;
 	}
 	.learning-tab-list {
 		margin: 0;
@@ -154,4 +176,133 @@
 	.learning-more--skillup {
 		display: block;
 	}
+
+
+	.about-wrap {
+		margin-bottom: 0;
+		padding-bottom: 30px;
+	}
+	.about-container {
+		flex-direction: column;
+	}
+	.about {
+		padding-top: 25px;
+		padding-bottom: 0;
+		margin-right: 0;
+	}
+	.about-more {
+		display: block;
+	}
+
+	.about-picture {
+		transform: none;
+	}
+	.about-picture__left,
+	.about-picture__right,
+	.about-picture__right-2 {
+		display: none;
+	}
+	.about__title {
+		margin-bottom: 20px;
+	}
+	.about__text {
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
+	.about-more {
+		max-width: 180px;
+		font-size: 14px;
+		margin-bottom: 30px;
+		font-family: var(--ff-extra);
+	}
+
+
+	.features {
+		padding-bottom: 50px;
+	}
+	.features__title {
+		margin-bottom: 30px;
+	}
+	.features-list {
+		flex-direction: column;
+	}
+	.features-list-item {
+		width: 100%;
+		padding: 25px 10px 25px 25px;
+	}
+	.features-item__text {
+		font-size: 15px;
+		padding-right: 0;
+		margin-bottom: 100px;
+	}
+	.features-list-item:nth-child(2) .features-item__text,
+	.features-list-item:nth-child(3) .features-item__text {
+		margin-bottom: 115px;
+	}
+	.features-list-item:nth-child(5) .features-item__text 
+	{
+		margin-bottom: 80px;
+	}
+	.features-list-item:nth-child(6) .features-item__text  {
+		padding-right: 70px;
+		margin-bottom: 85px;
+	}
+
+	.teachers-wrap {
+		padding-top: 50px;
+		padding-bottom: 0;
+	}
+	.teachers__title {
+		margin-bottom: 40px;
+	}
+	.teachers-slider-wrap {
+		max-width: 230px
+	}
+	.teachers-slider {
+		margin-bottom: 50px;
+	} 
+	.teachers__pic {
+		margin-bottom: 10px;
+	}
+	.teachers-slide__descr {
+		padding-right: 10px;
+		font-size: 14px;
+	}
+		
+	.meetups-wrapper {
+	}
+	.meetups-category {
+		max-width: 290px;
+	}
+
+	.meetup-info {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.meetup__title {
+		margin-bottom: 18px;
+		margin-bottom: 10px;
+	}
+	.meetup-location {
+		max-width: 100%;
+		margin-bottom: 15px;
+	}
+	.meetup-about p {
+		font-size: 14px;
+	}
+	.meetup-about img {
+		max-width: 25px;
+	}
+	.meetup-buttons {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.meetup__primary-button {
+		margin-bottom: 15px;
+	}
+	.meetup__secondary-button {
+		font-size: 10px;
+		font-family: var(--ff-extra);
+	}
+
 }

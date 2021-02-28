@@ -35,25 +35,25 @@ retrainTabHandler.addEventListener('click', function(){
 
 // sliders
 const teachersSlider = new Swiper('.teachers-slider-wrap',{
-	// slidesPerView: 1,
-	slidesPerView: 3,
-	slidesPerGroup: 3,
-	slidesPerColumn: 1,
+	slidesPerView: 1,
+	// slidesPerColumn: 1,
 	spaceBetween: 50,
-	navigation: {
-		nextEl: '.teachers-slider-next',
-		prevEl: '.teachers-slider-prev',
-	},
+	autoHeight: true,
+	// centerInsufficientSlides: true,
+	centeredSliderBounds: true,
 	scrollbar: {
 		el: '.teachers-slider-scrollbar',
 		hide: false,
 	},
-	// centerInsufficientSlides: true,
-	centeredSliderBounds: true,
 	breakpoints: {
 		// when window width is >= 320px
 		1200: {
+			slidesPerGroup: 3,
 			slidesPerView: 3,
+			navigation: {
+				nextEl: '.teachers-slider-next',
+				prevEl: '.teachers-slider-prev',
+			},
 		},
 		
 	}
@@ -160,6 +160,13 @@ if (window.innerWidth < 1000){
 		itemsToShow: 6,
 		currentItem: 0,
 		clickHandler: '.learning-more--retrain'
+	})
+	showInitialItems({
+		items: '.about__text',
+		initialShow: 2,
+		itemsToShow: 4,
+		currentItem: 0,
+		clickHandler: '.about-more'
 	})
 }
 
