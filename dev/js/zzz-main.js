@@ -1,3 +1,6 @@
+//
+// Learning tabs
+//
 const skillupTabHandler = document.querySelector('.learning-tab__control--skillup');
 const skillupTab = document.querySelector('.learning-tab--skillup');
 const retrainTabHandler = document.querySelector('.learning-tab__control--retrain');
@@ -75,5 +78,58 @@ const partnersSlider = new Swiper('.partners-slider-wrap',{
 })
 
 
+// Testimonials
+
+let testimonials = {
+	items: [...document.querySelectorAll('.testimonial-item')],
+	items: '.testimonial-item',
+	// items: [...document.querySelectorAll('.testimonial-item[hidden]')],
+	initialShow: 2,
+	itemsToShow: 2,
+	currentItem: 0,
+	clickHandler: '.testimonials-more'
+}
 
 
+const showInitialItems = ($) => {
+	let items = [...document.querySelectorAll($.items)] 
+	items.map(mapped => mapped.setAttribute('hidden', true))
+	items.slice(0,$.initialShow).map(mapped => mapped.removeAttribute('hidden'));
+	$.currentItem+= $.itemsToShow;
+
+	let clickHandler = document.querySelector($.clickHandler
+	)
+	clickHandler.addEventListener('click', function(){
+		console.log(`
+			allItems: ${items.length}
+			currentItem: ${$.currentItem}
+			itemsToShow: ${$.itemsToShow}
+		`)
+		$.currentItem+= $.itemsToShow;
+
+		if ($.currentItem > (items.length - 1)) {
+			clickHandler.setAttribute('hidden', true)
+		}
+		items.slice($.currentItem - $.itemsToShow, $.currentItem).map(mapped => mapped.removeAttribute('hidden'))
+	})
+}
+
+let seminars = {
+	items: '.meetups-item--seminar',
+	initialShow: 2,
+	itemsToShow: 2,
+	currentItem: 0,
+	clickHandler: '.meetups-more'
+
+}
+let webinars = {
+	items: '.meetups-item--webinar',
+	initialShow: 2,
+	itemsToShow: 2,
+	currentItem: 0,
+	clickHandler: '.meetups-more'
+
+}
+showInitialItems(testimonials)
+showInitialItems(seminars)
+showInitialItems(webinars)

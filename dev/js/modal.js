@@ -17,21 +17,37 @@ function popToggle($popWrap, $pop){
 	isPopHidden
 		? showPop(popWrap, pop)
 		: closePop(popWrap, pop)
+	console.log($popWrap, $pop, 'toggled')
+}
+
+
+function popaAddClasses($popWrap, $pop) {
+	$popWrap.classList.add('pop-wrap')
+	$pop.classList.add('pop')
 }
 
 function popa(data){
-	data.clickTrigger.addEventListener("click", () => popToggle(data.popWrap, data.pop));
-	data.popCloser.addEventListener('click', () => closePop(data.popWrap, data.pop));
+	popaAddClasses(data.popWrap, data.pop)
+	// let opener = [...document.querySelectorAll(data.clickTrigger)];
+	// let closer = [...document.querySelectorAll(data.popCloser)];
+	let opener = document.querySelector(data.clickTrigger);
+	let closer = document.querySelector( data.popCloser );
+	console.log(opener, closer)
+	opener.addEventListener("click", () => popToggle(data.popWrap, data.pop));
+	closer.addEventListener('click', () => closePop(data.popWrap, data.pop));
+	
+	// opener.map(mapped => mapped.addEventListener("click", () => popToggle(data.popWrap, data.pop)));
+	// closer.map(mapped => mapped.addEventListener('click', () => closePop(data.popWrap, data.pop)));
 }
 
-// const btn = document.querySelector('.pop-opener');
-// const closeBtn = document.querySelector('.pop-closer');
-// const popWrap = document.querySelector('.pop-wrap');
-// const pop = document.querySelector('.pop');
-//
-// popa({
-//     clickTrigger: btn,
-//     popWrap: popWrap,
-//     pop: pop,
-//     popCloser: closeBtn,
-// })
+const btn = '.header_get-consult';
+const closeBtn = '.pop-closer';
+const popWrap = document.querySelector('.consult-pop-wrap');
+const pop = document.querySelector('.consult-pop');
+
+popa({
+	clickTrigger: btn,
+	popWrap: popWrap,
+	pop: pop,
+	popCloser: closeBtn,
+})

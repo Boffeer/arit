@@ -300,7 +300,9 @@ p {
 	z-index: -2;
 	background-color: var(--color-lines);
 }
-
+.swiper-button-disabled {
+	opacity: 0.3;
+}
 .swiper-scrollbar-drag {
 	max-width: 80px !important;
 	border-radius: 0;
@@ -778,19 +780,24 @@ p {
 	}
 	
 	.meetups-item {
+		margin-bottom: 30px;
+	}
+
+	.meetups-category {
 		box-sizing: border-box;
 		max-width: 420px;
 		position: relative
 	}
-	.meetups-item:nth-child(1):after {
+	.meetups-category:nth-child(1):after {
 		content: '';
 		display: block;
 		position: absolute;
 		top: 0;
-		right: -90px;
+		right: -85px;
 		background-color: #ececec;
 		width: 1px;
 		height: 720px;
+		height: 100%;
 	}
 	.meetups__picture {
 		border-radius: 7px 7px 0 0;
@@ -1119,7 +1126,7 @@ p {
 		align-items: flex-start;
 		margin-bottom: 35px;
 	}
-	.testimonial:nth-child(even) {
+	.testimonial-item:nth-child(even) .testimonial{
 		flex-direction: row-reverse;
 	}
 	.testimonial__picture {
@@ -1148,7 +1155,7 @@ p {
 		clip-path: polygon(100% 0, 0 50%, 100% 100%);
 		-webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);
 	}
-	.testimonial:nth-child(even) .testimonial-message:before {
+	.testimonial-item:nth-child(even) .testimonial-message:before {
 		left: unset;
 		right: -15px;
 		-webkit-clip-path: polygon(0 0, 0 100%, 100% 50%);
@@ -1348,5 +1355,10 @@ p {
 	}
 	.footer_get-contacts {
 		color: #fff;
+	}
+
+	.pop-form {
+		max-width: auto;
+		width: 360px;
 	}
 @import './m480.css';

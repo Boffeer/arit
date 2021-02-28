@@ -387,48 +387,23 @@ block content
 		.meetups-wrapper
 			.meetups-container.container
 				.meetups
-					.meetups-item
+					.meetups-category
 						h2.section__title Семинары
-						+pic({
-							pictureClass: 'meetups__picture',
-							ext: 'png',
-							src: 'img/6-meetups/seminar'
-						})
-						.meetup-info
-							h3.meetup__title Название мероприятия
-							.meetup-about
-								.meetup-location
-									img(src="img/0-common/geo.svg", alt="geo-icon")
-									p г. Санкт-Петербург, ул. 50 лет ВЛКСМ д.22, офис 351
-								.meetup-time
-									img(src="img/0-common/time.svg")
-									p 26.03.21
-							.meetup-buttons
-								button.meetup__primary-button.primary-button.seminar__button-cta Принять участие
-								button.meetup__secondary-button.thirdly-button.seminar__button-more Подробнее
-
-					.meetups-item
+						+SeminarItem()
+						+SeminarItem()
+						+SeminarItem()
+						+SeminarItem()
+						+SeminarItem()
+					.meetups-category
 						h2.section__title Вебинары
-						+pic({
-							pictureClass: 'meetups__picture',
-							ext: 'png',
-							src: 'img/6-meetups/webinar'
-						})
-						.meetup-info
-							h3.meetup__title Название мероприятия
-							.meetup-about
-								.meetup-location
-									img(src="img/0-common/geo.svg", alt="geo-icon")
-									p г. Санкт-Петербург, ул. 50 лет ВЛКСМ д.22, офис 351
-								.meetup-time
-									img(src="img/0-common/time.svg")
-									p 26.03.21
-							.meetup-buttons
-								button.meetup__primary-button.primary-button.webinar__button-cta Принять участие
-								button.meetup__secondary-button.thirdly-button.webinar__button-more Подробнее
+						+WebinarItem()
+						+WebinarItem()
+						+WebinarItem()
+						+WebinarItem()
+						+WebinarItem()
 
 			.meetups-more-wrapper
-				button.secondary-button.meetup-more Показать еще
+				button.secondary-button.meetups-more Показать еще
 
 
 	.news-wrapper#news
@@ -658,45 +633,55 @@ block content
 				.testimonials
 					h2.section__title.testimonials__title Отзывы
 					ul.testimonials-list
-						li.testimonial
-							+pic({
-								pictureClass: 'testimonial__picture',
-								ext: 'png',
-								src: 'img/10-testimonials/testimonial-1'
-							})
-							div.testimonial-message
-								div.testimonial-message-info
-									div.testimonial-who
-										h3.testimonial-who__name Оксана Иванова
-										p.testimonial-who__position Директор MacDonalds
-									div.testimonial__date 02.06.20
-								p.testimonial__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.
-						li.testimonial
-							+pic({
-								pictureClass: 'testimonial__picture',
-								ext: 'png',
-								src: 'img/10-testimonials/testimonial-3-1'
-							})
-							div.testimonial-message
-								div.testimonial-message-info
-									div.testimonial-who
-										h3.testimonial-who__name Оксана Иванова
-										p.testimonial-who__position Директор MacDonalds
-									div.testimonial__date 21.06.20
-								p.testimonial__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.
-						li.testimonial
-							+pic({
-								pictureClass: 'testimonial__picture',
-								ext: 'png',
-								src: 'img/10-testimonials/testimonial-3'
-							})
-							div.testimonial-message
-								div.testimonial-message-info
-									div.testimonial-who
-										h3.testimonial-who__name Артем Репин
-										p.testimonial-who__position Основатель Apple
-									div.testimonial__date 12.06.20
-								p.testimonial__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.
+						mixin Testimonial(numb)
+							li.testimonial-item(hidden class= numb)
+								div.testimonial
+									+pic({
+										pictureClass: 'testimonial__picture',
+										ext: 'png',
+										src: 'img/10-testimonials/testimonial-1'
+									})
+									div.testimonial-message
+										div.testimonial-message-info
+											div.testimonial-who
+												h3.testimonial-who__name Оксана Иванова
+												p.testimonial-who__position Директор MacDonalds
+											div.testimonial__date 02.06.20
+										p.testimonial__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.
+
+
+						+Testimonial('1')
+						+Testimonial('2')
+						+Testimonial('3')
+						+Testimonial('4')
+						+Testimonial('5')
+						+Testimonial('6')
+						//- li.testimonial
+						//-     +pic({
+						//-         pictureClass: 'testimonial__picture',
+						//-         ext: 'png',
+						//-         src: 'img/10-testimonials/testimonial-3-1'
+						//-     })
+						//-     div.testimonial-message
+						//-         div.testimonial-message-info
+						//-             div.testimonial-who
+						//-                 h3.testimonial-who__name Оксана Иванова
+						//-                 p.testimonial-who__position Директор MacDonalds
+						//-             div.testimonial__date 21.06.20
+						//-         p.testimonial__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.
+						//- li.testimonial
+						//-     +pic({
+						//-         pictureClass: 'testimonial__picture',
+						//-         ext: 'png',
+						//-         src: 'img/10-testimonials/testimonial-3'
+						//-     })
+						//-     div.testimonial-message
+						//-         div.testimonial-message-info
+						//-             div.testimonial-who
+						//-                 h3.testimonial-who__name Артем Репин
+						//-                 p.testimonial-who__position Основатель Apple
+						//-             div.testimonial__date 12.06.20
+						//-         p.testimonial__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.
 					.testimonials-more-wrap
 						button.secondary-button.testimonials-more Показать еще
 
@@ -705,10 +690,7 @@ block content
 
 		.form-wrapper
 			.form-map
-				script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4e0949e6941d52d78f94a84b1d3430955dacdefab8154e7ad5c100bae25f7aa5&amp;width=100%25&amp;lang=ru_RU&amp;scroll=true")
-				//- script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4e0949e6941d52d78f94a84b1d3430955dacdefab8154e7ad5c100bae25f7aa5&amp;width=100%25&amp;height=720&amp;lang=ru_RU&amp;scroll=true")
-				//- script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4e0949e6941d52d78f94a84b1d3430955dacdefab8154e7ad5c100bae25f7aa5&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=true")
-				//- <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4e0949e6941d52d78f94a84b1d3430955dacdefab8154e7ad5c100bae25f7aa5&amp;source=constructor" width="100%" height="600" frameborder="0"></iframe>
+				//- script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4e0949e6941d52d78f94a84b1d3430955dacdefab8154e7ad5c100bae25f7aa5&amp;width=100%25&amp;lang=ru_RU&amp;scroll=true")
 			.container
 				form.form(action="")
 					.form__border
