@@ -629,7 +629,10 @@ p {
 		left: -20px;
 		top: 5px;
 	}
-
+	.learning-more--retrain,
+	.learning-more--skillup {
+		display: none;
+	}
 
 
 

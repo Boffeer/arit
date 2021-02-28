@@ -146,44 +146,45 @@ let webinars = {
 showInitialItems(testimonials)
 showInitialItems(seminars)
 showInitialItems(webinars)
-showInitialItems({
-	items: '.learning-tab--skillup .learning-tab-list-item',
-	initialShow: 6,
-	itemsToShow: 6,
-	currentItem: 0,
-	clickHandler: '.learning-more--skillup'
-})
-showInitialItems({
-	items: '.learning-tab--retrain .learning-tab-list-item',
-	initialShow: 6,
-	itemsToShow: 6,
-	currentItem: 0,
-	clickHandler: '.learning-more--retrain'
-})
-
-
-const lazyYmap = () => {
-	let mapContainer = document.querySelector('.form-map');
-	let optionsMap = {
-		once: true,
-		passive: true,
-		capture: true
-	};
-	// mapContainer.addEventListener('click')
-
-	let mapLoaded = false;
-	function startLazyMap(){
-		if (!mapLoaded) {
-			let mapBlock = document.querySelector('.ym-lazy');
-			mapLoaded = true;
-			mapBlock.setAttribute('src', mapBlock.getAttribute('data-src'));
-			mapBlock.removeAttribute('data_src');
-			console.log('Ym loaded')
-		}
-	}
-	startLazyMap()
+if (window.innerWidth < 1000){
+	showInitialItems({
+		items: '.learning-tab--skillup .learning-tab-list-item',
+		initialShow: 6,
+		itemsToShow: 6,
+		currentItem: 0,
+		clickHandler: '.learning-more--skillup'
+	})
+	showInitialItems({
+		items: '.learning-tab--retrain .learning-tab-list-item',
+		initialShow: 6,
+		itemsToShow: 6,
+		currentItem: 0,
+		clickHandler: '.learning-more--retrain'
+	})
 }
 
-setTimeout(function(){
-	lazyYmap()
-},10000)
+	const lazyYmap = () => {
+		let mapContainer = document.querySelector('.form-map');
+		let optionsMap = {
+			once: true,
+			passive: true,
+			capture: true
+		};
+		// mapContainer.addEventListener('click')
+
+		let mapLoaded = false;
+		function startLazyMap(){
+			if (!mapLoaded) {
+				let mapBlock = document.querySelector('.ym-lazy');
+				mapLoaded = true;
+				mapBlock.setAttribute('src', mapBlock.getAttribute('data-src'));
+				mapBlock.removeAttribute('data_src');
+				console.log('Ym loaded')
+			}
+		}
+		startLazyMap()
+	}
+
+	setTimeout(function(){
+		lazyYmap()
+	},10000)

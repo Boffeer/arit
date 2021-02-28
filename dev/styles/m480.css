@@ -12,6 +12,9 @@
 		max-width: 290px;
 		width: 100%;
 	}
+	.secondary-button {
+		width: 100%;
+	}
 
 
 
@@ -146,5 +149,9 @@
 	.learning-tab-list-item {
 		margin-bottom: 22px;
 		font-size: 14px;
+	}
+	.learning-more--retrain,
+	.learning-more--skillup {
+		display: block;
 	}
 }
