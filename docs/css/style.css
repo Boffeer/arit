@@ -1801,7 +1801,11 @@ p {
     margin-bottom: 10px;
     position: -webkit-sticky;
     position: sticky;
+    left: 0;
     top: 10px;
+    z-index: 2;
+    background-color: #f9fafa;
+    background-color: var(--color-surface-dark);
   }
 
   .learning-tab__control {
@@ -1811,8 +1815,6 @@ p {
     padding-right: 50px;
     height: 65px;
     margin-bottom: 10px;
-    background-color: #f9fafa;
-    background-color: var(--color-surface-dark);
   }
 
   .learning-tab__control--retrain.learning-tab__control--active,

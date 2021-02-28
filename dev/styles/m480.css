@@ -112,7 +112,10 @@
 		flex-direction: column;
 		margin-bottom: 10px;
 		position: sticky;
+		left: 0;
 		top: 10px;
+		z-index: 2;
+		background-color: var(--color-surface-dark);
 	}
 	.learning-tab__control {
 		width: 100%;
@@ -121,7 +124,6 @@
 		padding-right: 50px;
 		height: 65px;
 		margin-bottom: 10px;
-		background-color: var(--color-surface-dark);
 	}
 	.learning-tab__control--skillup.learning-tab__control--active {
 		-webkit-clip-path: none;
