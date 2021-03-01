@@ -247,7 +247,7 @@ button {
 	font-size: 14px;
 	padding: 18px 20px;
 	line-height: 1;
-	border: 2px solid var(--color-text-secondary);
+	border: 2px solid var(--color-text-regular);
 	border-radius: 5px;
 	background: transparent;
 	color: var(--color-text-regular);
@@ -267,7 +267,7 @@ button {
 }
 
 .burger-clickable {
-	display: flex;
+	display: none;
 	width: 50px;
 	justify-content: flex-end;
 	align-items: center;
@@ -425,6 +425,8 @@ p {
 
 	.header {
 		padding: 20px 7px 24px;
+		padding-left: 0;
+		padding-right: 0;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -432,6 +434,7 @@ p {
 
 	.header-search {
 		position: relative;
+		margin-right: 20px;
 	}
 	.header-search:before {
 		content: url('../img/0-common/search.svg');
@@ -440,20 +443,53 @@ p {
 		left: 20px;
 	}
 	.header__search {
+		max-width: 198px;
 		font-size: var(--f-header);
 		border: 1px solid var(--color-text-secondary);
 		color: var(--color-text-thirdly);
 		padding: 10px 10px 10px 50px;
-	background: #FAFAFA;
-	border: 1px solid #EDEDED;
-	box-sizing: border-box;
-	border-radius: 5px;
-		}
+		background: #FAFAFA;
+		border: 1px solid #EDEDED;
+		box-sizing: border-box;
+		border-radius: 5px;
+	}
 
+	.header__logo {
+		display: flex;
+		align-items: center;
+	}
+	.header-logo-descriptor {
+		font-size: 12px;
+		max-width: 316px;
+		box-sizing: border-box;
+		padding-left: 40px;
+		position: relative;
+	}
+	.header-logo-descriptor:before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 20px;
+		top: -20%;
+		height: 140%;
+		width: 1px;
+		background-color: var(--color-lines);
+	}
 	.socials,
 	.header-email,
 	.header-phone {
 		padding-top: 5px;
+	}
+	.header-contacts {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		margin-right: 20px;
+		text-align: right;
+	}
+	.socials-list {
+		display: flex;
+		margin-right: 20px;
 	}
 	.socials-item {
 		margin-right: 8px;
@@ -471,7 +507,6 @@ p {
 		border-right: 1px solid var(--color-lines);
 		border-left: 1px solid var(--color-lines);
 	}
-
 
 	.nav {
 		padding: 5px;
@@ -603,6 +638,13 @@ p {
 		position: absolute;
 		right: 0;
 		top: 0;
+	}
+	.hero-cta {
+		margin-right: 20px;
+	}
+	.hero-learning {
+		padding: 20px;
+		max-width: 189px;
 	}
 
 
@@ -741,6 +783,9 @@ p {
 		align-items: stretch;
 		transform: translateY(40px);
 		z-index: 1;
+	}
+	.about-picture img {
+		object-fit: contain
 	}
 	.about-more {
 		display: none;

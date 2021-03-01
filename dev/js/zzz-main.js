@@ -147,7 +147,7 @@ if (window.innerWidth < 1000){
 	let burger = document.querySelector('.burger');
 	let burgerMenu = document.querySelector('.burger-menu');
 	let isBurgerShown = false;
-	let burgerContent = ['.socials', '.header-email', '.header-phone', '.header_get-consult'];
+	let burgerContent = ['.socials', '.header-email', '.header-phone', '.header_get-consult', '.header-logo-descriptor'];
 
 	document.querySelector('.burger-nav').appendChild(document.querySelector('.nav-list'))
 	burgerContent.map(item => {

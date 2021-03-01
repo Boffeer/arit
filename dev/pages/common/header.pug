@@ -4,12 +4,13 @@
 		header.header
 			.header__logo
 				img(src="img/0-common/logo.svg", alt="logo")
+				p.header-logo-descriptor Дополнительное профессиональное образование. Лицензия №12 от 25.10.2013
 			.header-search
 				input(
 					type="text"
 					placeholder="Поиск").header__search
 			.socials
-				p.header__name Соцсети
+				//- p.header__name Соцсети
 				div.socials-list
 					a.socials-item(href=`${vk}`)
 						img.socials-item__img(src="img/0-common/vk.svg", alt="vk")
@@ -17,12 +18,15 @@
 						img.socials-item__img(src="img/0-common/instagram.svg", alt="instagram")
 					a.socials-item(href=`${facebook}`)
 						img.socials-item__img(src="img/0-common/facebook.svg", alt="facebook")
-			.header-email
-				p.header__name Наша почта
-				a(href=`mailto:${email}`).header__contact #{email}
-			.header-phone
-				p.header__name Наш телефон
-				a(href=`${phoneLnk}`).header__contact #{phone}
+					a.socials-item(href=`${youtube}`)
+						img.socials-item__img(src="img/0-common/youtube.svg", alt="youtube")
+			.header-contacts
+				.header-phone
+					//- p.header__name Наш телефон
+					a(href=`${phoneLnk}`).header__contact #{phone}
+				.header-email
+					//- p.header__name Наша почта
+					a(href=`mailto:${email}`).header__contact #{email}
 			button.header_get-consult.secondary-button Получить консультацию 
 			.burger-clickable
 				.burger

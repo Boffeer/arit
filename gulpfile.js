@@ -322,7 +322,7 @@ const imgBuild = () => {
 		.pipe(image({
 			pngquant: true,
 			optipng: true,
-			zopflipng: true,
+			zopflipng: false,
 			jpegRecompress: false,
 			mozjpeg: true,
 			gifsicle: true,
