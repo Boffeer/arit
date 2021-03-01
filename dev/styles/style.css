@@ -178,6 +178,8 @@
 	--ff-extra: 'Geometria-ExtraBold', sans-serif;
 
 	--z-contorls: 2;
+	--z-burger: 99;
+	--z-pop: 100;
 
     margin: 0;
     padding: 0;
@@ -264,6 +266,75 @@ button {
 	color: var(--color-primary)
 }
 
+.burger-clickable {
+	display: flex;
+	width: 50px;
+	justify-content: flex-end;
+	align-items: center;
+}
+.burger {
+	display: none;
+	width: 30px;
+}
+
+.burger span,
+.burger span:before, 
+.burger span:after {
+	height: 3px;
+	width: 100%;
+	background-color: var(--color-text-regular);
+	display: block;
+	transition: all 0.3s;
+}
+
+.burger span:before,
+.burger span:after {
+	content: '';
+}
+.burger span:before {
+	transform: translateY(-8px);
+}
+.burger span:after {
+	transform: translateY(5px);
+}
+.header--burger-shown {
+	z-index: var(--z-pop);
+	position: relative;
+}
+.burger--shown span {
+	background-color: transparent;
+}
+.burger--shown span:before {
+	transform: translateY(0) rotate(-45deg);
+}
+.burger--shown span:after {
+	transform: translateY(-3px) rotate(45deg);
+}
+
+.burger-menu {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 1px;
+	min-height: 100vh;
+	background-color: #fff;
+	transform: translateY(-200%);
+	transition: all 0.8s;
+	padding-top: 80px;
+}
+.burger-menu--shown {
+	z-index: var(--z-burger);
+	transform: translateY(0);
+	height: auto;
+}
+.burger-contacts {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-left: 40px;
+	padding-right: 40px;
+}
 
 a {
 	text-decoration: none;
@@ -327,7 +398,7 @@ p {
 	background-color: var(--color-lines);
 }
 .swiper-scrollbar-drag {
-	max-width: 80px !important;
+	/* min-width: 80px !important; */
 	border-radius: 0;
 	background: var(--gradient-primary);
 	height: 8px;
@@ -894,6 +965,10 @@ p {
 		width: 100%;
 		margin-right: 10px;
 	}
+	.meetups-more--webinars,
+	.meetups-more--seminars {
+		display: none;
+	}
 	.thirdly-button {
 		border: none;
 		background: transparent;
@@ -1026,6 +1101,7 @@ p {
 		background-image: url(../img/8-partners/partners-bg.png);
 		padding-top: 70px;
 		padding-bottom: 70px;
+		background-size: cover;
 	}
 	.partners__title {
 		color: #fff;
@@ -1423,9 +1499,9 @@ p {
 	}
 	.footer_get-contacts {
 		color: #fff;
+		border-color: #fff;
 	}
 	.footer_get-contacts:hover {
-		border-color: #fff;
 		background-color: #fff;
 		color: var(--color-text-regular);
 	}

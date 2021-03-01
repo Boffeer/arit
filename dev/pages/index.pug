@@ -340,23 +340,25 @@ block content
 		.meetups-wrapper#meetups
 			.meetups-container.container
 				.meetups
-					.meetups-category
+					.meetups-category.meetups-category--seminars
 						h2.section__title Семинары
 						+SeminarItem()
 						+SeminarItem()
 						+SeminarItem()
 						+SeminarItem()
 						+SeminarItem()
-					.meetups-category
+						button.secondary-button.meetups-more--seminars Показать еще
+					.meetups-category.meetups-category--webinars
 						h2.section__title Вебинары
 						+WebinarItem()
 						+WebinarItem()
 						+WebinarItem()
 						+WebinarItem()
 						+WebinarItem()
+						button.secondary-button.meetups-more--webinars Показать еще
 
 			.meetups-more-wrapper
-				button.secondary-button.meetups-more Показать еще
+				button.secondary-button.meetups-more.meetups-more--desktop Показать еще
 
 
 	.news-wrapper#news
@@ -547,7 +549,7 @@ block content
 							src: 'books.svg'
 						})
 						+ResoursesItem({
-							name: 'Федеральное медико-биологическое агентство',
+							name: `Федеральное медико\u2011биологическое агентство`,
 							src: 'pharmacy.svg'
 						})
 						+ResoursesItem({
@@ -585,30 +587,36 @@ block content
 			.testimonials-container.container
 				.testimonials
 					h2.section__title.testimonials__title Отзывы
-					ul.testimonials-list
-						mixin Testimonial(numb)
-							li.testimonial-item(hidden class= numb)
-								div.testimonial
-									+pic({
-										pictureClass: 'testimonial__picture',
-										ext: 'png',
-										src: 'img/10-testimonials/testimonial-1'
-									})
-									div.testimonial-message
-										div.testimonial-message-info
-											div.testimonial-who
-												h3.testimonial-who__name Оксана Иванова
-												p.testimonial-who__position Директор MacDonalds
-											div.testimonial__date 02.06.20
-										p.testimonial__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.
+					.testimonials-slider-outer
+						//- .testimonials-slider-wrap.swiper-container
+						.testimonials-slider-wrap
+							
+							//- ul.testimonials-list.testimonials-slider.swiper-wrapper
+							ul.testimonials-list.testimonials-slider
+								mixin Testimonial(numb)
+									li.testimonial-item.swiper-slide
+										div.testimonial
+											+pic({
+												pictureClass: 'testimonial__picture',
+												ext: 'png',
+												src: 'img/10-testimonials/testimonial-1'
+											})
+											div.testimonial-message
+												div.testimonial-message-info
+													div.testimonial-who
+														h3.testimonial-who__name Оксана Иванова
+														p.testimonial-who__position Директор MacDonalds
+													div.testimonial__date 02.06.20
+												p.testimonial__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.
 
 
-						+Testimonial('1')
-						+Testimonial('2')
-						+Testimonial('3')
-						+Testimonial('4')
-						+Testimonial('5')
-						+Testimonial('6')
+								+Testimonial('1')
+								+Testimonial('2')
+								+Testimonial('3')
+								+Testimonial('4')
+								+Testimonial('5')
+								+Testimonial('6')
+							.testimonials-slider-scrollbar
 						//- li.testimonial
 						//-     +pic({
 						//-         pictureClass: 'testimonial__picture',

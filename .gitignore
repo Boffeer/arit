@@ -13,7 +13,8 @@ node_modules/
 package-lock.json
 
 # Папка с собранными файлами проекта
-build/
+# build/
+docs/
 
 
 # Остальные папки

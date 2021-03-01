@@ -2,6 +2,11 @@
 	overflow: hidden;
 	margin-right: 15px;
 }
+@media (max-width: 1000px){
+	.pop-opened--html {
+		margin-right: 0;
+	}
+}
 .pop-wrap {
 	opacity: 0;
 	visibility: hidden;

@@ -26,6 +26,9 @@
             <p class="header__name">Наш телефон</p><a class="header__contact" href="tel:+70000000000">+7 (000) 000-00-00</a>
           </div>
           <button class="header_get-consult secondary-button">Получить консультацию </button>
+          <div class="burger-clickable">
+            <div class="burger"><span></span></div>
+          </div>
         </header>
       </div>
       <nav class="nav container">
@@ -330,7 +333,7 @@
       <div class="meetups-wrapper" id="meetups">
         <div class="meetups-container container">
           <div class="meetups">
-            <div class="meetups-category">
+            <div class="meetups-category meetups-category--seminars">
               <h2 class="section__title">Семинары</h2>
                   <div class="meetups-item meetups-item--seminar">
                     <picture class="meetups__picture">
@@ -432,8 +435,9 @@
                       </div>
                     </div>
                   </div>
+              <button class="secondary-button meetups-more--seminars">Показать еще</button>
             </div>
-            <div class="meetups-category">
+            <div class="meetups-category meetups-category--webinars">
               <h2 class="section__title">Вебинары</h2>
                   <div class="meetups-item meetups-item--webinar">
                     <picture class="meetups__picture">
@@ -535,11 +539,12 @@
                       </div>
                     </div>
                   </div>
+              <button class="secondary-button meetups-more--webinars">Показать еще</button>
             </div>
           </div>
         </div>
         <div class="meetups-more-wrapper">
-          <button class="secondary-button meetups-more">Показать еще</button>
+          <button class="secondary-button meetups-more meetups-more--desktop">Показать еще</button>
         </div>
       </div>
     </main>
@@ -719,7 +724,7 @@
                     <li class="resourses-item"><a class="resourses-item__link" href="#"><img class="resourses-item__icon" src="img/9-resources/books.svg" alt="resourse">
                         <h3 class="resourses-item__name">Электронно-библиотечная система</h3></a></li>
                     <li class="resourses-item"><a class="resourses-item__link" href="#"><img class="resourses-item__icon" src="img/9-resources/pharmacy.svg" alt="resourse">
-                        <h3 class="resourses-item__name">Федеральное медико-биологическое агентство</h3></a></li>
+                        <h3 class="resourses-item__name">Федеральное медико‑биологическое агентство</h3></a></li>
                     <li class="resourses-item"><a class="resourses-item__link" href="#"><img class="resourses-item__icon" src="img/9-resources/graduate.svg" alt="resourse">
                         <h3 class="resourses-item__name">Портал непрерывного медицинского образования</h3></a></li>
                     <li class="resourses-item"><a class="resourses-item__link" href="#"><img class="resourses-item__icon" src="img/9-resources/atom.svg" alt="resourse">
@@ -740,110 +745,115 @@
         <div class="testimonials-container container">
           <div class="testimonials">
             <h2 class="section__title testimonials__title">Отзывы</h2>
-            <ul class="testimonials-list">
-                            <li class="testimonial-item 1" hidden>
-                              <div class="testimonial">
-                                <picture class="testimonial__picture">
-                                  <source srcset="img/10-testimonials/testimonial-1.webp 1x,img/10-testimonials/testimonial-1@2x.webp 2x" type="image/webp"/><img src="img/10-testimonials/testimonial-1.png" srcset="img/10-testimonials/testimonial-1@2x.png 2x"/>
-                                </picture>
-                                <div class="testimonial-message">
-                                  <div class="testimonial-message-info">
-                                    <div class="testimonial-who">
-                                      <h3 class="testimonial-who__name">Оксана Иванова</h3>
-                                      <p class="testimonial-who__position">Директор MacDonalds</p>
-                                    </div>
-                                    <div class="testimonial__date">02.06.20</div>
-                                  </div>
-                                  <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="testimonial-item 2" hidden>
-                              <div class="testimonial">
-                                <picture class="testimonial__picture">
-                                  <source srcset="img/10-testimonials/testimonial-1.webp 1x,img/10-testimonials/testimonial-1@2x.webp 2x" type="image/webp"/><img src="img/10-testimonials/testimonial-1.png" srcset="img/10-testimonials/testimonial-1@2x.png 2x"/>
-                                </picture>
-                                <div class="testimonial-message">
-                                  <div class="testimonial-message-info">
-                                    <div class="testimonial-who">
-                                      <h3 class="testimonial-who__name">Оксана Иванова</h3>
-                                      <p class="testimonial-who__position">Директор MacDonalds</p>
-                                    </div>
-                                    <div class="testimonial__date">02.06.20</div>
-                                  </div>
-                                  <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="testimonial-item 3" hidden>
-                              <div class="testimonial">
-                                <picture class="testimonial__picture">
-                                  <source srcset="img/10-testimonials/testimonial-1.webp 1x,img/10-testimonials/testimonial-1@2x.webp 2x" type="image/webp"/><img src="img/10-testimonials/testimonial-1.png" srcset="img/10-testimonials/testimonial-1@2x.png 2x"/>
-                                </picture>
-                                <div class="testimonial-message">
-                                  <div class="testimonial-message-info">
-                                    <div class="testimonial-who">
-                                      <h3 class="testimonial-who__name">Оксана Иванова</h3>
-                                      <p class="testimonial-who__position">Директор MacDonalds</p>
-                                    </div>
-                                    <div class="testimonial__date">02.06.20</div>
-                                  </div>
-                                  <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="testimonial-item 4" hidden>
-                              <div class="testimonial">
-                                <picture class="testimonial__picture">
-                                  <source srcset="img/10-testimonials/testimonial-1.webp 1x,img/10-testimonials/testimonial-1@2x.webp 2x" type="image/webp"/><img src="img/10-testimonials/testimonial-1.png" srcset="img/10-testimonials/testimonial-1@2x.png 2x"/>
-                                </picture>
-                                <div class="testimonial-message">
-                                  <div class="testimonial-message-info">
-                                    <div class="testimonial-who">
-                                      <h3 class="testimonial-who__name">Оксана Иванова</h3>
-                                      <p class="testimonial-who__position">Директор MacDonalds</p>
-                                    </div>
-                                    <div class="testimonial__date">02.06.20</div>
-                                  </div>
-                                  <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="testimonial-item 5" hidden>
-                              <div class="testimonial">
-                                <picture class="testimonial__picture">
-                                  <source srcset="img/10-testimonials/testimonial-1.webp 1x,img/10-testimonials/testimonial-1@2x.webp 2x" type="image/webp"/><img src="img/10-testimonials/testimonial-1.png" srcset="img/10-testimonials/testimonial-1@2x.png 2x"/>
-                                </picture>
-                                <div class="testimonial-message">
-                                  <div class="testimonial-message-info">
-                                    <div class="testimonial-who">
-                                      <h3 class="testimonial-who__name">Оксана Иванова</h3>
-                                      <p class="testimonial-who__position">Директор MacDonalds</p>
-                                    </div>
-                                    <div class="testimonial__date">02.06.20</div>
-                                  </div>
-                                  <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="testimonial-item 6" hidden>
-                              <div class="testimonial">
-                                <picture class="testimonial__picture">
-                                  <source srcset="img/10-testimonials/testimonial-1.webp 1x,img/10-testimonials/testimonial-1@2x.webp 2x" type="image/webp"/><img src="img/10-testimonials/testimonial-1.png" srcset="img/10-testimonials/testimonial-1@2x.png 2x"/>
-                                </picture>
-                                <div class="testimonial-message">
-                                  <div class="testimonial-message-info">
-                                    <div class="testimonial-who">
-                                      <h3 class="testimonial-who__name">Оксана Иванова</h3>
-                                      <p class="testimonial-who__position">Директор MacDonalds</p>
-                                    </div>
-                                    <div class="testimonial__date">02.06.20</div>
-                                  </div>
-                                  <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.</p>
-                                </div>
-                              </div>
-                            </li>
-            </ul>
+            <div class="testimonials-slider-outer">
+              <div class="testimonials-slider-wrap">
+                <ul class="testimonials-list testimonials-slider">
+                                    <li class="testimonial-item swiper-slide">
+                                      <div class="testimonial">
+                                        <picture class="testimonial__picture">
+                                          <source srcset="img/10-testimonials/testimonial-1.webp 1x,img/10-testimonials/testimonial-1@2x.webp 2x" type="image/webp"/><img src="img/10-testimonials/testimonial-1.png" srcset="img/10-testimonials/testimonial-1@2x.png 2x"/>
+                                        </picture>
+                                        <div class="testimonial-message">
+                                          <div class="testimonial-message-info">
+                                            <div class="testimonial-who">
+                                              <h3 class="testimonial-who__name">Оксана Иванова</h3>
+                                              <p class="testimonial-who__position">Директор MacDonalds</p>
+                                            </div>
+                                            <div class="testimonial__date">02.06.20</div>
+                                          </div>
+                                          <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                      </div>
+                                    </li>
+                                    <li class="testimonial-item swiper-slide">
+                                      <div class="testimonial">
+                                        <picture class="testimonial__picture">
+                                          <source srcset="img/10-testimonials/testimonial-1.webp 1x,img/10-testimonials/testimonial-1@2x.webp 2x" type="image/webp"/><img src="img/10-testimonials/testimonial-1.png" srcset="img/10-testimonials/testimonial-1@2x.png 2x"/>
+                                        </picture>
+                                        <div class="testimonial-message">
+                                          <div class="testimonial-message-info">
+                                            <div class="testimonial-who">
+                                              <h3 class="testimonial-who__name">Оксана Иванова</h3>
+                                              <p class="testimonial-who__position">Директор MacDonalds</p>
+                                            </div>
+                                            <div class="testimonial__date">02.06.20</div>
+                                          </div>
+                                          <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                      </div>
+                                    </li>
+                                    <li class="testimonial-item swiper-slide">
+                                      <div class="testimonial">
+                                        <picture class="testimonial__picture">
+                                          <source srcset="img/10-testimonials/testimonial-1.webp 1x,img/10-testimonials/testimonial-1@2x.webp 2x" type="image/webp"/><img src="img/10-testimonials/testimonial-1.png" srcset="img/10-testimonials/testimonial-1@2x.png 2x"/>
+                                        </picture>
+                                        <div class="testimonial-message">
+                                          <div class="testimonial-message-info">
+                                            <div class="testimonial-who">
+                                              <h3 class="testimonial-who__name">Оксана Иванова</h3>
+                                              <p class="testimonial-who__position">Директор MacDonalds</p>
+                                            </div>
+                                            <div class="testimonial__date">02.06.20</div>
+                                          </div>
+                                          <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                      </div>
+                                    </li>
+                                    <li class="testimonial-item swiper-slide">
+                                      <div class="testimonial">
+                                        <picture class="testimonial__picture">
+                                          <source srcset="img/10-testimonials/testimonial-1.webp 1x,img/10-testimonials/testimonial-1@2x.webp 2x" type="image/webp"/><img src="img/10-testimonials/testimonial-1.png" srcset="img/10-testimonials/testimonial-1@2x.png 2x"/>
+                                        </picture>
+                                        <div class="testimonial-message">
+                                          <div class="testimonial-message-info">
+                                            <div class="testimonial-who">
+                                              <h3 class="testimonial-who__name">Оксана Иванова</h3>
+                                              <p class="testimonial-who__position">Директор MacDonalds</p>
+                                            </div>
+                                            <div class="testimonial__date">02.06.20</div>
+                                          </div>
+                                          <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                      </div>
+                                    </li>
+                                    <li class="testimonial-item swiper-slide">
+                                      <div class="testimonial">
+                                        <picture class="testimonial__picture">
+                                          <source srcset="img/10-testimonials/testimonial-1.webp 1x,img/10-testimonials/testimonial-1@2x.webp 2x" type="image/webp"/><img src="img/10-testimonials/testimonial-1.png" srcset="img/10-testimonials/testimonial-1@2x.png 2x"/>
+                                        </picture>
+                                        <div class="testimonial-message">
+                                          <div class="testimonial-message-info">
+                                            <div class="testimonial-who">
+                                              <h3 class="testimonial-who__name">Оксана Иванова</h3>
+                                              <p class="testimonial-who__position">Директор MacDonalds</p>
+                                            </div>
+                                            <div class="testimonial__date">02.06.20</div>
+                                          </div>
+                                          <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                      </div>
+                                    </li>
+                                    <li class="testimonial-item swiper-slide">
+                                      <div class="testimonial">
+                                        <picture class="testimonial__picture">
+                                          <source srcset="img/10-testimonials/testimonial-1.webp 1x,img/10-testimonials/testimonial-1@2x.webp 2x" type="image/webp"/><img src="img/10-testimonials/testimonial-1.png" srcset="img/10-testimonials/testimonial-1@2x.png 2x"/>
+                                        </picture>
+                                        <div class="testimonial-message">
+                                          <div class="testimonial-message-info">
+                                            <div class="testimonial-who">
+                                              <h3 class="testimonial-who__name">Оксана Иванова</h3>
+                                              <p class="testimonial-who__position">Директор MacDonalds</p>
+                                            </div>
+                                            <div class="testimonial__date">02.06.20</div>
+                                          </div>
+                                          <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                      </div>
+                                    </li>
+                </ul>
+                <div class="testimonials-slider-scrollbar"></div>
+              </div>
+            </div>
             <div class="testimonials-more-wrap">
               <button class="secondary-button testimonials-more">Показать еще</button>
             </div>
@@ -886,8 +896,11 @@
     <footer class="footer-wrapper" id="footer">
       <div class="container">
         <div class="footer">
-          <div class="footer__logo"><img src="img/0-common/logo-solid.svg" alt="logo">
-            <p class="footer-copyright">Компания &laquo;Академия развития инновационных технологий&raquo;<br>Все права защищены &copy; 2010-2021</p>
+          <div class="footer-top">
+            <div class="footer__logo"><img src="img/0-common/logo-solid.svg" alt="logo"></div>
+            <div class="footer-top__content">
+              <p class="footer-copyright">Компания &laquo;Академия развития инновационных технологий&raquo;<br> Все права защищены &copy; 2010-2021</p>
+            </div>
           </div>
           <nav class="footer-nav">
             <h3 class="footer-title">Разделы</h3>
@@ -948,6 +961,10 @@
           </form>
         </div>
       </div>
+    </div>
+    <div class="burger-menu">
+      <div class="burger-nav"></div>
+      <div class="burger-contacts"></div>
     </div>
     <script src="js/swiper-bundle.js"></script>
     <script src="js/main.min.js"></script>
