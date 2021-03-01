@@ -1784,7 +1784,7 @@ p {
   background: var(--color-primary);
 }
 
-@media (max-width:480px) {
+@media (max-width:1200px) {
   :root {
     --f-header: 12px;
     --f-regular: 14px;
