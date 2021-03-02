@@ -47,6 +47,9 @@
 
 
 
+	.header-container {
+		border: none;
+	}
 	.header-wrapper {
 		background: #fff;
 	}
@@ -87,6 +90,7 @@
 	}
 	
 	.header-logo-descriptor {
+		font-size: 10px;
 		padding-left: 0;
 		margin-left: auto;
 		text-align: center;
@@ -135,6 +139,9 @@
 		height: 100%;
 		width: 2px;
 	}
+	.nav-lsit-item__text {
+		font-size: 14px;
+	}
 	.nav-list-item--dropdown:after {
 		display: none;
 	}
@@ -144,7 +151,7 @@
 
 
 	.hero-wrapper {
-		background: url(../img/1-hero/hero-bg.png) 0 0/cover;
+		/* background: url(../img/1-hero/hero-bg.png) 0 0/cover; */
 		height: 800px;
 		margin-bottom: 50px;
 	}
@@ -155,6 +162,7 @@
 	}
 	.hero-container {
 		padding-right: 10px;
+		border: none;
 	}
 	.hero__title {
 		margin-bottom: 20px;
@@ -170,8 +178,12 @@
 	.hero-learning {
 		padding-top: 20px;
 		padding-bottom: 20px;
-		max-width: 100%;
+		max-width: 290px;
 		width: 100%;
+		text-align: center;
+		display: block;
+		font-family: var(--ff-bold);
+		box-sizing: border-box;
 	}
 	.hero-bullets {
 		padding-left: 15px;

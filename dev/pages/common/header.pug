@@ -34,15 +34,29 @@
 
 	nav.nav.container
 		.nav-list
-			a(href="#about").nav-list-item.nav-list-item--dropdown
-				.nav-list-item__text Об академии
+			div.dropdown-menu-item
+				a(href="#about").nav-list-item.nav-list-item--dropdown
+					.nav-list-item__text Об академии
+				.nav-list-item-dropdown-wrap
+					.nav-list-item-dropdown
+						a.dropdown-item(href="#") Сведения об образовательной организации
+						a.dropdown-item(href="#") Лицензии
+						a.dropdown-item(href="#") Основные сведения
+						a.dropdown-item(href="#") Структура и органы управления образовательной организацией
+						a.dropdown-item(href="#") Документы
+						a.dropdown-item(href="#") Образовательные стандарты
+						a.dropdown-item(href="#") Руководство и педагогический состав
+						a.dropdown-item(href="#") Вакансии
+						a.dropdown-item(href="#") Отзывы
+						a.dropdown-item(href="#") Реквизиты
 			a(href="#meetups").nav-list-item
 				.nav-list-item__text Семинары
 			a(href="#meetups").nav-list-item
 				.nav-list-item__text Вебинары
 			a(href="#learning").nav-list-item
 				.nav-list-item__text Обучение
-			a(href="#media").nav-list-item.nav-list-item--dropdown
+			//- a(href="#media").nav-list-item.nav-list-item--dropdown
+			a(href="#media").nav-list-item
 				.nav-list-item__text Медиа
 			a(href="#news").nav-list-item
 				.nav-list-item__text Новости
