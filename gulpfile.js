@@ -190,11 +190,11 @@ exports.stylesBuild = stylesBuild
 const concat = require(`gulp-concat`);
 const scripts = () => {
 	// return gulp.src(`dev/js/main.js`)
-	return gulp.src(`dev/js/*.js`)
+	return gulp.src(`dev/js/**/*.js`)
 		// .pipe(eslint())
 		// .pipe(eslint.format())
+		// .pipe(concat(`main.js`))
 		.pipe(sourcemaps.init())
-		.pipe(concat(`main.js`))
 		.pipe(babel({
 			presets: [`@babel/env`]
 		}))

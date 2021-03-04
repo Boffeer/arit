@@ -5,25 +5,42 @@
 		form.form(action="")
 			.form__border
 				h2.form__title Оставить заявку
-				div.form-fields
-					div.form-input-wrap
-						input(type="hidden", name="fomrname")
-					div.form-input-wrap
-						input.form__input(
-							type="type"
-							placeholder="Имя")
-					div.form-input-wrap
-						input.form__input(
-							type="type"
-							placeholder="Телефон")
-					div.form-input-wrap
-						input.form__input(
-							type="type"
-							placeholder="Эл. почта")
-					div.form-input-wrap.form-input-wrap--button
-						button.primary-button.form__button Отправить заявку
-				.gdpr Нажимая на эту кнопку, Вы даете согласие 
-					button.gdpr__button на обработку персональных данных
+				mixin defaultForm()
+					div.form-fields
+						div.form-input-wrap
+							input(type="hidden", name="fomrname")
+						div.form-input-wrap
+							input.form__input(
+								required
+								name="name"
+								type="text"
+								placeholder="Имя"
+								)
+						div.form-input-wrap
+							input.form__input.input--phone(
+								required
+								name="tel"
+								type="tel"
+								autocorrect="off"
+								autocomplete="tel"
+								placeholder="Телефон"
+								)
+						div.form-input-wrap
+							input.form__input(
+								name="email"
+								type="email"
+								autocapitalize="off" 
+								autocorrect="off"
+								autocomplete="email"
+								placeholder="Эл. почта"
+								data-value-missing="Пожалуйста, введите свою электронную почту" 
+								data-value-invalid="Проверьте правильно ли написана почта"
+								)
+						div.form-input-wrap.form-input-wrap--button
+							button.primary-button.form__button Отправить заявку
+					.gdpr Нажимая на эту кнопку, Вы даете согласие 
+						button.gdpr__button на обработку персональных данных
+				+defaultForm()
 
 
 

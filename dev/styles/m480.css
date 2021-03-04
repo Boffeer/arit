@@ -616,6 +616,44 @@
 		margin-bottom: 25px;
 	}
 
+
+
+
+
+/* License Page */
+
+.licenses-item {
+	flex-direction: column;
+}
+.licenses-item-text {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+.licenses-item__title {
+	font-size: 14px;
+	max-width: 90%;
+	font-family: var(--ff-bold);
+}
+.licenses-item__size {
+	font-size: 12px;
+}
+
+.licenses-item-download {
+	flex-direction: row-reverse;
+	width: auto;
+	margin-right: auto;
+	padding-left: 0;
+	padding-right: 0;
+}
+.licenses-item-download__text {
+	font-size: 12px;
+	margin-left: 10px;
+}
+
+
+
+
 }
 @media (min-height: 860px) {
 

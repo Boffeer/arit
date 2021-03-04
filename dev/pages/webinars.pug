@@ -1,0 +1,100 @@
+extends common/layout
+include common/mixins
+
+block content
+	main.subpage
+		.container
+			script.
+				var mapsDelay = 1000;
+
+			.breadcrumbs
+				a.breadcrumb.breadcrumb--main(href="#") Главная
+				a.breadcrumb(href="#") Об академии
+				a.breadcrumb(href="#") Лицензии
+
+			h1.section__title--left.section__title Ближайшие вебинары
+
+		.container
+			.meetups-page-container.meetups-page--webinars
+				.meetups-preview
+					+SeminarItem()
+				.meetups-next-list
+					+meetupNext({
+						date: '28/02',
+						status: 'Вербинар начался',
+						topic: '7-модульный сертификационный курс по диетологии и тутрициологии',
+						speakers: 'Ирышкин О.Е.',
+						classes: ' meetup-next-item-due--current'
+					})
+					+meetupNext({
+						date: '01/03',
+						status: 'Остался 1 день',
+						topic: 'Секреты успешной реставрации зубов с использованием современных методик, материалов и инструментов',
+						speakers: 'Оверченко К.В.',
+						classes: ''
+					})
+					+meetupNext({
+						date: '03/03',
+						status: 'Осталось 3 дня',
+						topic: 'Неотложная и экстренная медицинская помощь на догоспитальном этапе',
+						speakers: 'Несходимова С.А./Старков А.С.',
+						classes: ''
+					})
+					+meetupNext({
+						date: '03/03',
+						status: 'Осталось 3 дня',
+						topic: 'Шум в ушах: междисциплинарный подход к диагностике и лечению',
+						speakers: 'Лобовкина Л.А.',
+						classes: ''
+					})
+		.archieve-wrapper.archieve-wrapper--webinars
+			.container
+				.section__title Архив
+				.archieve
+					.archieve-item
+						.archieve-item-picture
+							+playIcon('archieve-play')
+							+pic({
+								pictureClass: 'archieve__picture',
+								ext: 'png',
+								src: 'img/pages/news/news-4'
+							})
+						h3.archieve-item__name 7-модульный сертификационный курс по диетологии и нутриологии
+						.archieve-item__controls
+							button.archieve__cta
+								span Запись
+								+angleRight('archieve__cta-button')
+							p.archieve__date 22.03.21
+					.archieve-item
+						.archieve-item-picture
+							+playIcon('archieve-play')
+							+pic({
+								pictureClass: 'archieve__picture',
+								ext: 'png',
+								src: 'img/pages/news/news-4'
+							})
+						h3.archieve-item__name 7-модульный сертификационный курс по диетологии и нутриологии
+						.archieve-item__controls
+							button.archieve__cta
+								span Запись
+								+angleRight('archieve__cta-angle')
+							p.archieve__date 22.03.21
+					.archieve-item
+						.archieve-item-picture
+							+playIcon('archieve-play')
+							+pic({
+								pictureClass: 'archieve__picture',
+								ext: 'png',
+								src: 'img/pages/news/news-4'
+							})
+						h3.archieve-item__name 7-модульный сертификационный курс по диетологии и нутриологии
+						.archieve-item__controls
+							button.archieve__cta
+								span Запись
+								+angleRight('archieve__cta-button')
+							p.archieve__date 22.03.21
+				.button--center-aligner
+					button.secondary-button.archieve__more Показать еще
+block scripts
+	script(src="js/modal.min.js")
+	script(src="js/blocks/headerAndFooter.min.js")

@@ -2,7 +2,36 @@ include icons
 
 
 mixin pic(data)
-    picture(class= data.pictureClass)
-        source(srcset= data.src+".webp 1x,"+data.src+"@2x.webp 2x", type="image/webp")
-        //- img(class= data.imgClass, src= data.src+data.ext alt= data.alt)
-        img(class= data.imgClass, src= data.src+'.'+data.ext, srcset= data.src+"@2x."+data.ext+" 2x", alt= data.alt)
+	picture(class= data.pictureClass)
+		source(srcset= data.src+".webp 1x,"+data.src+"@2x.webp 2x", type="image/webp")
+		//- img(class= data.imgClass, src= data.src+data.ext alt= data.alt)
+		img(style= data.style, class= data.imgClass, src= data.src+'.'+data.ext, srcset= data.src+"@2x."+data.ext+" 2x", alt= data.alt)
+
+
+mixin teacherSlide(data)
+	div.teachers-slide(class= data.classes)
+		- var src = data.src
+		+pic({
+			pictureClass: 'teachers__pic',
+			ext: 'png',
+			src: src
+		})
+		h3.teachers-slide__title= data.title
+		p.teachers-slide__descr= data.descr
+
+
+mixin ResoursesItem(data)
+	li.resourses-item
+		a(href="#").resourses-item__link
+			img(src= data.src, alt="resourse").resourses-item__icon
+			h3.resourses-item__name= data.name
+
+mixin meetupNext(data)
+	div.meetup-next-item
+		//- div.meetup-next-item-due(class= date.classes)
+		div.meetup-next-item-due(class= data.classes)
+			div.meetup-next-item__date= data.date
+			div.meetup-next-item__status= data.status
+		div.meetup-next-item-info
+			h3.meetup-next-item-info__topic= data.topic
+			p.meetup-next-item-info__speakers= data.speakers

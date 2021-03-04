@@ -3,6 +3,8 @@ include common/mixins
 
 block content
 	main
+		script.
+			var mapsDelay = 10000;
 		.hero-wrapper
 			+pic({
 				pictureClass: 'hero__picture-left',
@@ -143,7 +145,7 @@ block content
 					p.regular-text.about__text Врачи, геодезисты, строители, проектировщики, педагоги, средний медперсонал и люди других профессий, — получают дополнительное образование в нашей Академии.
 						span.text-bold  На базе АРИТ обучаются до 15 тысяч специалистов ежемесячно со всей России. 
 					p.regular-text.about__text Если у вас уже есть базовое образование, но вы хотите стать более востребованным специалистом ,то мы ждем вас в АРИТ. 
-				button.thirdly-button.about-more Показать полностью
+				//- button.thirdly-button.about-more Показать полностью
 				+pic({
 					pictureClass: 'about-picture',
 					ext: 'png',
@@ -274,57 +276,97 @@ block content
 					.teachers-slider-outer
 						.teachers-slider-wrap.swiper-container
 							.teachers-slider.swiper-wrapper
-								mixin teacherSlide(data)
-									div.teachers-slide.swiper-slide
-										- var src = data.src
-										+pic({
-											pictureClass: 'teachers__pic',
-											ext: 'png',
-											src: src
-										})
-										h3.teachers-slide__title= data.title
-										p.teachers-slide__descr= data.descr
+								+teacherSlide({
+									src: 'img/5-teachers/agafonov',
+									title: 'Агафонов Николай Владимирович',
+									descr: 'Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет',
+									classes: 'swiper-slide',
+								})
+								+teacherSlide({
+									classes: 'swiper-slide',
+									src: 'img/5-teachers/bahtiyarov',
+									title: 'Бахтияров Камиль Рафаэльевич',
+									descr: 'Доктор медицинских наук, профессор, врач акушер-гинеколог'
+								})
+								+teacherSlide({
+									classes: 'swiper-slide',
+									src: 'img/5-teachers/bikov',
+									title: 'Быков Алексей Юрьевич',
+									descr: 'Врач-нейрохирург, член Европейской ассоциации клинической гипертермии, продакт-менеджер компании Zerts'
+								})
+								+teacherSlide({
+									classes: 'swiper-slide',
+									src: 'img/5-teachers/shmatkova',
+									title: 'Шматкова Виктория Викторовна',
+									descr: 'Медицинский маркетолог, кандидат экономических наук, MBA, предприниматель, владелец компании ZERTS'
+								})
+								+teacherSlide({
+									classes: 'swiper-slide',
+									src: 'img/5-teachers/glazkova',
+									title: 'Глазкова Ольга Леонидовна',
+									descr: 'Кандидат медицинских наук, доцент, врач акушер-гинеколог, врач узи, гинеколог-эндокринолог, онкогинеколог'
+								})
+								+teacherSlide({
+									classes: 'swiper-slide',
+									src: 'img/5-teachers/knish',
+									title: 'Кныш Олег Юрьевич',
+									descr: 'Клинический психолог, гипнолог, коуч, преподаватель и автор серии курсов и тренингов по применению методик прикладной психологии для установления эффективной коммуникации'
+								})
+								+teacherSlide({
+									classes: 'swiper-slide',
+									src: 'img/5-teachers/leizerman',
+									title: 'Лейзерман Михаил Григорьевич',
+									descr: 'Доктор медицинских наук, профессор, врач-оториноларинголог высшей категории, заместитель главного врача по хирургии в ГКБ № 29 им. Н. Э. Баумана, основоположник радиохирургии в России'
+								})
+								+teacherSlide({
+									classes: 'swiper-slide',
+									src: 'img/5-teachers/lozhnikova',
+									title: 'Ложникова Татьяна Вячеславовна',
+									descr: 'Кандидат педагогических наук, доцент, заместитель директора по учебно-методической работе СПО'
+								})
+								+teacherSlide({
+									classes: 'swiper-slide',
+									src: 'img/5-teachers/lucenko',
+									title: 'Луценко Николай Николаевич',
+									descr: 'Кандидат медицинских наук, доцент, врач-гинеколог, начальник отдела по производственной практике РНИМУ им. Н.И. Пирогова, руководитель кластера «высокие технологии в гинекологии» НПС «Эндохирургия» ЦА УЦИМТ, ведущий специалист Центра по направлению гинекология — лапароскопические и гистероскопические технологии'
+								})
+								+teacherSlide({
+									classes: 'swiper-slide',
+									src: 'img/5-teachers/markevich',
+									title: 'Маркевич Харита Алексеевна',
+									descr: 'Психолог, коуч, сертифицированный бизнес-тренер'
+								})
+								+teacherSlide({
+									classes: 'swiper-slide',
+									src: 'img/5-teachers/mindlin',
+									title: 'Миндлин Сергей Николаевич',
+									descr: 'Врач-оториноларинголог, стипендиат президента 2016-2018 гг., обладатель золотой медали «Я-профессионал» (2018 г.), Победитель гранта УМНИК (2017 г.), автор более 10 печатных работ в рецензируемых изданиях, докладчик на всероссийских и международных конференциях'
+								})
+								+teacherSlide({
+									classes: 'swiper-slide',
+									src: 'img/5-teachers/pogosyan',
+									title: 'Погосян Месроп Левонович',
+									descr: 'Врач анестезиолог-реаниматолог, заведующий отделением анестезиологии и реанимации и оперблока официального филиала израильской клиники Hadassah Medical Moscow'
+								})
+								+teacherSlide({
+									classes: 'swiper-slide',
+									src: 'img/5-teachers/skvortsova',
+									title: 'Скворцова Мария Артуровна',
+									descr: 'Кандидат медицинских наук, врач травматолог-ортопед, ассистент кафедры травматологии, ортопедии и ВПХ ПФ РНИМУ им. Н. И. Пирогова'
+								})
+								+teacherSlide({
+									classes: 'swiper-slide',
+									src: 'img/5-teachers/firichenko',
+									title: 'Фириченко Сергей Викторович',
+									descr: 'Доктор медицинских наук, доцент кафедры акушерства и гинекологии лечебного факультета Московского Государственного Медико-стоматологического университета имени А.И. Евдокимова, эксперт РАГИН, член РАГИН, МАРС, сертифицированный специалист по кольпоскопии в Великобритании и США'
+								})
+								+teacherSlide({
+									classes: 'swiper-slide',
+									src: 'img/5-teachers/churganova',
+									title: 'Чурганова Анастасия Алексеевна',
+									descr: 'Кандидат медицинских наук, доцент кафедры акушерства, гинекологии и перинатологии Института клинической медицины имени Н.В. Склифосовского Первого МГМУ имени И.М.Сеченова'
+								})
 
-								div.teachers-slide.swiper-slide
-									+pic({
-										pictureClass: 'teachers__pic',
-										ext: 'png',
-										src: 'img/5-teachers/agafonov'
-									})
-									h3.teachers-slide__title Агафонов Николай Владимирович
-									p.teachers-slide__descr Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет
-								div.teachers-slide.swiper-slide
-									+pic({
-										pictureClass: 'teachers__pic',
-										ext: 'png',
-										src: 'img/5-teachers/bahtiyarov'
-									})
-									h3.teachers-slide__title Бахтияров Камиль Рафаэльевич
-									p.teachers-slide__descr Доктор медицинских наук, профессор, врач акушер-гинеколог
-								div.teachers-slide.swiper-slide
-									+pic({
-										pictureClass: 'teachers__pic',
-										ext: 'png',
-										src: 'img/5-teachers/bikov'
-									})
-									h3.teachers-slide__title Быков  Алексей Юрьевич
-									p.teachers-slide__descr Врач-нейрохирург, член Европейской аcсоциации клинической гипертермии, эксперт по радиохирургическим методам лечения, продакт-менеджер компании Zerts
-		
-								+teacherSlide({
-									src: 'img/5-teachers/agafonov',
-									title: 'Агафонов Николай Владимирович',
-									descr: 'Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет'
-								})
-								+teacherSlide({
-									src: 'img/5-teachers/agafonov',
-									title: 'Агафонов Николай Владимирович',
-									descr: 'Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет'
-								})
-								//- +teacherSlide({
-								//-     src: 'img/5-teachers/agafonov',
-								//-     title: 'Агафонов Николай Владимирович',
-								//-     descr: 'Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет'
-								//- })
 						.teachers-slider-scrollbar.slider-scrollbar
 						.teachers-slider-prev.slider-button
 							+leftArrow('news-slider__arrow')
@@ -345,22 +387,14 @@ block content
 					.meetups-category.meetups-category--seminars
 						h2.section__title Семинары
 						+SeminarItem()
-						+SeminarItem()
-						+SeminarItem()
-						+SeminarItem()
-						+SeminarItem()
-						button.secondary-button.meetups-more--seminars Показать еще
+						a.secondary-button.meetups-more--seminars(href="/seminars") Показать еще
 					.meetups-category.meetups-category--webinars
 						h2.section__title Вебинары
 						+WebinarItem()
-						+WebinarItem()
-						+WebinarItem()
-						+WebinarItem()
-						+WebinarItem()
-						button.secondary-button.meetups-more--webinars Показать еще
+						a.secondary-button.meetups-more--webinars(href="/webinars") Показать еще
 
-			.meetups-more-wrapper
-				button.secondary-button.meetups-more.meetups-more--desktop Показать еще
+			//- .meetups-mor -wrapper
+			//-     button.secondary-button.meetups-more.meetups-more--desktop Показать еще
 
 
 	.news-wrapper#news
@@ -462,59 +496,32 @@ block content
 		.partners-wrapper#partners
 			.partners-container.container
 				.partners
-					h2.section__title.partners__title Партенры
+					h2.section__title.partners__title Партнеры 
 					.partners-slider-outer
 						.partners-slider-wrap.swiper-container
 							.partners-slider.swiper-wrapper
-								div.partners-item.swiper-slide
-									div.partners-item__border
-										+pic({
-											pictureClass: 'partners__picture',
-											ext: 'png',
-											src: 'img/8-partners/gbuzvookb'
-										})
-								div.partners-item.swiper-slide
-									div.partners-item__border
-										+pic({
-											pictureClass: 'partners__picture',
-											ext: 'png',
-											src: 'img/8-partners/gedeon'
-										})
-								div.partners-item.swiper-slide
-									div.partners-item__border
-										+pic({
-											pictureClass: 'partners__picture',
-											ext: 'png',
-											src: 'img/8-partners/gkb'
-										})
-								div.partners-item.swiper-slide
-									div.partners-item__border
-										+pic({
-											pictureClass: 'partners__picture',
-											ext: 'png',
-											src: 'img/8-partners/sergiev-posad'
-										})
-								div.partners-item.swiper-slide
-									div.partners-item__border
-										+pic({
-											pictureClass: 'partners__picture',
-											ext: 'png',
-											src: 'img/8-partners/atmos'
-										})
-								div.partners-item.swiper-slide
-									div.partners-item__border
-										+pic({
-											pictureClass: 'partners__picture',
-											ext: 'png',
-											src: 'img/8-partners/atmos'
-										})
-								div.partners-item.swiper-slide
-									div.partners-item__border
-										+pic({
-											pictureClass: 'partners__picture',
-											ext: 'png',
-											src: 'img/8-partners/atmos'
-										})
+								mixin partnerItem(src)
+									div.partners-item.swiper-slide
+										div.partners-item__border
+											+pic({
+												pictureClass: 'partners__picture',
+												ext: 'png',
+												src: 'img/8-partners/' + src,
+											})
+								+partnerItem('atmos')
+								+partnerItem('btl')
+								+partnerItem('center-hygien')
+								+partnerItem('center-karnelius')
+								+partnerItem('dental-aurora-clinic')
+								+partnerItem('dr-super')
+								+partnerItem('gbuzvookb')
+								+partnerItem('gedeon-richter')
+								+partnerItem('gkb-eramishanceva')
+								+partnerItem('gkb')
+								+partnerItem('job-service')
+								+partnerItem('nii')
+								+partnerItem('president-gov-univercity')
+								+partnerItem('sergiev-posad')
 						.partners-slider-scrollbar.slider-scrollbar
 						.partners-slider-prev.slider-button
 							+leftArrow('news-slider__arrow')
@@ -532,13 +539,11 @@ block content
 						span Скачать PDF
 						img(src="img/0-common/pdf.svg", alt="")
 
-		mixin ResoursesItem(data)
-			li.resourses-item
-				a(href="#").resourses-item__link
-					img(src="img/9-resources/"+data.src, alt="resourse").resourses-item__icon
-					h3.resourses-item__name= data.name
-
-
+		//- mixin ResoursesItem(data)
+		//-     li.resourses-item
+		//-         a(href="#").resourses-item__link
+		//-             img(src= data.src, alt="resourse").resourses-item__icon
+		//-             h3.resourses-item__name= data.name
 
 
 		section.resourses-wrapper#resourses
@@ -548,35 +553,35 @@ block content
 					ul.resourses-list
 						+ResoursesItem({
 							name: 'Электронно-библиотечная система',
-							src: 'books.svg'
+							src: 'img/9-resources/books.svg'
 						})
 						+ResoursesItem({
 							name: `Федеральное медико\u2011биологическое агентство`,
-							src: 'pharmacy.svg'
+							src: 'img/9-resources/pharmacy.svg'
 						})
 						+ResoursesItem({
 							name: 'Портал непрерывного медицинского образования',
-							src: 'graduate.svg'
+							src: 'img/9-resources/graduate.svg'
 						})
 						+ResoursesItem({
 							name: 'Центральная научная медицинская библиотека',
-							src: 'atom.svg'
+							src: 'img/9-resources/atom.svg'
 						})
 						+ResoursesItem({
 							name: 'Электронная медицинская библиотека',
-							src: 'caduceus.svg'
+							src: 'img/9-resources/caduceus.svg'
 						})
 						+ResoursesItem({
 							name: 'Фундаментальная медицинская библиотека',
-							src: 'dna.svg'
+							src: 'img/9-resources/dna.svg'
 						})
 						+ResoursesItem({
 							name: 'Медицинская энциклопедия',
-							src: 'encyclopedia.svg'
+							src: 'img/9-resources/encyclopedia.svg'
 						})
 						+ResoursesItem({
 							name: 'Единое окно доступа к информационным ресурсам',
-							src: 'file.svg'
+							src: 'img/9-resources/file.svg'
 						})
 
 
@@ -615,9 +620,6 @@ block content
 								+Testimonial('1')
 								+Testimonial('2')
 								+Testimonial('3')
-								+Testimonial('4')
-								+Testimonial('5')
-								+Testimonial('6')
 							.testimonials-slider-scrollbar
 						//- li.testimonial
 						//-     +pic({
@@ -647,3 +649,10 @@ block content
 						//-         p.testimonial__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.
 					.testimonials-more-wrap
 						button.secondary-button.testimonials-more Показать еще
+
+block scripts
+	script(src="js/modal.min.js")
+	script(src="js/blocks/headerAndFooter.min.js")
+	script(src="js/blocks/tabbar.min.js")
+	script(src="js/swiper-bundle.min.js")
+	script(src="js/zzz-main.min.js")

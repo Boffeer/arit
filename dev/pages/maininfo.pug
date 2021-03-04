@@ -1,0 +1,54 @@
+extends common/layout
+include common/mixins
+
+block content
+	main.subpage
+		.container
+			script
+				| var mapsDelay = 1000;
+
+			.breadcrumbs
+				a.breadcrumb.breadcrumb--main(href="#") Главная
+				a.breadcrumb(href="#") Об академии
+				a.breadcrumb(href="#") Лицензии
+
+		.container.main-info-container
+			.maininfo
+				h1.section__title.section__title--left Основные сведения
+				p.regular-text Автономная некоммерческая организация дополнительного профессионального образования «Академия развития инновационных технологий» создана 24 ноября 2020 года.
+			.maininfo-contacts
+				h1.section__title.section__title--left Контакты
+				.contacts-items
+					.contacts-item
+						h3.minititle Наш адрес
+						.contacts-item-content.footer-contact--geo
+							img(src="img/0-common/geo-footer.svg", alt="geo")
+							p.footer-contacts__text #{geo}
+
+					.contacts-item
+						h3.minititle Телефон
+						a(href=`${phoneLnk}`).contacts-item-content.footer-contact--phone
+							img(src="img/0-common/phone.svg", alt="phone")
+							p.footer-contacts__text #{phone}
+				
+					.contacts-item
+						h3.minititle Почта
+						a(href=`mailto:${mail}`).contacts-item-content.footer-contact--mail
+							img(src="img/0-common/mail.svg", alt="email")
+							.footer-contacts__text #{email}
+					.contacts-item.contacts-item--socials
+						.socials
+							h3.minititle Социальные сети
+							div.socials-list
+								a.socials-item(href=`${vk}`)
+									+vkIcon('socials-item__img')
+								a.socials-item(href=`${instagram}`)
+									+instagramIcon('socials-item__img')
+								a.socials-item(href=`${facebook}`)
+									+facebookIcon('socials-item__img')
+								a.socials-item(href=`${youtube}`)
+									+youtubeIcon('socials-item__img')
+
+block scripts
+	script(src="js/modal.min.js")
+	script(src="js/blocks/headerAndFooter.min.js")

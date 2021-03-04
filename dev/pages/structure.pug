@@ -1,0 +1,36 @@
+extends common/layout
+include common/mixins
+
+block content
+	main(style="margin-top: 156px")
+		.container
+			script.
+				var mapsDelay = 1000;
+
+			.breadcrumbs
+				a.breadcrumb.breadcrumb--main(href="#") Главная
+				a.breadcrumb(href="#") Об академии
+				a.breadcrumb(href="#") Лицензии
+
+			h1.section__title.section__title--page Структура и органы управления образовательной организацией
+			.structure
+				.structure-item.structure-head.bordered-card
+					.bordered-card__border
+						span.bordered-card__name Президент
+				.structure-item.structure-head.bordered-card
+					.bordered-card__border
+						span.bordered-card__name Ректор
+
+				.structure-children
+					.structure-item.bordered-card.structure-child
+						.bordered-card__border
+							span.bordered-card__name Ректор
+					.structure-item.bordered-card.structure-child
+						.bordered-card__border
+							span.bordered-card__name Ректор
+					.structure-item.bordered-card.structure-child
+						.bordered-card__border
+							span.bordered-card__name Ректор
+block scripts
+	script(src="js/modal.min.js")
+	script(src="js/blocks/headerAndFooter.min.js")

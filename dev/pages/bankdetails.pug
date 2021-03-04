@@ -1,0 +1,23 @@
+extends common/layout
+include common/mixins
+
+block content
+	main.subpage
+		.container
+			script.
+				var mapsDelay = 1000;
+
+			.breadcrumbs
+				a.breadcrumb.breadcrumb--main(href="#") Главная
+				a.breadcrumb(href="#") Об академии
+				a.breadcrumb(href="#") Лицензии
+
+			h1.section__title.section__title--page Реквизиты
+
+		.container
+			.simple-card
+				p Реквизиты АНО ДПО АРИТ 
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac porta diam. Duis sed quam quam. Etiam orci ligula, auctor sit amet sem in, tempor placerat est. 
+block scripts
+	script(src="js/modal.min.js")
+	script(src="js/blocks/headerAndFooter.min.js")

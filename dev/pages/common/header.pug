@@ -13,13 +13,13 @@
 				//- p.header__name Соцсети
 				div.socials-list
 					a.socials-item(href=`${vk}`)
-						img.socials-item__img(src="img/0-common/vk.svg", alt="vk")
+						+vkIcon('socials-item__img')
 					a.socials-item(href=`${instagram}`)
-						img.socials-item__img(src="img/0-common/instagram.svg", alt="instagram")
+						+instagramIcon('socials-item__img')
 					a.socials-item(href=`${facebook}`)
-						img.socials-item__img(src="img/0-common/facebook.svg", alt="facebook")
+						+facebookIcon('socials-item__img')
 					a.socials-item(href=`${youtube}`)
-						img.socials-item__img(src="img/0-common/youtube.svg", alt="youtube")
+						+youtubeIcon('socials-item__img')
 			.header-contacts
 				.header-phone
 					//- p.header__name Наш телефон
@@ -39,7 +39,7 @@
 					.nav-list-item__text Об академии
 				.nav-list-item-dropdown-wrap
 					.nav-list-item-dropdown
-						a.dropdown-item(href="#") Сведения об образовательной организации
+						a.dropdown-item(href="/about.html") Сведения об образовательной организации
 						a.dropdown-item(href="#") Лицензии
 						a.dropdown-item(href="#") Основные сведения
 						a.dropdown-item(href="#") Структура и органы управления образовательной организацией

@@ -1,0 +1,34 @@
+extends common/layout
+include common/mixins
+
+block content
+	main.subpage
+		.container
+			script.
+				var mapsDelay = 1000;
+
+			.breadcrumbs
+				a.breadcrumb.breadcrumb--main(href="#") Главная
+				a.breadcrumb(href="#") Об академии
+				a.breadcrumb(href="#") Документы
+
+			h1.section__title.section__title--page Документы
+
+		.container.container--mobile-fullscreen
+			.licenses-list
+				mixin licenseItem(data)
+					.licenses-item
+						.licenses-item-text
+							p.licenses-item__title= data.text
+							p.licenses-item__size 1Мб
+						button.licenses-item-download 
+							span.licenses-item-download__text Скачать PDF
+							+pdf()
+
+				+licenseItem({text: 'Правила приема на обучение, 2021 год' })
+				+licenseItem({text: 'Положение о реализации дополнительных профессиональных программ в Автономной'})
+					
+				+licenseItem({text: 'Финансово-хозяйственная деятельность'})
+block scripts
+	script(src="js/modal.min.js")
+	script(src="js/blocks/headerAndFooter.min.js")

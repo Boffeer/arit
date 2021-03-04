@@ -17,6 +17,7 @@
 	height: 100vh;
 	background-color: rgba(0,0,0,0.3);
 	transition: all 0.3s;
+	z-index: var(--z-pop);
 }
 .pop-wrap--opened {
 	visibility: visible;
@@ -46,11 +47,11 @@
 
 /* TEMP */
 .pop {
-	display: none;
+	/* display: none; */
 	transform: scale(0.2);
 	transition: all 0.3s;
 }
 .pop--opened {
-	display: block;
+	/* display: block; */
 	transform: scale(1);
 }

@@ -1,0 +1,34 @@
+extends common/layout
+include common/mixins
+
+block content
+	main.subpage
+		.container
+			script.
+				var mapsDelay = 1000;
+
+			.breadcrumbs
+				a.breadcrumb.breadcrumb--main(href="#") Главная
+				a.breadcrumb(href="#") Об академии
+				a.breadcrumb(href="#") Лицензии
+
+			h1.section__title.section__title--page Лицензии
+
+		.container.container--mobile-fullscreen
+			.licenses-list
+				mixin licenseItem(data)
+					.licenses-item
+						.licenses-item-text
+							p.licenses-item__title= data.text
+							p.licenses-item__size 1Мб
+						button.licenses-item-download 
+							span.licenses-item-download__text Скачать PDF
+							+pdf()
+
+				+licenseItem({text: 'Свидетельство о пастановке в налоговый орган от 24.11.2020' })
+				+licenseItem({text: 'Устав АНО ДПО АРИТ 20.10.2020'})
+				+licenseItem({text: 'Договор аренды от 15.12.2020'})
+				+licenseItem({text: 'Свидетельство о гос.рег 03.12.2020'})
+block scripts
+	script(src="js/modal.min.js")
+	script(src="js/blocks/headerAndFooter.min.js")

@@ -1,0 +1,125 @@
+extends common/layout
+include common/mixins
+
+block content
+	main.subpage
+		.container
+			script.
+				var mapsDelay = 1000;
+
+			.breadcrumbs
+				a.breadcrumb.breadcrumb--main(href="#") Главная
+				a.breadcrumb(href="#") Об академии
+				a.breadcrumb(href="#") Лицензии
+
+			h1.section__title.section__title--page Руководство и педагогический состав
+
+		.container
+			.teachers-page
+				+teacherSlide({
+					src: 'img/5-teachers/agafonov',
+					title: 'Агафонов Николай Владимирович',
+					descr: 'Генеральный директор компании «Альфа Консалтинг», преподаватель по геодезии со стажем более 10 лет',
+					classes: '',
+				})
+				+teacherSlide({
+					classes: '',
+					src: 'img/5-teachers/bahtiyarov',
+					title: 'Бахтияров Камиль Рафаэльевич',
+					descr: 'Доктор медицинских наук, профессор, врач акушер-гинеколог'
+				})
+				+teacherSlide({
+					classes: '',
+					src: 'img/5-teachers/bikov',
+					title: 'Быков Алексей Юрьевич',
+					descr: 'Врач-нейрохирург, член Европейской ассоциации клинической гипертермии, продакт-менеджер компании Zerts'
+				})
+				+teacherSlide({
+					classes: '',
+					src: 'img/5-teachers/shmatkova',
+					title: 'Шматкова Виктория Викторовна',
+					descr: 'Медицинский маркетолог, кандидат экономических наук, MBA, предприниматель, владелец компании ZERTS'
+				})
+				+teacherSlide({
+					classes: '',
+					src: 'img/5-teachers/glazkova',
+					title: 'Глазкова Ольга Леонидовна',
+					descr: 'Кандидат медицинских наук, доцент, врач акушер-гинеколог, врач узи, гинеколог-эндокринолог, онкогинеколог'
+				})
+				+teacherSlide({
+					classes: '',
+					src: 'img/5-teachers/knish',
+					title: 'Кныш Олег Юрьевич',
+					descr: 'Клинический психолог, гипнолог, коуч, преподаватель и автор серии курсов и тренингов по применению методик прикладной психологии для установления эффективной коммуникации'
+				})
+				+teacherSlide({
+					classes: '',
+					src: 'img/5-teachers/leizerman',
+					title: 'Лейзерман Михаил Григорьевич',
+					descr: 'Доктор медицинских наук, профессор, врач-оториноларинголог высшей категории, заместитель главного врача по хирургии в ГКБ № 29 им. Н. Э. Баумана, основоположник радиохирургии в России'
+				})
+				+teacherSlide({
+					classes: '',
+					src: 'img/5-teachers/lozhnikova',
+					title: 'Ложникова Татьяна Вячеславовна',
+					descr: 'Кандидат педагогических наук, доцент, заместитель директора по учебно-методической работе СПО'
+				})
+				+teacherSlide({
+					classes: '',
+					src: 'img/5-teachers/lucenko',
+					title: 'Луценко Николай Николаевич',
+					descr: 'Кандидат медицинских наук, доцент, врач-гинеколог, начальник отдела по производственной практике РНИМУ им. Н.И. Пирогова, руководитель кластера «высокие технологии в гинекологии» НПС «Эндохирургия» ЦА УЦИМТ, ведущий специалист Центра по направлению гинекология — лапароскопические и гистероскопические технологии'
+				})
+				+teacherSlide({
+					classes: '',
+					src: 'img/5-teachers/markevich',
+					title: 'Маркевич Харита Алексеевна',
+					descr: 'Психолог, коуч, сертифицированный бизнес-тренер'
+				})
+				+teacherSlide({
+					classes: '',
+					src: 'img/5-teachers/mindlin',
+					title: 'Миндлин Сергей Николаевич',
+					descr: 'Врач-оториноларинголог, стипендиат президента 2016-2018 гг., обладатель золотой медали «Я-профессионал» (2018 г.), Победитель гранта УМНИК (2017 г.), автор более 10 печатных работ в рецензируемых изданиях, докладчик на всероссийских и международных конференциях'
+				})
+				+teacherSlide({
+					classes: '',
+					src: 'img/5-teachers/pogosyan',
+					title: 'Погосян Месроп Левонович',
+					descr: 'Врач анестезиолог-реаниматолог, заведующий отделением анестезиологии и реанимации и оперблока официального филиала израильской клиники Hadassah Medical Moscow'
+				})
+				+teacherSlide({
+					classes: '',
+					src: 'img/5-teachers/skvortsova',
+					title: 'Скворцова Мария Артуровна',
+					descr: 'Кандидат медицинских наук, врач травматолог-ортопед, ассистент кафедры травматологии, ортопедии и ВПХ ПФ РНИМУ им. Н. И. Пирогова'
+				})
+				+teacherSlide({
+					classes: '',
+					src: 'img/5-teachers/firichenko',
+					title: 'Фириченко Сергей Викторович',
+					descr: 'Доктор медицинских наук, доцент кафедры акушерства и гинекологии лечебного факультета Московского Государственного Медико-стоматологического университета имени А.И. Евдокимова, эксперт РАГИН, член РАГИН, МАРС, сертифицированный специалист по кольпоскопии в Великобритании и США'
+				})
+				+teacherSlide({
+					classes: '',
+					src: 'img/5-teachers/churganova',
+					title: 'Чурганова Анастасия Алексеевна',
+					descr: 'Кандидат медицинских наук, доцент кафедры акушерства, гинекологии и перинатологии Института клинической медицины имени Н.В. Склифосовского Первого МГМУ имени И.М.Сеченова'
+				})
+		.button--center-aligner
+			button.secondary-button.teachers__more Показать еще
+	script(defer).
+		if (window.innerWidth < 1200) {
+			showmore({
+				items: '.teachers-page .teachers-slide',
+				clickHandler: '.teachers__more',
+				initialShow: 4,
+				itemsToShow: 4,
+				currentItem: 4,
+			})
+		}
+block scripts
+	script(src="js/modal.min.js")
+	script(src="js/blocks/headerAndFooter.min.js")
+block headScripts
+	script(src="js/blocks/showmore.min.js")

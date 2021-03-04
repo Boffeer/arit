@@ -2,22 +2,24 @@ extends common/layout
 include common/mixins
 
 block content
-	main
+	main.subpage
+		script.
+			var mapsDelay = 100;
 		.about-wrap#about
 			.about-container.container
 				.about
-					h2.section__title.section__title--left.about__title О нашей академии
+					h2.section__title.section__title--left.about__title Сведения об образовательной орагнизации
 					p.regular-text.about__text Академия развития инновационных технологий (АРИТ). АРИТ — это место, где помогают людям разных профессий повысить квалификацию или пройти полную профессиональную переподготовку. В академии свои знания и опыт  передают команда профессоров, докторов наук, специалистов практиков с выдающимися результатами в своих областях. 
-					p.regular-text.about__text.text-bold Достаточно выбрать одно из 100 направлений.
+					p.regular-text.about__text Достаточно выбрать одно из 100 направлений.
 					p.regular-text.about__text Теоретические знания вы можете получать дистанционно, в удобное для Вас время. А практика всегда проходит в оборудованных высокотехнологичных классах. Поэтому у вас нет необходимости надолго отрываться от работы ради обучения.
 					p.regular-text.about__text Врачи, геодезисты, строители, проектировщики, педагоги, средний медперсонал и люди других профессий, — получают дополнительное образование в нашей Академии.
-						span.text-bold  На базе АРИТ обучаются до 15 тысяч специалистов ежемесячно со всей России. 
+						span  На базе АРИТ обучаются до 15 тысяч специалистов ежемесячно со всей России. 
 					p.regular-text.about__text Если у вас уже есть базовое образование, но вы хотите стать более востребованным специалистом ,то мы ждем вас в АРИТ. 
-				button.thirdly-button.about-more Показать полностью
 				+pic({
-					pictureClass: 'about-picture',
+					pictureClass: 'about-picture about-page-hero',
 					ext: 'png',
-					src: 'img/3-about/about-pic'
+					style: 'object-fit: cover;',
+					src: 'img/pages/about/about-page-hero'
 				})
 			+pic({
 				pictureClass: 'about-picture__left',
@@ -29,3 +31,6 @@ block content
 				ext: 'png',
 				src: 'img/3-about/apolo-r'
 			})
+block scripts
+	script(src="js/modal.min.js")
+	script(src="js/blocks/headerAndFooter.min.js")
