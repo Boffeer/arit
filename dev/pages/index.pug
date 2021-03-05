@@ -2,7 +2,7 @@ extends common/layout
 include common/mixins
 
 block content
-	main
+	main#top
 		script.
 			var mapsDelay = 10000;
 		.hero-wrapper
@@ -31,7 +31,7 @@ block content
 							|  по&nbsp;окончании
 					.hero-buttons
 						button.primary-button.hero-cta Получить консультацию
-						a(href="https://dpoarit.ispringlearn.ru").secondary-button.hero-learning Учебный портал
+						a(target="_blank" href="https://dpoarit.ispringlearn.ru").secondary-button.hero-learning Учебный портал
 
 
 
@@ -173,96 +173,7 @@ block content
 
 
 
-
-		.features-wrapper
-			.features-container.container
-				.features
-					h2.section__title.features__title Преимущества
-					ol.features-list
-						li.features-list-item
-							p.features-item__text 
-								span.text-bold Индивидуальный подход 
-								|  и&nbsp;модульная система обучения 
-							+pic({
-								pictureClass: 'features-pic',
-								ext: 'png',
-								src: 'img/4-features/stairs'
-							})
-							h3.features-item__number 01
-						li.features-list-item
-							p.features-item__text 
-								span.text-bold Сотни
-								|  направлений обучения
-							+pic({
-								pictureClass: 'features-pic',
-								ext: 'png',
-								src: 'img/4-features/weathervane'
-							})
-							h3.features-item__number 02
-						li.features-list-item
-							p.features-item__text Поддержка кураторов 
-								span.text-bold 24/7
-							+pic({
-								pictureClass: 'features-pic',
-								ext: 'png',
-								src: 'img/4-features/shield'
-							})
-							h3.features-item__number 03
-						li.features-list-item
-							p.features-item__text Все преподаватели<br>действующие 
-								span.text-bold практики
-							+pic({
-								pictureClass: 'features-pic',
-								ext: 'png',
-								src: 'img/4-features/caduceus'
-							})
-							h3.features-item__number 04
-						li.features-list-item
-							p.features-item__text.features-item__text--single-row Учебные программы соответствуют
-								span.text-bold  государственным стандартам (ФГОС) 
-							+pic({
-								pictureClass: 'features-pic',
-								ext: 'png',
-								src: 'img/4-features/book'
-							})
-							h3.features-item__number 05
-						li.features-list-item 
-							p.features-item__text.features-item__text--single-row Доставка документов
-								span.text-bold  по всей России
-							+pic({
-								pictureClass: 'features-pic',
-								ext: 'png',
-								src: 'img/4-features/box'
-							})
-							h3.features-item__number 06
-
-						li.features-list-item
-							p.features-item__text.features-item__text--single-row Документы установленного образца
-							+pic({
-								pictureClass: 'features-pic',
-								ext: 'png',
-								src: 'img/4-features/paper'
-							})
-							h3.features-item__number 07
-
-						li.features-list-item
-							p.features-item__text Доступ к учебным материалам 
-								span.text-bold в&nbsp;любое время
-							+pic({
-								pictureClass: 'features-pic',
-								ext: 'png',
-								src: 'img/4-features/safe'
-							})
-							h3.features-item__number 08
-
-						li.features-list-item
-							p.features-item__text Доступные цены
-							+pic({
-								pictureClass: 'features-pic',
-								ext: 'png',
-								src: 'img/4-features/piggy'
-							})
-							h3.features-item__number 09
+		+featuresBlock()
 
 
 
@@ -500,28 +411,85 @@ block content
 					.partners-slider-outer
 						.partners-slider-wrap.swiper-container
 							.partners-slider.swiper-wrapper
-								mixin partnerItem(src)
-									div.partners-item.swiper-slide
-										div.partners-item__border
-											+pic({
-												pictureClass: 'partners__picture',
-												ext: 'png',
-												src: 'img/8-partners/' + src,
-											})
-								+partnerItem('atmos')
-								+partnerItem('btl')
-								+partnerItem('center-hygien')
-								+partnerItem('center-karnelius')
-								+partnerItem('dental-aurora-clinic')
-								+partnerItem('dr-super')
-								+partnerItem('gbuzvookb')
-								+partnerItem('gedeon-richter')
-								+partnerItem('gkb-eramishanceva')
-								+partnerItem('gkb')
-								+partnerItem('job-service')
-								+partnerItem('nii')
-								+partnerItem('president-gov-univercity')
-								+partnerItem('sergiev-posad')
+								+partnerItem({
+									src: 'atmos',
+									href: 'https://www.atmos-med.ru/',
+									className: 'swiper-slide'
+								})
+								+partnerItem({
+									src: 'btl',
+									href: 'https://www.btlmed.ru/',
+									className: 'swiper-slide'
+								})
+								+partnerItem({
+									src: 'center-hygien',
+									href: 'https://fcgie.ru/',
+									className: 'swiper-slide'
+								})
+								+partnerItem({
+									src: 'center-karnelius',
+									href: '',
+									className: 'swiper-slide'
+								})
+								+partnerItem({
+									src: 'dental-aurora-clinic',
+									href: 'https://vk.com/dental.aurora',
+									className: 'swiper-slide'
+								})
+								+partnerItem({
+									src: 'dr-super',
+									href: 'https://www.instagram.com/doctor_super/?hl=ru',
+									className: 'swiper-slide'
+								})
+								+partnerItem({
+									src: 'gbuzvookb',
+									href: 'https://www.vladokb.ru/',
+									className: 'swiper-slide'
+								})
+								+partnerItem({
+									src: 'gedeon-richter',
+									href: 'https://g-richter.ru/',
+									className: 'swiper-slide'
+								})
+								+partnerItem({
+									src: 'gkb-eramishanceva',
+									href: 'https://gkbe.ru/',
+									className: 'swiper-slide'
+								})
+								+partnerItem({
+									src: 'job-service',
+									className: 'swiper-slide'
+								})
+								+partnerItem({
+									src: 'nii',
+									href: 'https://niioz.ru/',
+									className: 'swiper-slide'
+								})
+								+partnerItem({
+									src: 'president-gov-univercity',
+									href: 'https://www.pnzgu.ru/',
+									className: 'swiper-slide'
+								})
+								+partnerItem({
+									src: 'sergiev-posad',
+									href: 'http://spmuzrb.ru/',
+									className: 'swiper-slide'
+								})
+								+partnerItem({
+									src: 'doctor',
+									href: 'https://www.lvrach.ru/',
+									className: 'swiper-slide'
+								})
+								+partnerItem({
+									src: 'ttp-optic',
+									href: 'https://www.lvrach.ru/',
+									className: 'swiper-slide'
+								})
+								+partnerItem({
+									src: 'szgmu',
+									href: 'https://szgmu.ru/rus/',
+									className: 'swiper-slide'
+								})
 						.partners-slider-scrollbar.slider-scrollbar
 						.partners-slider-prev.slider-button
 							+leftArrow('news-slider__arrow')
@@ -599,23 +567,7 @@ block content
 						.testimonials-slider-wrap
 							
 							//- ul.testimonials-list.testimonials-slider.swiper-wrapper
-							ul.testimonials-list.testimonials-slider
-								mixin Testimonial(numb)
-									li.testimonial-item.swiper-slide
-										div.testimonial
-											+pic({
-												pictureClass: 'testimonial__picture',
-												ext: 'png',
-												src: 'img/10-testimonials/testimonial-1'
-											})
-											div.testimonial-message
-												div.testimonial-message-info
-													div.testimonial-who
-														h3.testimonial-who__name Оксана Иванова
-														p.testimonial-who__position Директор MacDonalds
-													div.testimonial__date 02.06.20
-												p.testimonial__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.
-
+							.testimonials-list.testimonials-slider
 
 								+Testimonial('1')
 								+Testimonial('2')
@@ -648,7 +600,7 @@ block content
 						//-             div.testimonial__date 12.06.20
 						//-         p.testimonial__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.
 					.testimonials-more-wrap
-						button.secondary-button.testimonials-more Показать еще
+						a.secondary-button.testimonials-more(href="/testimonials.html") Показать еще
 
 block scripts
 	script(src="js/modal.min.js")

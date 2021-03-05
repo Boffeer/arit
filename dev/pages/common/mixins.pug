@@ -35,3 +35,128 @@ mixin meetupNext(data)
 		div.meetup-next-item-info
 			h3.meetup-next-item-info__topic= data.topic
 			p.meetup-next-item-info__speakers= data.speakers
+
+mixin Testimonial(numb)
+	.testimonial-item.swiper-slide
+		div.testimonial
+			+pic({
+				pictureClass: 'testimonial__picture',
+				ext: 'png',
+				src: 'img/10-testimonials/testimonial-1'
+			})
+			div.testimonial-message
+				div.testimonial-message-info
+					div.testimonial-who
+						h3.testimonial-who__name Оксана Иванова
+						p.testimonial-who__position Директор MacDonalds
+					div.testimonial__date 02.06.20
+				p.testimonial__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.
+
+
+
+
+
+
+
+mixin partnerItem(data)
+	a.partners-item(class= data.className href= data.href target="_blank")
+		div.partners-item__border
+			+pic({
+				pictureClass: 'partners__picture',
+				ext: 'png',
+				src: 'img/8-partners/' + data.src,
+			})
+
+
+
+
+mixin featuresBlock()
+		.features-wrapper
+			.features-container.container
+				.features
+					h2.section__title.features__title Преимущества
+					ol.features-list
+						li.features-list-item
+							p.features-item__text 
+								span.text-bold Индивидуальный подход 
+								|  и&nbsp;модульная система обучения 
+							+pic({
+								pictureClass: 'features-pic',
+								ext: 'png',
+								src: 'img/4-features/stairs'
+							})
+							h3.features-item__number 01
+						li.features-list-item
+							p.features-item__text 
+								span.text-bold Сотни
+								|  направлений обучения
+							+pic({
+								pictureClass: 'features-pic',
+								ext: 'png',
+								src: 'img/4-features/weathervane'
+							})
+							h3.features-item__number 02
+						li.features-list-item
+							p.features-item__text Поддержка кураторов 
+								span.text-bold 24/7
+							+pic({
+								pictureClass: 'features-pic',
+								ext: 'png',
+								src: 'img/4-features/shield'
+							})
+							h3.features-item__number 03
+						li.features-list-item
+							p.features-item__text Все преподаватели<br>действующие 
+								span.text-bold практики
+							+pic({
+								pictureClass: 'features-pic',
+								ext: 'png',
+								src: 'img/4-features/caduceus'
+							})
+							h3.features-item__number 04
+						li.features-list-item
+							p.features-item__text.features-item__text--single-row Учебные программы соответствуют
+								span.text-bold  государственным стандартам (ФГОС) 
+							+pic({
+								pictureClass: 'features-pic',
+								ext: 'png',
+								src: 'img/4-features/book'
+							})
+							h3.features-item__number 05
+						li.features-list-item 
+							p.features-item__text.features-item__text--single-row Доставка документов
+								span.text-bold  по всей России
+							+pic({
+								pictureClass: 'features-pic',
+								ext: 'png',
+								src: 'img/4-features/box'
+							})
+							h3.features-item__number 06
+
+						li.features-list-item
+							p.features-item__text.features-item__text--single-row Документы установленного образца
+							+pic({
+								pictureClass: 'features-pic',
+								ext: 'png',
+								src: 'img/4-features/paper'
+							})
+							h3.features-item__number 07
+
+						li.features-list-item
+							p.features-item__text Доступ к учебным материалам 
+								span.text-bold в&nbsp;любое время
+							+pic({
+								pictureClass: 'features-pic',
+								ext: 'png',
+								src: 'img/4-features/safe'
+							})
+							h3.features-item__number 08
+
+						li.features-list-item
+							p.features-item__text Доступные цены
+							+pic({
+								pictureClass: 'features-pic',
+								ext: 'png',
+								src: 'img/4-features/piggy'
+							})
+							h3.features-item__number 09

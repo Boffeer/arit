@@ -8,6 +8,7 @@ const isHereChecker = (elementClass, callback) => {
 
 
 
+
 const selector = (className) => {
 	return document.querySelector(className)
 }

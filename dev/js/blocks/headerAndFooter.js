@@ -39,6 +39,12 @@ popa({
 	pop: '.consult-pop',
 	popCloser: '.pop-closer',
 })
+popa({
+	clickTrigger: '.footer_get-contacts',
+	popWrap: '.consult-pop-wrap',
+	pop: '.consult-pop',
+	popCloser: '.pop-closer',
+})
 
 
 
@@ -131,3 +137,24 @@ const lazyYmap = () => {
 	setTimeout(function(){
 		lazyYmap()
 	}, mapsDelay)
+
+
+
+
+
+
+
+
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+	anchor.addEventListener('click', function (e) {
+		e.preventDefault()
+		const blockID = anchor.getAttribute('href').substr(1)
+		document.getElementById(blockID).scrollIntoView({
+			  behavior: 'smooth',
+			  block: 'start'
+		})
+	})
+}
+

@@ -10,10 +10,8 @@
   <body>
     <div class="header-wrapper">
       <div class="container header-container">
-        <header class="header">
-          <div class="header__logo"><img src="img/0-common/logo.svg" alt="logo">
-            <p class="header-logo-descriptor">Дополнительное профессиональное образование. Лицензия №12 от 25.10.2013</p>
-          </div>
+        <header class="header"><a class="header__logo" href="https://арит.рф"><img src="img/0-common/logo.svg" alt="logo">
+            <p class="header-logo-descriptor">Дополнительное профессиональное образование. Лицензия №12 от 25.10.2013</p></a>
           <div class="header-search">
             <input class="header__search" type="text" placeholder="Поиск">
           </div>
@@ -50,21 +48,21 @@
           <div class="dropdown-menu-item"><a class="nav-list-item nav-list-item--dropdown" href="#about">
               <div class="nav-list-item__text">Об академии</div></a>
             <div class="nav-list-item-dropdown-wrap">
-              <div class="nav-list-item-dropdown"><a class="dropdown-item" href="/about.html">Сведения об образовательной организации</a><a class="dropdown-item" href="#">Лицензии</a><a class="dropdown-item" href="#">Основные сведения</a><a class="dropdown-item" href="#">Структура и органы управления образовательной организацией</a><a class="dropdown-item" href="#">Документы</a><a class="dropdown-item" href="#">Образовательные стандарты</a><a class="dropdown-item" href="#">Руководство и педагогический состав</a><a class="dropdown-item" href="#">Вакансии</a><a class="dropdown-item" href="#">Отзывы</a><a class="dropdown-item" href="#">Реквизиты</a></div>
+              <div class="nav-list-item-dropdown"><a class="dropdown-item" href="/about.html">Сведения об образовательной организации</a><a class="dropdown-item" href="/licenses.html">Лицензии</a><a class="dropdown-item" href="/maininfo.html">Основные сведения</a><a class="dropdown-item" href="/structure.html">Структура и органы управления образовательной организацией</a><a class="dropdown-item" href="/documents.html">Документы</a><a class="dropdown-item" href="/standards.html">Образовательные стандарты</a><a class="dropdown-item" href="/teachers.html">Руководство и педагогический состав</a><a class="dropdown-item" href="jobs.html">Вакансии</a><a class="dropdown-item" href="testimonials.html">Отзывы</a><a class="dropdown-item" href="bankdetails.html">Реквизиты</a></div>
             </div>
-          </div><a class="nav-list-item" href="#meetups">
-            <div class="nav-list-item__text">Семинары</div></a><a class="nav-list-item" href="#meetups">
-            <div class="nav-list-item__text">Вебинары</div></a><a class="nav-list-item" href="#learning">
+          </div><a class="nav-list-item" href="./seminars.html">
+            <div class="nav-list-item__text">Семинары</div></a><a class="nav-list-item" href="./webinars.html">
+            <div class="nav-list-item__text">Вебинары</div></a><a class="nav-list-item" href="./learning.html">
             <div class="nav-list-item__text">Обучение</div></a><a class="nav-list-item" href="#media">
-            <div class="nav-list-item__text">Медиа</div></a><a class="nav-list-item" href="#news">
-            <div class="nav-list-item__text">Новости</div></a><a class="nav-list-item" href="#testimonials">
-            <div class="nav-list-item__text">Отзывы</div></a><a class="nav-list-item" href="#partners">
-            <div class="nav-list-item__text">Партнеры</div></a><a class="nav-list-item" href="#footer">
+            <div class="nav-list-item__text">Медиа</div></a><a class="nav-list-item" href="./news.html">
+            <div class="nav-list-item__text">Новости</div></a><a class="nav-list-item" href="./testimonials.html">
+            <div class="nav-list-item__text">Отзывы</div></a><a class="nav-list-item" href="./partners.html">
+            <div class="nav-list-item__text">Партнеры</div></a><a class="nav-list-item" href="./contacts.html">
             <div class="nav-list-item__text">Контакты</div></a>
         </div>
       </nav>
     </div>
-    <main>
+    <main id="top">
       <script>var mapsDelay = 10000;</script>
       <div class="hero-wrapper">
         <picture class="hero__picture-left">
@@ -82,7 +80,7 @@
               <li class="hero-bullet">Получи<span class="text-bold"> поддержку 24/7 и диплом</span> по&nbsp;окончании</li>
             </ul>
             <div class="hero-buttons">
-              <button class="primary-button hero-cta">Получить консультацию</button><a class="secondary-button hero-learning" href="https://dpoarit.ispringlearn.ru">Учебный портал</a>
+              <button class="primary-button hero-cta">Получить консультацию</button><a class="secondary-button hero-learning" target="_blank" href="https://dpoarit.ispringlearn.ru">Учебный портал</a>
             </div>
           </div>
         </div>
@@ -576,105 +574,87 @@
             <h2 class="section__title partners__title">Партнеры </h2>
             <div class="partners-slider-outer">
               <div class="partners-slider-wrap swiper-container">
-                <div class="partners-slider swiper-wrapper">
-                                    <div class="partners-item swiper-slide">
-                                      <div class="partners-item__border">
-                                        <picture class="partners__picture">
-                                          <source srcset="img/8-partners/atmos.webp 1x,img/8-partners/atmos@2x.webp 2x" type="image/webp"/><img src="img/8-partners/atmos.png" srcset="img/8-partners/atmos@2x.png 2x"/>
-                                        </picture>
-                                      </div>
-                                    </div>
-                                    <div class="partners-item swiper-slide">
-                                      <div class="partners-item__border">
-                                        <picture class="partners__picture">
-                                          <source srcset="img/8-partners/btl.webp 1x,img/8-partners/btl@2x.webp 2x" type="image/webp"/><img src="img/8-partners/btl.png" srcset="img/8-partners/btl@2x.png 2x"/>
-                                        </picture>
-                                      </div>
-                                    </div>
-                                    <div class="partners-item swiper-slide">
-                                      <div class="partners-item__border">
-                                        <picture class="partners__picture">
-                                          <source srcset="img/8-partners/center-hygien.webp 1x,img/8-partners/center-hygien@2x.webp 2x" type="image/webp"/><img src="img/8-partners/center-hygien.png" srcset="img/8-partners/center-hygien@2x.png 2x"/>
-                                        </picture>
-                                      </div>
-                                    </div>
-                                    <div class="partners-item swiper-slide">
-                                      <div class="partners-item__border">
-                                        <picture class="partners__picture">
-                                          <source srcset="img/8-partners/center-karnelius.webp 1x,img/8-partners/center-karnelius@2x.webp 2x" type="image/webp"/><img src="img/8-partners/center-karnelius.png" srcset="img/8-partners/center-karnelius@2x.png 2x"/>
-                                        </picture>
-                                      </div>
-                                    </div>
-                                    <div class="partners-item swiper-slide">
-                                      <div class="partners-item__border">
-                                        <picture class="partners__picture">
-                                          <source srcset="img/8-partners/dental-aurora-clinic.webp 1x,img/8-partners/dental-aurora-clinic@2x.webp 2x" type="image/webp"/><img src="img/8-partners/dental-aurora-clinic.png" srcset="img/8-partners/dental-aurora-clinic@2x.png 2x"/>
-                                        </picture>
-                                      </div>
-                                    </div>
-                                    <div class="partners-item swiper-slide">
-                                      <div class="partners-item__border">
-                                        <picture class="partners__picture">
-                                          <source srcset="img/8-partners/dr-super.webp 1x,img/8-partners/dr-super@2x.webp 2x" type="image/webp"/><img src="img/8-partners/dr-super.png" srcset="img/8-partners/dr-super@2x.png 2x"/>
-                                        </picture>
-                                      </div>
-                                    </div>
-                                    <div class="partners-item swiper-slide">
-                                      <div class="partners-item__border">
-                                        <picture class="partners__picture">
-                                          <source srcset="img/8-partners/gbuzvookb.webp 1x,img/8-partners/gbuzvookb@2x.webp 2x" type="image/webp"/><img src="img/8-partners/gbuzvookb.png" srcset="img/8-partners/gbuzvookb@2x.png 2x"/>
-                                        </picture>
-                                      </div>
-                                    </div>
-                                    <div class="partners-item swiper-slide">
-                                      <div class="partners-item__border">
-                                        <picture class="partners__picture">
-                                          <source srcset="img/8-partners/gedeon-richter.webp 1x,img/8-partners/gedeon-richter@2x.webp 2x" type="image/webp"/><img src="img/8-partners/gedeon-richter.png" srcset="img/8-partners/gedeon-richter@2x.png 2x"/>
-                                        </picture>
-                                      </div>
-                                    </div>
-                                    <div class="partners-item swiper-slide">
-                                      <div class="partners-item__border">
-                                        <picture class="partners__picture">
-                                          <source srcset="img/8-partners/gkb-eramishanceva.webp 1x,img/8-partners/gkb-eramishanceva@2x.webp 2x" type="image/webp"/><img src="img/8-partners/gkb-eramishanceva.png" srcset="img/8-partners/gkb-eramishanceva@2x.png 2x"/>
-                                        </picture>
-                                      </div>
-                                    </div>
-                                    <div class="partners-item swiper-slide">
-                                      <div class="partners-item__border">
-                                        <picture class="partners__picture">
-                                          <source srcset="img/8-partners/gkb.webp 1x,img/8-partners/gkb@2x.webp 2x" type="image/webp"/><img src="img/8-partners/gkb.png" srcset="img/8-partners/gkb@2x.png 2x"/>
-                                        </picture>
-                                      </div>
-                                    </div>
-                                    <div class="partners-item swiper-slide">
-                                      <div class="partners-item__border">
-                                        <picture class="partners__picture">
-                                          <source srcset="img/8-partners/job-service.webp 1x,img/8-partners/job-service@2x.webp 2x" type="image/webp"/><img src="img/8-partners/job-service.png" srcset="img/8-partners/job-service@2x.png 2x"/>
-                                        </picture>
-                                      </div>
-                                    </div>
-                                    <div class="partners-item swiper-slide">
-                                      <div class="partners-item__border">
-                                        <picture class="partners__picture">
-                                          <source srcset="img/8-partners/nii.webp 1x,img/8-partners/nii@2x.webp 2x" type="image/webp"/><img src="img/8-partners/nii.png" srcset="img/8-partners/nii@2x.png 2x"/>
-                                        </picture>
-                                      </div>
-                                    </div>
-                                    <div class="partners-item swiper-slide">
-                                      <div class="partners-item__border">
-                                        <picture class="partners__picture">
-                                          <source srcset="img/8-partners/president-gov-univercity.webp 1x,img/8-partners/president-gov-univercity@2x.webp 2x" type="image/webp"/><img src="img/8-partners/president-gov-univercity.png" srcset="img/8-partners/president-gov-univercity@2x.png 2x"/>
-                                        </picture>
-                                      </div>
-                                    </div>
-                                    <div class="partners-item swiper-slide">
-                                      <div class="partners-item__border">
-                                        <picture class="partners__picture">
-                                          <source srcset="img/8-partners/sergiev-posad.webp 1x,img/8-partners/sergiev-posad@2x.webp 2x" type="image/webp"/><img src="img/8-partners/sergiev-posad.png" srcset="img/8-partners/sergiev-posad@2x.png 2x"/>
-                                        </picture>
-                                      </div>
-                                    </div>
+                <div class="partners-slider swiper-wrapper"><a class="partners-item swiper-slide" href="https://www.atmos-med.ru/" target="_blank">
+                    <div class="partners-item__border">
+                      <picture class="partners__picture">
+                        <source srcset="img/8-partners/atmos.webp 1x,img/8-partners/atmos@2x.webp 2x" type="image/webp"/><img src="img/8-partners/atmos.png" srcset="img/8-partners/atmos@2x.png 2x"/>
+                      </picture>
+                    </div></a><a class="partners-item swiper-slide" href="https://www.btlmed.ru/" target="_blank">
+                    <div class="partners-item__border">
+                      <picture class="partners__picture">
+                        <source srcset="img/8-partners/btl.webp 1x,img/8-partners/btl@2x.webp 2x" type="image/webp"/><img src="img/8-partners/btl.png" srcset="img/8-partners/btl@2x.png 2x"/>
+                      </picture>
+                    </div></a><a class="partners-item swiper-slide" href="https://fcgie.ru/" target="_blank">
+                    <div class="partners-item__border">
+                      <picture class="partners__picture">
+                        <source srcset="img/8-partners/center-hygien.webp 1x,img/8-partners/center-hygien@2x.webp 2x" type="image/webp"/><img src="img/8-partners/center-hygien.png" srcset="img/8-partners/center-hygien@2x.png 2x"/>
+                      </picture>
+                    </div></a><a class="partners-item swiper-slide" href="" target="_blank">
+                    <div class="partners-item__border">
+                      <picture class="partners__picture">
+                        <source srcset="img/8-partners/center-karnelius.webp 1x,img/8-partners/center-karnelius@2x.webp 2x" type="image/webp"/><img src="img/8-partners/center-karnelius.png" srcset="img/8-partners/center-karnelius@2x.png 2x"/>
+                      </picture>
+                    </div></a><a class="partners-item swiper-slide" href="https://vk.com/dental.aurora" target="_blank">
+                    <div class="partners-item__border">
+                      <picture class="partners__picture">
+                        <source srcset="img/8-partners/dental-aurora-clinic.webp 1x,img/8-partners/dental-aurora-clinic@2x.webp 2x" type="image/webp"/><img src="img/8-partners/dental-aurora-clinic.png" srcset="img/8-partners/dental-aurora-clinic@2x.png 2x"/>
+                      </picture>
+                    </div></a><a class="partners-item swiper-slide" href="https://www.instagram.com/doctor_super/?hl=ru" target="_blank">
+                    <div class="partners-item__border">
+                      <picture class="partners__picture">
+                        <source srcset="img/8-partners/dr-super.webp 1x,img/8-partners/dr-super@2x.webp 2x" type="image/webp"/><img src="img/8-partners/dr-super.png" srcset="img/8-partners/dr-super@2x.png 2x"/>
+                      </picture>
+                    </div></a><a class="partners-item swiper-slide" href="https://www.vladokb.ru/" target="_blank">
+                    <div class="partners-item__border">
+                      <picture class="partners__picture">
+                        <source srcset="img/8-partners/gbuzvookb.webp 1x,img/8-partners/gbuzvookb@2x.webp 2x" type="image/webp"/><img src="img/8-partners/gbuzvookb.png" srcset="img/8-partners/gbuzvookb@2x.png 2x"/>
+                      </picture>
+                    </div></a><a class="partners-item swiper-slide" href="https://g-richter.ru/" target="_blank">
+                    <div class="partners-item__border">
+                      <picture class="partners__picture">
+                        <source srcset="img/8-partners/gedeon-richter.webp 1x,img/8-partners/gedeon-richter@2x.webp 2x" type="image/webp"/><img src="img/8-partners/gedeon-richter.png" srcset="img/8-partners/gedeon-richter@2x.png 2x"/>
+                      </picture>
+                    </div></a><a class="partners-item swiper-slide" href="https://gkbe.ru/" target="_blank">
+                    <div class="partners-item__border">
+                      <picture class="partners__picture">
+                        <source srcset="img/8-partners/gkb-eramishanceva.webp 1x,img/8-partners/gkb-eramishanceva@2x.webp 2x" type="image/webp"/><img src="img/8-partners/gkb-eramishanceva.png" srcset="img/8-partners/gkb-eramishanceva@2x.png 2x"/>
+                      </picture>
+                    </div></a><a class="partners-item swiper-slide" target="_blank">
+                    <div class="partners-item__border">
+                      <picture class="partners__picture">
+                        <source srcset="img/8-partners/job-service.webp 1x,img/8-partners/job-service@2x.webp 2x" type="image/webp"/><img src="img/8-partners/job-service.png" srcset="img/8-partners/job-service@2x.png 2x"/>
+                      </picture>
+                    </div></a><a class="partners-item swiper-slide" href="https://niioz.ru/" target="_blank">
+                    <div class="partners-item__border">
+                      <picture class="partners__picture">
+                        <source srcset="img/8-partners/nii.webp 1x,img/8-partners/nii@2x.webp 2x" type="image/webp"/><img src="img/8-partners/nii.png" srcset="img/8-partners/nii@2x.png 2x"/>
+                      </picture>
+                    </div></a><a class="partners-item swiper-slide" href="https://www.pnzgu.ru/" target="_blank">
+                    <div class="partners-item__border">
+                      <picture class="partners__picture">
+                        <source srcset="img/8-partners/president-gov-univercity.webp 1x,img/8-partners/president-gov-univercity@2x.webp 2x" type="image/webp"/><img src="img/8-partners/president-gov-univercity.png" srcset="img/8-partners/president-gov-univercity@2x.png 2x"/>
+                      </picture>
+                    </div></a><a class="partners-item swiper-slide" href="http://spmuzrb.ru/" target="_blank">
+                    <div class="partners-item__border">
+                      <picture class="partners__picture">
+                        <source srcset="img/8-partners/sergiev-posad.webp 1x,img/8-partners/sergiev-posad@2x.webp 2x" type="image/webp"/><img src="img/8-partners/sergiev-posad.png" srcset="img/8-partners/sergiev-posad@2x.png 2x"/>
+                      </picture>
+                    </div></a><a class="partners-item swiper-slide" href="https://www.lvrach.ru/" target="_blank">
+                    <div class="partners-item__border">
+                      <picture class="partners__picture">
+                        <source srcset="img/8-partners/doctor.webp 1x,img/8-partners/doctor@2x.webp 2x" type="image/webp"/><img src="img/8-partners/doctor.png" srcset="img/8-partners/doctor@2x.png 2x"/>
+                      </picture>
+                    </div></a><a class="partners-item swiper-slide" href="https://www.lvrach.ru/" target="_blank">
+                    <div class="partners-item__border">
+                      <picture class="partners__picture">
+                        <source srcset="img/8-partners/ttp-optic.webp 1x,img/8-partners/ttp-optic@2x.webp 2x" type="image/webp"/><img src="img/8-partners/ttp-optic.png" srcset="img/8-partners/ttp-optic@2x.png 2x"/>
+                      </picture>
+                    </div></a><a class="partners-item swiper-slide" href="https://szgmu.ru/rus/" target="_blank">
+                    <div class="partners-item__border">
+                      <picture class="partners__picture">
+                        <source srcset="img/8-partners/szgmu.webp 1x,img/8-partners/szgmu@2x.webp 2x" type="image/webp"/><img src="img/8-partners/szgmu.png" srcset="img/8-partners/szgmu@2x.png 2x"/>
+                      </picture>
+                    </div></a>
                 </div>
               </div>
               <div class="partners-slider-scrollbar slider-scrollbar"></div>
@@ -723,65 +703,63 @@
             <h2 class="section__title testimonials__title">Отзывы</h2>
             <div class="testimonials-slider-outer">
               <div class="testimonials-slider-wrap">
-                <ul class="testimonials-list testimonials-slider">
-                                    <li class="testimonial-item swiper-slide">
-                                      <div class="testimonial">
-                                        <picture class="testimonial__picture">
-                                          <source srcset="img/10-testimonials/testimonial-1.webp 1x,img/10-testimonials/testimonial-1@2x.webp 2x" type="image/webp"/><img src="img/10-testimonials/testimonial-1.png" srcset="img/10-testimonials/testimonial-1@2x.png 2x"/>
-                                        </picture>
-                                        <div class="testimonial-message">
-                                          <div class="testimonial-message-info">
-                                            <div class="testimonial-who">
-                                              <h3 class="testimonial-who__name">Оксана Иванова</h3>
-                                              <p class="testimonial-who__position">Директор MacDonalds</p>
-                                            </div>
-                                            <div class="testimonial__date">02.06.20</div>
-                                          </div>
-                                          <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.</p>
-                                        </div>
-                                      </div>
-                                    </li>
-                                    <li class="testimonial-item swiper-slide">
-                                      <div class="testimonial">
-                                        <picture class="testimonial__picture">
-                                          <source srcset="img/10-testimonials/testimonial-1.webp 1x,img/10-testimonials/testimonial-1@2x.webp 2x" type="image/webp"/><img src="img/10-testimonials/testimonial-1.png" srcset="img/10-testimonials/testimonial-1@2x.png 2x"/>
-                                        </picture>
-                                        <div class="testimonial-message">
-                                          <div class="testimonial-message-info">
-                                            <div class="testimonial-who">
-                                              <h3 class="testimonial-who__name">Оксана Иванова</h3>
-                                              <p class="testimonial-who__position">Директор MacDonalds</p>
-                                            </div>
-                                            <div class="testimonial__date">02.06.20</div>
-                                          </div>
-                                          <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.</p>
-                                        </div>
-                                      </div>
-                                    </li>
-                                    <li class="testimonial-item swiper-slide">
-                                      <div class="testimonial">
-                                        <picture class="testimonial__picture">
-                                          <source srcset="img/10-testimonials/testimonial-1.webp 1x,img/10-testimonials/testimonial-1@2x.webp 2x" type="image/webp"/><img src="img/10-testimonials/testimonial-1.png" srcset="img/10-testimonials/testimonial-1@2x.png 2x"/>
-                                        </picture>
-                                        <div class="testimonial-message">
-                                          <div class="testimonial-message-info">
-                                            <div class="testimonial-who">
-                                              <h3 class="testimonial-who__name">Оксана Иванова</h3>
-                                              <p class="testimonial-who__position">Директор MacDonalds</p>
-                                            </div>
-                                            <div class="testimonial__date">02.06.20</div>
-                                          </div>
-                                          <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.</p>
-                                        </div>
-                                      </div>
-                                    </li>
-                </ul>
+                <div class="testimonials-list testimonials-slider">
+                  <div class="testimonial-item swiper-slide">
+                    <div class="testimonial">
+                      <picture class="testimonial__picture">
+                        <source srcset="img/10-testimonials/testimonial-1.webp 1x,img/10-testimonials/testimonial-1@2x.webp 2x" type="image/webp"/><img src="img/10-testimonials/testimonial-1.png" srcset="img/10-testimonials/testimonial-1@2x.png 2x"/>
+                      </picture>
+                      <div class="testimonial-message">
+                        <div class="testimonial-message-info">
+                          <div class="testimonial-who">
+                            <h3 class="testimonial-who__name">Оксана Иванова</h3>
+                            <p class="testimonial-who__position">Директор MacDonalds</p>
+                          </div>
+                          <div class="testimonial__date">02.06.20</div>
+                        </div>
+                        <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="testimonial-item swiper-slide">
+                    <div class="testimonial">
+                      <picture class="testimonial__picture">
+                        <source srcset="img/10-testimonials/testimonial-1.webp 1x,img/10-testimonials/testimonial-1@2x.webp 2x" type="image/webp"/><img src="img/10-testimonials/testimonial-1.png" srcset="img/10-testimonials/testimonial-1@2x.png 2x"/>
+                      </picture>
+                      <div class="testimonial-message">
+                        <div class="testimonial-message-info">
+                          <div class="testimonial-who">
+                            <h3 class="testimonial-who__name">Оксана Иванова</h3>
+                            <p class="testimonial-who__position">Директор MacDonalds</p>
+                          </div>
+                          <div class="testimonial__date">02.06.20</div>
+                        </div>
+                        <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="testimonial-item swiper-slide">
+                    <div class="testimonial">
+                      <picture class="testimonial__picture">
+                        <source srcset="img/10-testimonials/testimonial-1.webp 1x,img/10-testimonials/testimonial-1@2x.webp 2x" type="image/webp"/><img src="img/10-testimonials/testimonial-1.png" srcset="img/10-testimonials/testimonial-1@2x.png 2x"/>
+                      </picture>
+                      <div class="testimonial-message">
+                        <div class="testimonial-message-info">
+                          <div class="testimonial-who">
+                            <h3 class="testimonial-who__name">Оксана Иванова</h3>
+                            <p class="testimonial-who__position">Директор MacDonalds</p>
+                          </div>
+                          <div class="testimonial__date">02.06.20</div>
+                        </div>
+                        <p class="testimonial__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. In culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="testimonials-slider-scrollbar"></div>
               </div>
             </div>
-            <div class="testimonials-more-wrap">
-              <button class="secondary-button testimonials-more">Показать еще</button>
-            </div>
+            <div class="testimonials-more-wrap"><a class="secondary-button testimonials-more" href="/testimonials.html">Показать еще</a></div>
           </div>
         </div>
       </div>
@@ -821,8 +799,7 @@
     <footer class="footer-wrapper" id="footer">
       <div class="container">
         <div class="footer">
-          <div class="footer-top">
-            <div class="footer__logo"><img src="img/0-common/logo-solid.svg" alt="logo"></div>
+          <div class="footer-top"><a class="footer__logo" href="#top"><img src="img/0-common/logo-solid.svg" alt="logo"></a>
             <div class="footer-top__content">
               <p class="footer-copyright">Компания &laquo;Академия развития инновационных технологий&raquo;<br> Все права защищены &copy; 2010-2021</p>
             </div>

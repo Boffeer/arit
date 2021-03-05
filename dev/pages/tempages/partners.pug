@@ -1,0 +1,56 @@
+extends common/layout
+include common/mixins
+
+block content
+	main.subpage
+		.container
+			script
+				| var mapsDelay = 1000;
+
+			.breadcrumbs
+				a.breadcrumb.breadcrumb--main(href="#") Главная
+				a.breadcrumb(href="#") Отзывы
+
+		.container.partners-container
+			.partners-page
+				h1.section__title Партнеры
+				.partners
+					+partnerItem({
+						src: 'atmos',
+					})
+					+partnerItem({
+						src: 'btl',
+					})
+					+partnerItem({
+						src: 'center-hygien',
+					})
+					+partnerItem({
+						src: 'center-karnelius',
+					})
+					+partnerItem({
+						src: 'dental-aurora-clinic',
+					})
+					+partnerItem({
+						src: 'dr-super',
+					})
+					+partnerItem({
+						src: 'gbuzvookb'
+					})
+					+partnerItem({
+						src: 'gedeon-richter',
+					})
+					+partnerItem({
+						src: 'gkb-eramishanceva',
+					})
+					+partnerItem({
+						src: 'job-service',
+					})
+					+partnerItem({
+						src: 'nii',
+					})
+					+partnerItem({
+						src: 'president-gov-univercity',
+					})
+					+partnerItem({
+						src: 'sergiev-posad',
+					})

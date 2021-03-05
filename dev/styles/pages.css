@@ -673,3 +673,33 @@
 		padding-bottom: 20px;
 	}
 }
+
+
+
+
+
+.testimonials-page {
+	padding-bottom: 50px;
+}
+
+
+
+
+
+
+.partners-page .partners{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	position: relative;
+	padding-bottom: 40px;
+}
+.partners-page .partners:after {
+	content: '';
+	flex: auto;
+	max-width: 450px;
+}
+.partners-page .partners-item {
+	width: 200px;
+	margin-bottom: 20px;
+}

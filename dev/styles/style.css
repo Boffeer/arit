@@ -89,7 +89,6 @@
     src: url('../fonts/Geometria-Bold.woff2') format('woff2');
     src: url('../fonts/Geometria-Bold.woff') format('woff');
 }
-    
 
 @font-face {
     font-family: 'Geometria-BoldItalic';
@@ -98,7 +97,6 @@
     src: url('../fonts/Geometria-BoldItalic.woff2') format('woff2');
     src: url('../fonts/Geometria-BoldItalic.woff') format('woff');
 }
-    
 
 @font-face {
     font-family: 'Geometria-ExtraBold';
@@ -107,7 +105,6 @@
     src: url('../fonts/Geometria-ExtraBold.woff2') format('woff2');
     src: url('../fonts/Geometria-ExtraBold.woff') format('woff');
 }
-    
 
 @font-face {
     font-family: 'Geometria-ExtraBoldItalic';
@@ -116,7 +113,6 @@
     src: url('../fonts/Geometria-ExtraBoldItalic.woff2') format('woff2');
     src: url('../fonts/Geometria-ExtraBoldItalic.woff') format('woff');
 }
-    
 
 @font-face {
     font-family: 'Geometria-Heavy';
@@ -289,6 +285,7 @@ input {
 		justify-content: space-between;
 		align-items: center;
 		transition: all 0.7s;
+		z-index: var(--z-header);
 	}
 	.header-wrapper {
 		position: fixed;
@@ -298,14 +295,17 @@ input {
 		margin-left: auto;
 		margin-right: auto;
 		box-shadow: 0px 1px 15px rgba(207, 207, 207, 0.55);
+		background-color: #fff;
+		transition: all 0.7s;
+		z-index: var(--z-header);
 	}
 	.header--hidden {
 		transform: translateY(-100%);
+		transition: all 0.7s;
 	}
 	.header--visible {
 		transform: translateY(0);
-		background-color: #fff;
-		z-index: var(--z-header);
+		transition: all 0.7s;
 	}
 
 	.header-search {
@@ -1085,6 +1085,7 @@ input {
 		justify-content: center;
 		align-items: center;
 		box-sizing: border-box;
+		display: block;
 	}
 	.partners-item__border {
 		border: 1px solid var(--color-lines);
@@ -1470,6 +1471,7 @@ input {
 	.footer_get-contacts {
 		color: #fff;
 		border-color: #fff;
+		margin-right: 0;
 	}
 	.footer_get-contacts:hover {
 		background-color: #fff;

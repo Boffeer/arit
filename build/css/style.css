@@ -695,10 +695,17 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header,
+.header-wrapper {
   transition: all .7s;
+  z-index: 70;
+  z-index: var(--z-header);
 }
 
 .header-wrapper {
+  background: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -710,13 +717,12 @@ input {
 
 .header--hidden {
   transform: translateY(-100%);
+  transition: all .7s;
 }
 
 .header--visible {
-  background: #fff;
   transform: translateY(0);
-  z-index: 70;
-  z-index: var(--z-header);
+  transition: all .7s;
 }
 
 .header-search {
@@ -1514,13 +1520,14 @@ input {
   background: #fff;
   height: 120px;
   border-radius: 7px;
+  display: flex;
   align-items: center;
+  display: block;
 }
 
 .partners-item,
 .partners-item__border {
   padding: 5px;
-  display: flex;
   justify-content: center;
   box-sizing: border-box;
 }
@@ -1531,6 +1538,7 @@ input {
   border-radius: 7px;
   width: 100%;
   height: 100%;
+  display: flex;
   align-items: stretch;
 }
 
@@ -1933,6 +1941,7 @@ input {
 .footer_get-contacts {
   color: #fff;
   border-color: #fff;
+  margin-right: 0;
 }
 
 .footer_get-contacts:hover {
@@ -2684,6 +2693,29 @@ input {
   }
 }
 
+.testimonials-page {
+  padding-bottom: 50px;
+}
+
+.partners-page .partners {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.partners-page .partners:after {
+  content: "";
+  flex: auto;
+  max-width: 450px;
+}
+
+.partners-page .partners-item {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
 @media (max-width:1200px) {
   :root {
     --f-header: 12px;
@@ -3335,6 +3367,7 @@ input {
   }
 
   .footer_get-contacts {
+    margin-right: auto;
     font-size: 12px;
     padding-right: 0;
     padding-left: 0;

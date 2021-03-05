@@ -1,0 +1,46 @@
+extends common/layout
+include common/mixins
+
+block content
+	main.subpage
+		.container
+			script
+				| var mapsDelay = 1000;
+
+			.breadcrumbs
+				a.breadcrumb.breadcrumb--main(href="#") Главная
+				a.breadcrumb(href="#") Отзывы
+
+		.container.testimonials-container
+			.testimonials-page
+				h1.section__title Отзывы
+				.testimonials
+					+Testimonial('1')
+					+Testimonial('2')
+					+Testimonial('3')
+					+Testimonial('4')
+					+Testimonial('5')
+					+Testimonial('5')
+					+Testimonial('5')
+					+Testimonial('5')
+					+Testimonial('5')
+					+Testimonial('5')
+				.button--center-aligner
+					button.secondary-button.testimonials__more Показать еще
+
+		script(defer).
+			showmore({
+				items: '.testimonial-item',
+				initialShow: 5,
+				itemsToShow: 5,
+				currentItem: 0,
+				clickHandler: '.testimonials__more'
+			})
+
+block scripts
+	script(src="js/modal.min.js")
+	script(src="js/blocks/headerAndFooter.min.js")
+
+
+block headScripts
+	script(src="js/blocks/showmore.min.js")

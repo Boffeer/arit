@@ -21,7 +21,7 @@ if ((skillupTabHandler != null ) && (retrainTab != null)) {
 	})
 }
 
-showInitialItems({
+showmore({
 	items: '.learning-tab--skillup .learning-tab-list-item',
 	initialShow: 6,
 	itemsToShow: 6,
@@ -29,7 +29,7 @@ showInitialItems({
 	clickHandler: '.learning-more--skillup'
 })
 
-showInitialItems({
+showmore({
 	items: '.learning-tab--retrain .learning-tab-list-item',
 	initialShow: 6,
 	itemsToShow: 6,
