@@ -70,93 +70,274 @@ mixin partnerItem(data)
 
 
 
-mixin featuresBlock()
-		.features-wrapper
-			.features-container.container
-				.features
-					h2.section__title.features__title Преимущества
-					ol.features-list
-						li.features-list-item
-							p.features-item__text 
-								span.text-bold Индивидуальный подход 
-								|  и&nbsp;модульная система обучения 
-							+pic({
-								pictureClass: 'features-pic',
-								ext: 'png',
-								src: 'img/4-features/stairs'
-							})
-							h3.features-item__number 01
-						li.features-list-item
-							p.features-item__text 
-								span.text-bold Сотни
-								|  направлений обучения
-							+pic({
-								pictureClass: 'features-pic',
-								ext: 'png',
-								src: 'img/4-features/weathervane'
-							})
-							h3.features-item__number 02
-						li.features-list-item
-							p.features-item__text Поддержка кураторов 
-								span.text-bold 24/7
-							+pic({
-								pictureClass: 'features-pic',
-								ext: 'png',
-								src: 'img/4-features/shield'
-							})
-							h3.features-item__number 03
-						li.features-list-item
-							p.features-item__text Все преподаватели<br>действующие 
-								span.text-bold практики
-							+pic({
-								pictureClass: 'features-pic',
-								ext: 'png',
-								src: 'img/4-features/caduceus'
-							})
-							h3.features-item__number 04
-						li.features-list-item
-							p.features-item__text.features-item__text--single-row Учебные программы соответствуют
-								span.text-bold  государственным стандартам (ФГОС) 
-							+pic({
-								pictureClass: 'features-pic',
-								ext: 'png',
-								src: 'img/4-features/book'
-							})
-							h3.features-item__number 05
-						li.features-list-item 
-							p.features-item__text.features-item__text--single-row Доставка документов
-								span.text-bold  по всей России
-							+pic({
-								pictureClass: 'features-pic',
-								ext: 'png',
-								src: 'img/4-features/box'
-							})
-							h3.features-item__number 06
+mixin featuresBlock(data)
+	.features-wrapper
+		.features-container.container
+			.features
+				h2.section__title.features__title= data.title
+				ol.features-list
+					li.features-list-item
+						p.features-item__text 
+							span.text-bold Индивидуальный подход 
+							|  и&nbsp;модульная система обучения 
+						+pic({
+							pictureClass: 'features-pic',
+							ext: 'png',
+							src: 'img/4-features/stairs'
+						})
+						h3.features-item__number 01
+					li.features-list-item
+						p.features-item__text 
+							span.text-bold Сотни
+							|  направлений обучения
+						+pic({
+							pictureClass: 'features-pic',
+							ext: 'png',
+							src: 'img/4-features/weathervane'
+						})
+						h3.features-item__number 02
+					li.features-list-item
+						p.features-item__text Поддержка кураторов 
+							span.text-bold 24/7
+						+pic({
+							pictureClass: 'features-pic',
+							ext: 'png',
+							src: 'img/4-features/shield'
+						})
+						h3.features-item__number 03
+					li.features-list-item
+						p.features-item__text Все преподаватели<br>действующие 
+							span.text-bold практики
+						+pic({
+							pictureClass: 'features-pic',
+							ext: 'png',
+							src: 'img/4-features/caduceus'
+						})
+						h3.features-item__number 04
+					li.features-list-item
+						p.features-item__text.features-item__text--single-row Учебные программы соответствуют
+							span.text-bold  государственным стандартам (ФГОС) 
+						+pic({
+							pictureClass: 'features-pic',
+							ext: 'png',
+							src: 'img/4-features/book'
+						})
+						h3.features-item__number 05
+					li.features-list-item 
+						p.features-item__text.features-item__text--single-row Доставка документов
+							span.text-bold  по всей России
+						+pic({
+							pictureClass: 'features-pic',
+							ext: 'png',
+							src: 'img/4-features/box'
+						})
+						h3.features-item__number 06
 
-						li.features-list-item
-							p.features-item__text.features-item__text--single-row Документы установленного образца
-							+pic({
-								pictureClass: 'features-pic',
-								ext: 'png',
-								src: 'img/4-features/paper'
-							})
-							h3.features-item__number 07
+					li.features-list-item
+						p.features-item__text.features-item__text--single-row Документы установленного образца
+						+pic({
+							pictureClass: 'features-pic',
+							ext: 'png',
+							src: 'img/4-features/paper'
+						})
+						h3.features-item__number 07
 
-						li.features-list-item
-							p.features-item__text Доступ к учебным материалам 
-								span.text-bold в&nbsp;любое время
-							+pic({
-								pictureClass: 'features-pic',
-								ext: 'png',
-								src: 'img/4-features/safe'
-							})
-							h3.features-item__number 08
+					li.features-list-item
+						p.features-item__text Доступ к учебным материалам 
+							span.text-bold в&nbsp;любое время
+						+pic({
+							pictureClass: 'features-pic',
+							ext: 'png',
+							src: 'img/4-features/safe'
+						})
+						h3.features-item__number 08
 
-						li.features-list-item
-							p.features-item__text Доступные цены
-							+pic({
-								pictureClass: 'features-pic',
-								ext: 'png',
-								src: 'img/4-features/piggy'
+					li.features-list-item
+						p.features-item__text Доступные цены
+						+pic({
+							pictureClass: 'features-pic',
+							ext: 'png',
+							src: 'img/4-features/piggy'
+						})
+						h3.features-item__number 09
+
+
+
+
+
+
+mixin learningPageItem()
+	div.learning-page-item
+		.learning-page-info-wrapper
+			div.learning-page-number
+				p.learning-page__number 1
+			div.learning-page-info
+				h3.learning-page-info__title IT менеджмент
+				p.learning-page-info__hours.learning-page-info__bullet
+					span.learning-page-info__field-name Объем программы:
+					span.text-bold.learning-page-info__content от 520 ч.
+				p.learning-page-info__duration.learning-page-info__bullet
+					span.learning-page-info__field-name Длительность обучения:
+					span.text-bold.learning-page-info__content от 83 дней
+				p.learning-page-info__document.learning-page-info__bullet
+					span.learning-page-info__field-name Получаемый документ:
+					span.text-bold.learning-page-info__content Диплом о профессиональной переподготовке (ПП)
+				p.learning-page-info__base.learning-page-info__bullet
+					span.learning-page-info__field-name Обучение на базе:
+					span.text-bold.learning-page-info__content высшего или средне-профессионального образования
+		div.learning-page-info-buttons
+			button.primary-button.learning-page-info__consult Получить консультацию
+			button.thirdly-button.learning-page-info__more Подробнее
+
+
+mixin licenseItem(data)
+	.licenses-item
+		.licenses-item-text
+			p.licenses-item__title= data.text
+			p.licenses-item__size 1Мб
+		button.licenses-item-download 
+			span.licenses-item-download__text Скачать PDF
+			+pdf()
+
+
+mixin defaultForm()
+	div.form-fields
+		div.form-input-wrap
+			input(type="hidden", name="fomrname")
+		div.form-input-wrap
+			input.form__input(
+				required
+				name="name"
+				type="text"
+				placeholder="Имя"
+				)
+		div.form-input-wrap
+			input.form__input.input--phone(
+				required
+				name="tel"
+				type="tel"
+				autocorrect="off"
+				autocomplete="tel"
+				placeholder="Телефон"
+				)
+		div.form-input-wrap
+			input.form__input(
+				name="email"
+				type="email"
+				autocapitalize="off" 
+				autocorrect="off"
+				autocomplete="email"
+				placeholder="Эл. почта"
+				data-value-missing="Пожалуйста, введите свою электронную почту" 
+				data-value-invalid="Проверьте правильно ли написана почта"
+				)
+		div.form-input-wrap.form-input-wrap--button
+			button.primary-button.form__button Отправить заявку
+	.gdpr Нажимая на эту кнопку, Вы даете согласие 
+		button.gdpr__button на обработку персональных данных
+
+
+
+mixin partnersSlider($)
+	.partners-wrapper#partners
+		.partners-container.container
+			.partners
+				h2.section__title.partners__title= $.title
+				.partners-slider-outer
+					.partners-slider-wrap.swiper-container
+						.partners-slider.swiper-wrapper
+							+partnerItem({
+								src: 'atmos',
+								href: 'https://www.atmos-med.ru/',
+								className: 'swiper-slide'
 							})
-							h3.features-item__number 09
+							+partnerItem({
+								src: 'btl',
+								href: 'https://www.btlmed.ru/',
+								className: 'swiper-slide'
+							})
+							+partnerItem({
+								src: 'cb',
+								href: 'https://www.cbr.ru/',
+								className: 'swiper-slide'
+							})
+							+partnerItem({
+								src: 'center-hygien',
+								href: 'https://fcgie.ru/',
+								className: 'swiper-slide'
+							})
+							+partnerItem({
+								src: 'center-karnelius',
+								href: 'http://ucentr.karelia.ru/',
+								className: 'swiper-slide'
+							})
+							+partnerItem({
+								src: 'dental-aurora-clinic',
+								href: 'https://vk.com/dental.aurora',
+								className: 'swiper-slide'
+							})
+							+partnerItem({
+								src: 'dr-super',
+								href: 'https://www.instagram.com/doctor_super/?hl=ru',
+								className: 'swiper-slide'
+							})
+							+partnerItem({
+								src: 'gbuzvookb',
+								href: 'https://www.vladokb.ru/',
+								className: 'swiper-slide'
+							})
+							+partnerItem({
+								src: 'gedeon-richter',
+								href: 'https://g-richter.ru/',
+								className: 'swiper-slide'
+							})
+							+partnerItem({
+								src: 'gkb-eramishanceva',
+								href: 'https://gkbe.ru/',
+								className: 'swiper-slide'
+							})
+							+partnerItem({
+								src: 'job-service',
+								className: 'swiper-slide'
+							})
+							+partnerItem({
+								src: 'nii',
+								href: 'https://niioz.ru/',
+								className: 'swiper-slide'
+							})
+							+partnerItem({
+								src: 'president-gov-univercity',
+								href: 'https://www.pnzgu.ru/',
+								className: 'swiper-slide'
+							})
+							+partnerItem({
+								src: 'sergiev-posad',
+								href: 'http://spmuzrb.ru/',
+								className: 'swiper-slide'
+							})
+							+partnerItem({
+								src: 'doctor',
+								href: 'https://www.lvrach.ru/',
+								className: 'swiper-slide'
+							})
+							+partnerItem({
+								src: 'ttp-optic',
+								href: 'https://www.lvrach.ru/',
+								className: 'swiper-slide'
+							})
+							+partnerItem({
+								src: 'szgmu',
+								href: 'https://szgmu.ru/rus/',
+								className: 'swiper-slide'
+							})
+							+partnerItem({
+								src: 'status',
+								href: 'https://www.rastatus.ru/',
+								className: 'swiper-slide'
+							})
+					.partners-slider-scrollbar.slider-scrollbar
+					.partners-slider-prev.slider-button
+						+leftArrow('news-slider__arrow')
+						//- img(src="img/0-common/arrow-left.svg", alt="")
+					.partners-slider-next.slider-button
+						+rightArrow('news-slider__arrow')

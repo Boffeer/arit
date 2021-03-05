@@ -367,6 +367,12 @@ button {
   height: 8px;
 }
 
+@media (max-width:1200px) {
+  .secondary-button--show-more {
+    max-width: 230px;
+  }
+}
+
 @font-face {
   font-family: Geometria;
   font-style: normal;
@@ -562,6 +568,7 @@ html {
   --color-text-regular: #333;
   --color-text-secondary: grey;
   --color-text-thirdly: #b1b1b1;
+  --c-text-caption: #b8b8b8;
   --color-primary: #1d53a9;
   --color-primary--dark: #004d9d;
   --color-font-footer: #fff;
@@ -639,6 +646,22 @@ picture img {
   box-sizing: border-box;
 }
 
+.socials-item__img:hover path {
+  fill: #1d53a9;
+  fill: var(--color-primary);
+}
+
+input {
+  font-family: Geometria,sans-serif;
+  font-family: var(--ff-regular);
+}
+
+.text-bold {
+  font-family: Geometria-ExtraBold,sans-serif;
+  font-family: var(--ff-extra);
+  font-weight: 700;
+}
+
 .minititle {
   font: 18px var(--ff-bold);
   margin-bottom: 10px;
@@ -674,20 +697,10 @@ p {
   margin-left: 0!important;
 }
 
-.socials-item__img:hover path {
-  fill: #1d53a9;
-  fill: var(--color-primary);
-}
-
-input {
-  font-family: Geometria,sans-serif;
-  font-family: var(--ff-regular);
-}
-
-.text-bold {
-  font-family: Geometria-ExtraBold,sans-serif;
-  font-family: var(--ff-extra);
-  font-weight: 700;
+.text--title-caption {
+  color: #c5c5c5;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .header {
@@ -2714,6 +2727,472 @@ input {
 .partners-page .partners-item {
   width: 200px;
   margin-bottom: 20px;
+}
+
+.skillup-page .about-wrap,
+.skillup-page .learning {
+  background: #fff;
+}
+
+.skillup-page .learning-tab {
+  padding-right: 35px;
+}
+
+.skillup-page .about {
+  max-width: 630px;
+  padding-bottom: 40px;
+}
+
+.skillup-page .learning-tab {
+  display: flex;
+  flex-direction: column;
+}
+
+.learning-page-item {
+  background: #fff;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.learning-page-info-wrapper {
+  display: flex;
+}
+
+.learning-page-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1d53a9;
+  background: var(--color-primary);
+  width: 51px;
+}
+
+.learning-page__number {
+  font: 26px var(--ff-regular);
+  color: #fff;
+  text-align: center;
+}
+
+.learning-page-info {
+  padding: 20px;
+}
+
+.learning-page-info__title {
+  font: 18px var(--ff-extra);
+  margin-bottom: 10px;
+}
+
+.learning-page-info-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.learning-page-info__consult {
+  margin-bottom: 20px;
+}
+
+.learning-page-info__field-name {
+  position: relative;
+  margin-right: 5px;
+}
+
+.learning-page-info__bullet {
+  display: flex;
+  font-size: 14px;
+}
+
+.learning-page-search {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.learning-page__search {
+  padding-top: 23px;
+  padding-bottom: 23px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.learning-page-search:before {
+  bottom: 34%;
+}
+
+.skillup-page__more {
+  display: none;
+}
+
+@media (max-width:1200px) {
+  .skillup-page .learning {
+    background-color: #f9fafa;
+    border-radius: 5px;
+    padding-bottom: 30px;
+  }
+
+  .skillup-page .learning-tabs-wrap {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .learning-page-number {
+    display: none;
+  }
+
+  .learning-page-item {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .skillup-page .learning-tab {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .learning-page-info-buttons {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  .learning-page-info__consult {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .skillup-page__more {
+    display: block;
+  }
+
+  .skillup-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .learning-page-info__bullet {
+    display: block;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+}
+
+.paper {
+  background: #f9fafa;
+  max-width: 972px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 79px 50px 50px;
+  color: #333;
+  color: var(--color-text-regular);
+}
+
+.paper b i {
+  background: var(--color-primary);
+  font-style: normal;
+  color: #fff;
+  display: block;
+  padding: 23px;
+  font-size: 16px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  max-width: 70%;
+}
+
+.paper h3 {
+  font: 30px var(--ff-extra);
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+
+.paper p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.paper img {
+  margin-bottom: 20px;
+  max-width: 70%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.paper b {
+  font-family: Geometria-ExtraBold,sans-serif;
+  font-family: var(--ff-extra);
+}
+
+.paper ul {
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+
+.paper li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.paper li:before {
+  content: "\2022";
+  color: #1d53a9;
+  color: var(--color-primary);
+  font-weight: 700;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.paper ol {
+  counter-reset: paper-ol;
+  padding-left: 70px;
+  position: relative;
+  max-width: 80%;
+}
+
+.paper ol:before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 0;
+  display: block;
+  width: 1px;
+  height: 90%;
+  border-left: 2px dashed #1d53a9;
+  border-left: 2px dashed var(--color-primary);
+}
+
+.paper ol li {
+  position: relative;
+  counter-increment: paper-ol;
+  margin-bottom: 27px;
+}
+
+.paper ol li:before {
+  font: 16px var(--ff-bold);
+  background: #f9fafa;
+  content: counter(paper-ol);
+  position: absolute;
+  top: -4px;
+  left: -55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #1d53a9;
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  width: 49px;
+  height: 49px;
+}
+
+@media (max-width:1200px) {
+  .mobile-fullpage-container {
+    max-width: 100%!important;
+  }
+
+  .paper {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    background-color: #fff;
+  }
+
+  .paper h3 {
+    font-size: 18px;
+  }
+
+  .skillup-page .features-wrapper {
+    background-color: #fff;
+  }
+
+  .skillup-page .licenses-list {
+    padding-bottom: 30px;
+  }
+
+  .skillup-page .features {
+    padding-bottom: 40px;
+  }
+
+  .skillup-page .licenses {
+    background-color: #f9fafa;
+    background-color: var(--color-surface-dark);
+    padding-top: 50px;
+  }
+}
+
+.course-about__descriptor {
+  margin-bottom: 5px;
+}
+
+.course-about__value {
+  color: #333;
+  color: var(--color-text-regular);
+}
+
+.container--page-course {
+  display: flex;
+  justify-content: space-between;
+}
+
+.course-left {
+  max-width: 694px;
+}
+
+.sticky-form-right .form-fields {
+  width: 300px;
+}
+
+.sticky-form-right {
+  border: 1px solid #f8f8f8;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.sticky-form-right-wrap {
+  border: 7px solid #f9fafa;
+  box-shadow: 0 24px 0 -15px #f5f5f5,0 4px 15px hsla(0,0%,91.8%,.2);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 180px;
+  bottom: 20px;
+}
+
+.course-about {
+  background: #f9fafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.course-about__descriptor {
+  color: #b8b8b8;
+  font-size: 14px;
+}
+
+.course-about__value {
+  max-width: 370px;
+  font-size: 14px;
+}
+
+.course-info {
+  transition: all .3s;
+  margin-bottom: 45px;
+}
+
+.dropdown-block {
+  margin-bottom: 20px;
+  transition: all .3s;
+}
+
+.dropdown-block-inner {
+  width: 100%;
+  background: #f9fafa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 26px 30px;
+  transition: all .3s;
+}
+
+.dropdown-block__handler {
+  background: transparent;
+  position: relative;
+  padding: 30px;
+  margin: -15px;
+  transition: all .3s;
+  border-radius: 50%;
+  border: none;
+}
+
+.dropdown-block__handler:focus {
+  outline: none;
+}
+
+.dropdown-block__handler:after,
+.dropdown-block__handler:before {
+  background: grey;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  height: 4px;
+  width: 18px;
+  border-radius: 3px;
+  transition: all .3s;
+}
+
+.dropdown-block__handler:after {
+  transform: rotate(90deg);
+}
+
+.dropdown-block__handler--opened:after {
+  transform: rotate(0);
+  transition: all .3s;
+}
+
+.dropdown-block__handler:hover.dropdown-block__handler:after,
+.dropdown-block__handler:hover.dropdown-block__handler:before {
+  background: var(--color-primary);
+}
+
+.paper--dropdown {
+  padding: 0 30px;
+  transition: all .3s;
+  max-height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.dropdown-block--opened {
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  transition: all .3s;
+}
+
+.paper--dropdown h3 {
+  font-size: 18px;
+}
+
+.paper--dropdown b,
+.paper--dropdown h3 {
+  font-family: Geometria-Bold,sans-serif;
+  font-family: var(--ff-bold);
+}
+
+.how-start-wrap {
+  background: var(--color-surface-dark);
+  padding-top: 70px;
+}
+
+.how-start {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.how-start-item {
+  background: #fff;
+  max-width: 350px;
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.how-start__text {
+  font-size: 16px;
 }
 
 @media (max-width:1200px) {

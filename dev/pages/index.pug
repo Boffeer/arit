@@ -90,6 +90,7 @@ block content
 								li.learning-tab-list-item Юриспруденция
 						button.learning-more--retrain.secondary-button Показать еще
 					.learning-tab--skillup.learning-tab--active
+
 						.learning-tab
 							ul.learning-tab-list
 								li.learning-tab-list-item Master of Business Administration&nbsp;(MBA)
@@ -173,7 +174,9 @@ block content
 
 
 
-		+featuresBlock()
+		+featuresBlock({
+			title: 'Преимущества',
+		})
 
 
 
@@ -403,99 +406,9 @@ block content
 
 
 
-
-		.partners-wrapper#partners
-			.partners-container.container
-				.partners
-					h2.section__title.partners__title Партнеры 
-					.partners-slider-outer
-						.partners-slider-wrap.swiper-container
-							.partners-slider.swiper-wrapper
-								+partnerItem({
-									src: 'atmos',
-									href: 'https://www.atmos-med.ru/',
-									className: 'swiper-slide'
-								})
-								+partnerItem({
-									src: 'btl',
-									href: 'https://www.btlmed.ru/',
-									className: 'swiper-slide'
-								})
-								+partnerItem({
-									src: 'center-hygien',
-									href: 'https://fcgie.ru/',
-									className: 'swiper-slide'
-								})
-								+partnerItem({
-									src: 'center-karnelius',
-									href: '',
-									className: 'swiper-slide'
-								})
-								+partnerItem({
-									src: 'dental-aurora-clinic',
-									href: 'https://vk.com/dental.aurora',
-									className: 'swiper-slide'
-								})
-								+partnerItem({
-									src: 'dr-super',
-									href: 'https://www.instagram.com/doctor_super/?hl=ru',
-									className: 'swiper-slide'
-								})
-								+partnerItem({
-									src: 'gbuzvookb',
-									href: 'https://www.vladokb.ru/',
-									className: 'swiper-slide'
-								})
-								+partnerItem({
-									src: 'gedeon-richter',
-									href: 'https://g-richter.ru/',
-									className: 'swiper-slide'
-								})
-								+partnerItem({
-									src: 'gkb-eramishanceva',
-									href: 'https://gkbe.ru/',
-									className: 'swiper-slide'
-								})
-								+partnerItem({
-									src: 'job-service',
-									className: 'swiper-slide'
-								})
-								+partnerItem({
-									src: 'nii',
-									href: 'https://niioz.ru/',
-									className: 'swiper-slide'
-								})
-								+partnerItem({
-									src: 'president-gov-univercity',
-									href: 'https://www.pnzgu.ru/',
-									className: 'swiper-slide'
-								})
-								+partnerItem({
-									src: 'sergiev-posad',
-									href: 'http://spmuzrb.ru/',
-									className: 'swiper-slide'
-								})
-								+partnerItem({
-									src: 'doctor',
-									href: 'https://www.lvrach.ru/',
-									className: 'swiper-slide'
-								})
-								+partnerItem({
-									src: 'ttp-optic',
-									href: 'https://www.lvrach.ru/',
-									className: 'swiper-slide'
-								})
-								+partnerItem({
-									src: 'szgmu',
-									href: 'https://szgmu.ru/rus/',
-									className: 'swiper-slide'
-								})
-						.partners-slider-scrollbar.slider-scrollbar
-						.partners-slider-prev.slider-button
-							+leftArrow('news-slider__arrow')
-							//- img(src="img/0-common/arrow-left.svg", alt="")
-						.partners-slider-next.slider-button
-							+rightArrow('news-slider__arrow')
+		+partnersSlider({
+			title: 'Партнеры'
+		})
 							//- img(src="img/0-common/arrow-right.svg", alt="")
 
 		mixin oldResourcesItem()

@@ -16,14 +16,6 @@ block content
 
 		.container.container--mobile-fullscreen
 			.licenses-list
-				mixin licenseItem(data)
-					.licenses-item
-						.licenses-item-text
-							p.licenses-item__title= data.text
-							p.licenses-item__size 1Мб
-						button.licenses-item-download 
-							span.licenses-item-download__text Скачать PDF
-							+pdf()
 
 				+licenseItem({text: 'Свидетельство о пастановке в налоговый орган от 24.11.2020' })
 				+licenseItem({text: 'Устав АНО ДПО АРИТ 20.10.2020'})

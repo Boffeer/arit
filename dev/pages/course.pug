@@ -1,0 +1,143 @@
+extends common/layout
+include common/mixins
+
+block content
+	main.subpage--white
+		.container
+			script.
+				var mapsDelay = 1000;
+
+			.breadcrumbs
+				a.breadcrumb.breadcrumb--main(href="#") Главная
+				a.breadcrumb(href="#") Обучение
+				a.breadcrumb(href="#") Повышение квалификации
+				a.breadcrumb(href="#") Менеджмент
+				a.breadcrumb(href="#") Логистическйи менеджмент
+
+		.container.container--page-course
+			.course-left
+				p.text--title-caption Повышение квалификации по программе
+				h1.section__title.section__title--left Логистический менеджмент
+
+				.course-about
+					.course-about-name
+						p.course-about__descriptor Форма обучения
+						p.course-about__value Заочная с сиспользованием дистанционных образовтальных технологий
+					.course-about-time
+						p.course-about__descriptor Время обучения
+						p.course-about__value от 500ч.
+
+
+				.course-info
+
+					.dropdown-block.course-info-dropdown
+						.dropdown-block-inner
+							h3.dropdown-block__name Описание курса
+							button.dropdown-block__handler
+						.dropdown-block-text.paper.paper--dropdown
+							p Курс профессиональной переподготовки «Логистический менеджмент» предназначен для лиц, желающих сменить специальность и занять должность руководителя или специалиста транспортной или складской организации. Занятия будут также полезны сотрудникам, занимающимся вопросами экономики и менеджмента на профильных предприятиях.
+							p Обучение проводится дистанционно. В сжатые сроки слушатели самостоятельно изучают вопросы стандартизированной программы:
+							ul
+								li Методология управления;
+								li Основы теории экономики транспорта и складского хозяйства;
+								li Основы финансов и стратегического менеджмента;
+								li Основы управления персоналом;
+								li Организация работы структурного подразделения.
+							p Слушателям предоставляются электронные методические пособия. Они размещены в личном кабинете на нашем портале. При необходимости проводятся онлайн-консультации.
+							h3 Преимущества обучения в АРИТ
+							ul
+								li Удаленный формат;
+								li Индивидуальный график;
+								li Учебный план, соответствующий действующим образовательным и профессиональным стандартам;
+								li Поддержка
+								li Доступная стоимость.
+
+							h3 Получаемые документы
+							p Обучение логистическому менеджменту заканчивается аттестационной проверочной работой. По ее результатам выдается диплом установленного образца, действующий на территории Российской Федерации. Документ высылается по почте.
+							h3 Условия поступления
+							p Чтобы записаться на курс переподготовки, необходимо подать заявку, подписать договор и внести оплату. Дополнительно потребуются копии (сканы) паспорта и диплома об окончании ВУЗа, техникума или колледжа. Вступительных экзаменов нет.
+
+					.dropdown-block.course-info-dropdown
+						.dropdown-block-inner
+							h3.dropdown-block__name Получаемые документы
+							button.dropdown-block__handler
+						.dropdown-block-text.paper.paper--dropdown
+							img(src="img/pages/course/diploma.png", alt="")
+							p
+								b 
+									i Важно! В дипломе не указывается форма обучения (очная/заочная). Диплом установленного образца
+					.dropdown-block.course-info-dropdown
+						.dropdown-block-inner
+							h3.dropdown-block__name Условия поступления
+							button.dropdown-block__handler
+						.dropdown-block-text.paper.paper--dropdown
+							p Обучение по направлению «Логистический менеджмент» дает возможность получить диплом о переподготовке. Также для отдельных направлений и специальностей предусмотрена выдача дополнительных документов, если их требуют ведомственные нормативно-правовые акты: сертификаты, книжки и т.д.
+							p
+								b Для того чтобы стать студентом академии, необходимо соответствовать нескольким требованиям и выполнить некоторые действия:
+							ol
+								li Иметь диплом о среднем профессиональном или высшем образовании
+								li Подайте заявку на обучение по программе профессиональной переподготовки или¸ повышения квалификации по направлению «Логистический менеджмент» в электронном формате:
+									| <br>- по электронной почте,
+									| <br>- по форме обратной связи на сайте,
+									| <br>- или позвоните по бесплатному круглосуточному телефону;
+								li Предоставить документы, подтверждающие личность и имеющийся уровень образования;
+								li После подписания договора пройдите курс обучения в дистанционном форме;
+								li Пройдите итоговое тестирование, и получите диплом о прохождении переподготовки или удостоверение о повышении квалификации по программе «Логистический менеджмент».
+
+
+
+
+			.course-right
+				.sticky-form-right-wrap
+					.sticky-form-right
+						h3.form__title Оставить заявку на консультацию
+						+defaultForm()
+		script(defer).
+			dropdown({
+				container: '.dropdown-block',
+				handler: '.dropdown-block__handler',
+				dropdown: '.dropdown-block-text',
+			})
+
+
+	.how-start-wrap
+		.container.container--dark
+			h2.section__title Как начать обучение
+			ul.how-start
+				li.how-start-item
+					p.how-start__text Оставьте заявку на&nbsp;обратный звонок, позвоните по телефону или&nbsp;воспользуйтесь&nbspформой
+					+pic({
+						src: 'img/pages/course/retroPhone',
+						ext: 'png',
+						pictureClass: 'how-start__pic',
+					})
+					h3.how-start__number 01
+
+				li.how-start-item
+					p.how-start__text Предоставить документы об образовании
+					h3.how-start__number 02
+
+				li.how-start-item
+					p.how-start__text Заключить договор и начать обучение
+					h3.how-start__number 03
+
+				li.how-start-item
+					p.how-start__text Завершить обучение и получить документы
+					+pic({
+						src: 'img/pages/course/cap',
+						ext: 'png',
+						pictureClass: 'how-start__pic',
+					})
+					h3.how-start__number 04
+		+partnersSlider({
+			title: 'У нас обучаются',
+		})
+
+
+
+block scripts
+	script(src="js/modal.min.js")
+	script(src="js/blocks/headerAndFooter.min.js")
+	
+block headScripts
+	script(src="js/dropdown.min.js")
