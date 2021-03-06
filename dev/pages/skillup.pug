@@ -27,7 +27,6 @@ block content
 								+learningPageItem()
 								+learningPageItem()
 								+learningPageItem()
-								+learningPageItem()
 
 					.learning-tab--skillup.learning-tab--active
 						.learning-tab
@@ -73,7 +72,44 @@ block content
 					+licenseItem({text: 'Договор аренды от 15.12.2020'})
 					+licenseItem({text: 'Свидетельство о гос.рег 03.12.2020'})
 
+
+			script(defer).
+				const skillupTabHandler = document.querySelector('.learning-tab__control--skillup');
+				const skillupTab = document.querySelector('.learning-tab--skillup');
+				const retrainTabHandler = document.querySelector('.learning-tab__control--retrain');
+				const retrainTab = document.querySelector('.learning-tab--retrain');
+
+					skillupTabHandler.addEventListener('click', function(){
+						this.classList.add('learning-tab__control--active')
+						skillupTab.classList.add('learning-tab--active');
+						retrainTabHandler.classList.remove('learning-tab__control--active')
+						retrainTab.classList.remove('learning-tab--active')
+					})
+					retrainTabHandler.addEventListener('click', function(){
+						this.classList.add('learning-tab__control--active');
+						retrainTab.classList.add('learning-tab--active');
+						skillupTabHandler.classList.remove('learning-tab__control--active');
+						skillupTab.classList.remove('learning-tab--active');
+					})
+				if (window.innerWidth < 1200){
+					showmore({
+						items: '.learning-tab--skillup',
+						clickHandler: '.skillup-page__more',
+						itemsToShow: 5,
+						initialShow: 5,
+						currentItem: 0,
+					})
+					showmore({
+						items: '.learning-tab--retrain',
+						clickHandler: '.skillup-page__more',
+						itemsToShow: 5,
+						initialShow: 5,
+						currentItem: 0,
+					})
+				}
+
 block scripts
 	script(src="js/modal.min.js")
 	script(src="js/blocks/headerAndFooter.min.js")
-	script(src="js/pages/skillup.min.js")
+block headScripts
+	script(src="js/blocks/showmore.min.js")

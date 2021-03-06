@@ -1,0 +1,328 @@
+extends common/layout
+include common/mixins
+
+block content
+	main.subpage--white
+		.container
+			script.
+				var mapsDelay = 1000;
+
+			.breadcrumbs
+				a.breadcrumb.breadcrumb--main(href="#") Главная
+				a.breadcrumb(href="#") Об академии
+				a.breadcrumb(href="#") Лицензии
+
+			h1.section__title.section__title--page.section__title--center Обучение
+
+		.learning.learning-page#learning
+			.container
+				.learning-tabs-wrap
+
+					.learning-tab--retrain
+						h3.learning-page-title Профессиональная переподготовка
+						.learning-slider-wrap.learning-slider-wrap--retrain.swiper-container
+							div.swiper-wrapper
+								ul.learning-tab-list.swiper-slide
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Master of Business Administration&nbsp;(MBA)
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") АвиаГСМ 
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Агрономия 
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Архитектура и дизайн
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Бухгалтерское дело
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Ветеринария
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Горная промышленность и маркшейдерское дело
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Государственное и муниципальное управление
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Государственные закупки
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Железнодорожный транспорт
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Землеустройство и кадастр
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Инженерные изыскания
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Инженерные системы
+
+
+									//- li.learning-tab-list-item Master of Business Administration&nbsp;(MBA)
+									//- li.learning-tab-list-item АвиаГСМ
+									//- li.learning-tab-list-item Агрономия
+									//- li.learning-tab-list-item Архитектура и дизайн
+									//- li.learning-tab-list-item Бухгалтерское дело
+									//- li.learning-tab-list-item Ветеринария
+									//- li.learning-tab-list-item Горная промышленность и маркшейдерское дело
+									//- li.learning-tab-list-item Государственное и муниципальное управление
+									//- li.learning-tab-list-item Государственные закупки
+									//- li.learning-tab-list-item Железнодорожный транспорт
+									//- li.learning-tab-list-item Землеустройство и кадастр
+									//- li.learning-tab-list-item Инженерные изыскания
+									//- li.learning-tab-list-item Инженерные системы
+								ul.learning-tab-list.swiper-slide
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Кадровое делопроизводство
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Косметология
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Лаборатории
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Медицина
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Менеджмент
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Металлургия
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Метрологический контроль
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Нефтегазовое дело
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Охрана труда. Специальная оценка условий труда (СОУТ)
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Оценочная деятельность
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Педагогика
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Подъемные сооружения и лифты
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Пожарно-технический минимум
+
+
+									//- li.learning-tab-list-item Кадровое делопроизводство
+									//- li.learning-tab-list-item Косметология
+									//- li.learning-tab-list-item Лаборатории
+									//- li.learning-tab-list-item Медицина
+									//- li.learning-tab-list-item Менеджмент
+									//- li.learning-tab-list-item Металлургия
+									//- li.learning-tab-list-item Метрологический контроль
+									//- li.learning-tab-list-item Нефтегазовое дело
+									//- li.learning-tab-list-item Охрана труда. Специальная оценка условий труда (СОУТ)
+									//- li.learning-tab-list-item Оценочная деятельность
+									//- li.learning-tab-list-item Педагогика
+									//- li.learning-tab-list-item Подъемные сооружения и лифты
+									//- li.learning-tab-list-item Пожарно-технический минимум
+								ul.learning-tab-list.swiper-slide
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Проектирование
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Реставрация
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Спорт и фитнес
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Строительство
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Техническое обслуживание медицинской техники (ТОМТ)
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Транспортная безопасность
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Фармация 
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Холодильное оборудование
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Экология
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Экономика и финансы
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Энергетика
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Юриспруденция
+
+
+
+
+
+									//- li.learning-tab-list-item Проектирование
+									//- li.learning-tab-list-item Реставрация
+									//- li.learning-tab-list-item Спорт и фитнес
+									//- li.learning-tab-list-item Строительство
+									//- li.learning-tab-list-item Техническое обслуживание медицинской техники (ТОМТ)
+									//- li.learning-tab-list-item Транспортная безопасность
+									//- li.learning-tab-list-item Фармация
+									//- li.learning-tab-list-item Холодильное оборудование
+									//- li.learning-tab-list-item Экология
+									//- li.learning-tab-list-item Экономика и финансы
+									//- li.learning-tab-list-item Энергетика
+									//- li.learning-tab-list-item Юриспруденция
+							.learning-slider--first.slider-scrollbar
+
+
+
+	.learning--skillup
+		.learning.learning-page#learning
+			.container
+				.learning-tabs-wrap.learning-tabs-wrap--skillup
+					.learning-tab--skillup
+						h3.learning-page-title Повышение квалификации
+						.learning-slider-wrap.swiper-container
+							div.swiper-wrapper
+								ul.learning-tab-list.swiper-slide
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") АвиаГСМ
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Агрономия
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Архитектура и дизайн
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Бухгалтерское дело
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Ветеринария
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Горная промышленность и маркшейдерское дело
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Государственное и муниципальное управление
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Государственные закупки
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Железнодорожный транспорт
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Землеустройство и кадастр
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Инженерные изыскания
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Инженерные системы
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Кадровое делопроизводство
+
+
+
+
+
+									//- li.learning-tab-list-item АвиаГСМ
+									//- li.learning-tab-list-item Агрономия
+									//- li.learning-tab-list-item Архитектура и дизайн
+									//- li.learning-tab-list-item Бухгалтерское дело
+									//- li.learning-tab-list-item Ветеринария
+									//- li.learning-tab-list-item Горная промышленность и маркшейдерское дело
+									//- li.learning-tab-list-item Государственное и муниципальное управление
+									//- li.learning-tab-list-item Государственные закупки
+									//- li.learning-tab-list-item Железнодорожный транспорт
+									//- li.learning-tab-list-item Землеустройство и кадастр
+									//- li.learning-tab-list-item Инженерные изыскания
+									//- li.learning-tab-list-item Инженерные системы
+									//- li.learning-tab-list-item Кадровое делопроизводство
+								ul.learning-tab-list.swiper-slide
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Косметология
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Лаборатории
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Медицина
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Менеджмент
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Металлургия
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Метрологический контроль
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Нефтегазовое дело
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Охрана труда. Специальная оценка условий труда (СОУТ)
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Оценочная деятельность
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Педагогика
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Подъемные сооружения и лифты
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Пожарно-технический минимум
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Проектирование 
+
+
+
+
+
+
+									//- li.learning-tab-list-item Косметология
+									//- li.learning-tab-list-item Лаборатории
+									//- li.learning-tab-list-item Медицина
+									//- li.learning-tab-list-item Менеджмент
+									//- li.learning-tab-list-item Металлургия
+									//- li.learning-tab-list-item Метрологический контроль
+									//- li.learning-tab-list-item Нефтегазовое дело
+									//- li.learning-tab-list-item Охрана труда. Специальная оценка условий труда (СОУТ)
+									//- li.learning-tab-list-item Оценочная деятельность
+									//- li.learning-tab-list-item Педагогика
+									//- li.learning-tab-list-item Подъемные сооружения и лифты
+									//- li.learning-tab-list-item Пожарно-технический минимум
+									//- li.learning-tab-list-item Проектирование
+								ul.learning-tab-list.swiper-slide
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Радиационная безопасность
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Реставрация
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Спорт и фитнес
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Строительство
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Техническое обслуживание медицинской техники (ТОМТ)
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Транспортная безопасность
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Фармация
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Холодильное оборудование
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Экология
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Экономика и финансы
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Электробезопасность
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Энергетика
+									li.learning-tab-list-item 
+										a.learning-tab-list-item__link(href="#") Юриспруденция
+									//- li.learning-tab-list-item Радиационная безопасность
+									//- li.learning-tab-list-item Реставрация
+									//- li.learning-tab-list-item Спорт и фитнес
+									//- li.learning-tab-list-item Строительство
+									//- li.learning-tab-list-item Техническое обслуживание медицинской техники (ТОМТ)
+									//- li.learning-tab-list-item Транспортная безопасность
+									//- li.learning-tab-list-item Фармация
+									//- li.learning-tab-list-item Холодильное оборудование
+									//- li.learning-tab-list-item Экология
+									//- li.learning-tab-list-item Экономика и финансы
+									//- li.learning-tab-list-item Электробезопасность
+									//- li.learning-tab-list-item Энергетика
+									//- li.learning-tab-list-item Юриспруденция
+							.learning-slider.slider-scrollbar
+
+	script.
+					
+		if (window.innerWidth < 1200) {
+			var learningSecond = new Swiper('.learning-slider-wrap', {
+				slidesPerView: 1,
+				spaceBetween: 50,
+							
+				scrollbar: {
+					el: '.learning-slider.slider-scrollbar',
+					hide: false,
+				},
+			})
+			var learningFirst = new Swiper('.learning-slider-wrap--retrain', {
+				slidesPerView: 1,
+				spaceBetween: 50,
+							
+				scrollbar: {
+					el: '.learning-slider--first.slider-scrollbar',
+					hide: false,
+				},
+			})
+		}
+
+
+
+
+
+
+block scripts
+	script(src="js/modal.min.js")
+	script(src="js/blocks/headerAndFooter.min.js")
+block headScripts
+	script(src="js/swiper-bundle.min.js")

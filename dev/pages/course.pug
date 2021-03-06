@@ -129,15 +129,78 @@ block content
 						pictureClass: 'how-start__pic',
 					})
 					h3.how-start__number 04
-		+partnersSlider({
-			title: 'У нас обучаются',
+		.partners--course
+			+partnersSlider({
+				title: 'У нас обучаются',
+			})
+
+	
+	.testimonials-wrapper
+		.testimonials-container.container
+			.testimonials.page-course
+				h2.section__title.testimonials__title Отзывы абитуриентов
+				.testimonials-slider-outer
+					//- .testimonials-slider-wrap.swiper-container
+					.testimonials-slider-wrap
+						
+						//- ul.testimonials-list.testimonials-slider.swiper-wrapper
+						.testimonials-list.testimonials-slider
+
+							+Testimonial('1')
+							+Testimonial('2')
+							+Testimonial('3')
+						.testimonials-slider-scrollbar
+				.testimonials-more-wrap
+					a.secondary-button.testimonials-more(href="/testimonials.html") Показать еще
+
+
+		+featuresBlock({
+			title: 'Преимущества академии',
+			className: 'bg-white'
+		})
+	script.
+		const partnersSlider = new Swiper('.partners-slider-wrap',{
+			slidesPerView: 1,
+			spaceBetween: 20,
+
+			slidesPerColumn: 2,
+			slidesPerColumnFill: 'row',
+
+			scrollbar: {
+				el: '.partners-slider-scrollbar',
+				hide: false,
+			},
+			breakpoints: {
+				1200: {
+					slidesPerView: 5,
+					slidesPerColumn: 1,
+					navigation: {
+						nextEl: '.partners-slider-next',
+						prevEl: '.partners-slider-prev',
+					},
+				}
+			}
 		})
 
+		if (window.innerWidth < 1200){
+				document.querySelector('.testimonials-slider-wrap').classList.add('swiper-container');
+				document.querySelector('.testimonials-list').classList.add('swiper-wrapper');
+				document.querySelector('.testimonials-slider-scrollbar').classList.add('.slider-scrollbar');
 
+				 const testimonialsSlider = new Swiper('.testimonials-slider-wrap', {
+					slidesPerView: 1,
+					spaceBetween: 20,
+					scrollbar: {
+						el: '.testimonials-slider-scrollbar',
+						hide: false,
+					},
+			})
+		}
 
 block scripts
 	script(src="js/modal.min.js")
 	script(src="js/blocks/headerAndFooter.min.js")
 	
 block headScripts
+	script(src="js/swiper-bundle.min.js")
 	script(src="js/dropdown.min.js")

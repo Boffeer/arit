@@ -71,7 +71,7 @@ mixin partnerItem(data)
 
 
 mixin featuresBlock(data)
-	.features-wrapper
+	.features-wrapper(class= data.className)
 		.features-container.container
 			.features
 				h2.section__title.features__title= data.title
@@ -341,3 +341,38 @@ mixin partnersSlider($)
 						//- img(src="img/0-common/arrow-left.svg", alt="")
 					.partners-slider-next.slider-button
 						+rightArrow('news-slider__arrow')
+
+mixin newsItem($)
+	div.news-item(class= $.className)
+		a(href="")
+			+pic({
+				pictureClass: 'news__picture',
+				ext: 'png',
+				src: $.src 
+			})
+		.news-info
+			a(href="")
+				h3.news-item__title Заголовок новости
+			p.news-item__descr Текст описания в 2 строчки, чтобы набить обхем текста
+			div.news-bottom
+				a.news-button(href="") Подробнее
+				span.news-date 02.06.20
+
+
+
+mixin pagination()
+	.pagination-wrap
+		.news-page-pagination.page-pagination
+			a.page-pagination__prev(href="")
+				+angleRight('pagination__prev-icon')
+				span Назад
+			.page-pagination-pages
+				a.page-pagination__page.page-pagination__page--current(href="") 1
+				a.page-pagination__page(href="") 2
+				a.page-pagination__page(href="") 3
+				a.page-pagination__page(href="") 4
+				a.page-pagination__page(href="") 5
+			a.page-pagination__next(href="")
+				span Вперед
+				+angleRight('pagination__next-icon')
+

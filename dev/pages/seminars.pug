@@ -77,6 +77,21 @@ block content
 						p.archieve-item__status Семинар завершен
 				.button--center-aligner
 					button.secondary-button.archieve__more Показать еще
+
+
+			script(defer).
+				showmore({
+					items: '.archieve-item',
+					clickHandler: '.archieve__more',
+					itemsToShow: 3,
+					initialShow: 3,
+					currentItem: 0,
+				})
+
 block scripts
 	script(src="js/modal.min.js")
 	script(src="js/blocks/headerAndFooter.min.js")
+
+
+block headScripts
+	script(src="js/blocks/showmore.min.js")

@@ -3,6 +3,7 @@
  * clickHandler
  * itemsToShow
  * initialShow 
+ * currentItem
  *
  *
  * */

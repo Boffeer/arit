@@ -104,10 +104,11 @@ phoneInput.map(item => {
 
 if (window.innerWidth < 1200){
 	// Mobile footer reforming
-	document.querySelector('.footer').appendChild(document.querySelector('.footer-copyright'));
-	document.querySelector('.footer-top__content').appendChild(document.querySelector('.footer-contact--phone'));
-	document.querySelector('.footer-top__content').appendChild(document.querySelector('.footer_get-contacts'));
-	document.querySelector('.footer-copyright').removeChild(document.querySelector('.footer-copyright br'))
+	let footer = document.querySelector('.footer');
+	footer.appendChild(document.querySelector('.footer-copyright'));
+	document.querySelector('.footer-top__content').appendChild(footer.querySelector('.footer-contact--phone'));
+	document.querySelector('.footer-top__content').appendChild(footer.querySelector('.footer_get-contacts'));
+	document.querySelector('.footer-copyright').removeChild(footer.querySelector('.footer-copyright br'))
 }
 
 

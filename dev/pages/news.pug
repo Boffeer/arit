@@ -1,0 +1,86 @@
+extends common/layout
+include common/mixins
+
+block content
+	main.subpage--white
+		.container
+			script.
+				var mapsDelay = 1000;
+
+			.breadcrumbs
+				a.breadcrumb.breadcrumb--main(href="#") Главная
+				a.breadcrumb(href="#") Обучение
+				a.breadcrumb(href="#") Повышение квалификации
+				a.breadcrumb(href="#") Менеджмент
+				a.breadcrumb(href="#") Логистическйи менеджмент
+			h1.section__title Новости
+
+
+			.news-page
+				.news-wrapper
+					.news-latest-one
+						a.news-latest-one__img-wrap(href="#")
+							img(src="img/pages/news/news-pic.png", alt="").news-latest-one__pic
+						.news-latest-one-info
+							a(href="")
+								h3.news-item__title 7-модульный сертификационный курс по диетологии и нутрициологии
+							p.news-item__descr Текст описания в строчки, чтобы набить обхем текста
+							div.news-bottom
+								a.news-button(href="#") Подробнее
+								span.news-date 02.06.20
+						
+					.news-latest
+						a.news-latest-item(href="#")
+							h3.news-item__title Секреты успешной реставрации зубов с использованием современных методик, материалов и инструментов
+							p.news-date 02.06.20
+
+						a.news-latest-item(href="#")
+							h3.news-item__title Секреты успешной реставрации зубов с использованием современных методик, материалов и инструментов
+							p.news-date 02.06.20
+
+						a.news-latest-item(href="#")
+							h3.news-item__title Секреты успешной реставрации зубов с использованием современных методик, материалов и инструментов
+							p.news-date 02.06.20
+
+			.regular-news-wrapper
+				.news-page.regular-news
+					+newsItem({
+						src: 'img/7-news/news-1'
+					})
+					+newsItem({
+						src: 'img/7-news/news-2'
+					})
+					+newsItem({
+						src: 'img/7-news/news-1'
+					})
+					+newsItem({
+						src: 'img/7-news/news-1'
+					})
+					+newsItem({
+						src: 'img/7-news/news-2'
+					})
+					+newsItem({
+						src: 'img/7-news/news-1'
+					})
+				.button--center-aligner
+					button.secondary-button.news__more Показать еще
+			script.
+				showmore({
+					items: '.news-item'	,
+					clickHandler: '.news__more',
+					itemsToShow: 3,
+					initialShow: 3,
+					currentItem: 0,
+				})
+
+
+block scripts
+	script(src="js/modal.min.js")
+	script(src="js/blocks/headerAndFooter.min.js")
+	
+block headScripts
+	script(src="js/swiper-bundle.min.js")
+	script(src="js/dropdown.min.js")
+	script(src="js/blocks/showmore.min.js")
+
+

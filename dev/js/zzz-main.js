@@ -85,7 +85,7 @@ const selector = (className) => {
 
 
 
-if (window.innerWidth < 1000){
+if (window.innerWidth < 1200){
 		document.querySelector('.testimonials-slider-wrap').classList.add('swiper-container');
 		document.querySelector('.testimonials-list').classList.add('swiper-wrapper');
 		document.querySelector('.testimonials-slider-scrollbar').classList.add('.slider-scrollbar');
@@ -97,6 +97,5 @@ if (window.innerWidth < 1000){
 				el: '.testimonials-slider-scrollbar',
 				hide: false,
 			},
-		})
+	})
 }
-

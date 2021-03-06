@@ -1,0 +1,128 @@
+extends common/layout
+include common/mixins
+
+block content
+	main.subpage
+		.container
+			script
+				| var mapsDelay = 1000;
+
+			.breadcrumbs
+				a.breadcrumb.breadcrumb--main(href="#") Главная
+				a.breadcrumb(href="#") Отзывы
+
+		.container.partners-container
+			.partners-page
+				h1.section__title Партнеры
+				.partners
+					.partners-page-item-wrap
+							+partnerItem({
+							src: 'atmos',
+							href: 'https://www.atmos-med.ru/',
+						})
+					.partners-page-item-wrap
+						+partnerItem({
+							src: 'btl',
+							href: 'https://www.btlmed.ru/',
+							className: 'swiper-slide'
+						})
+					.partners-page-item-wrap
+						+partnerItem({
+							src: 'cb',
+							href: 'https://www.cbr.ru/',
+						})
+					.partners-page-item-wrap
+						+partnerItem({
+							src: 'center-hygien',
+							href: 'https://fcgie.ru/',
+						})
+					.partners-page-item-wrap
+						+partnerItem({
+							src: 'center-karnelius',
+							href: 'http://ucentr.karelia.ru/',
+						})
+					.partners-page-item-wrap
+						+partnerItem({
+							src: 'dental-aurora-clinic',
+							href: 'https://vk.com/dental.aurora',
+						})
+					.partners-page-item-wrap
+						+partnerItem({
+							src: 'dr-super',
+							href: 'https://www.instagram.com/doctor_super/?hl=ru',
+						})
+					.partners-page-item-wrap
+						+partnerItem({
+							src: 'gbuzvookb',
+							href: 'https://www.vladokb.ru/',
+						})
+					.partners-page-item-wrap
+						+partnerItem({
+							src: 'gedeon-richter',
+							href: 'https://g-richter.ru/',
+						})
+					.partners-page-item-wrap
+						+partnerItem({
+							src: 'gkb-eramishanceva',
+							href: 'https://gkbe.ru/',
+						})
+					.partners-page-item-wrap
+						+partnerItem({
+							src: 'job-service',
+						})
+					.partners-page-item-wrap
+						+partnerItem({
+							src: 'nii',
+							href: 'https://niioz.ru/',
+						})
+					.partners-page-item-wrap
+						+partnerItem({
+							src: 'president-gov-univercity',
+							href: 'https://www.pnzgu.ru/',
+						})
+					.partners-page-item-wrap
+						+partnerItem({
+							src: 'sergiev-posad',
+							href: 'http://spmuzrb.ru/',
+						})
+					.partners-page-item-wrap
+						+partnerItem({
+							src: 'doctor',
+							href: 'https://www.lvrach.ru/',
+						})
+					.partners-page-item-wrap
+						+partnerItem({
+							src: 'ttp-optic',
+							href: 'https://www.lvrach.ru/',
+						})
+					.partners-page-item-wrap
+						+partnerItem({
+							src: 'szgmu',
+							href: 'https://szgmu.ru/rus/',
+						})
+					.partners-page-item-wrap
+						+partnerItem({
+							src: 'status',
+							href: 'https://www.rastatus.ru/',
+						})
+				.button--center-aligner
+					button.secondary-button.partners__more Покзать еще
+
+			script(defer).
+				if (window.innerWidth < 1200){
+					showmore({
+						items: '.partners-page-item-wrap',
+						clickHandler: '.partners__more',
+						itemsToShow: 5,
+						initialShow: 5,
+						currentItem: 0,
+					})
+				}
+
+
+block scripts
+	script(src="js/modal.min.js")
+	script(src="js/blocks/headerAndFooter.min.js")
+
+block headScripts
+	script(src="js/blocks/showmore.min.js")

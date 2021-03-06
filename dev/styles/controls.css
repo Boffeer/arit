@@ -203,4 +203,7 @@ button {
 	.secondary-button--show-more {
 		max-width: 230px;
 	}
+	.testimonials-more {
+		display: block !important;
+	}
 }
