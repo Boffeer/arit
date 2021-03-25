@@ -46,6 +46,15 @@ popa({
 	popCloser: '.pop-closer',
 })
 
+function scrollToTop($clickTrigger){
+	document.querySelector($clickTrigger).addEventListener('click', function(){
+		document.querySelector('html').scrollIntoView({
+			behavior: 'smooth',
+			block: 'start'
+		})
+	})
+}
+scrollToTop('.scroll-to-top');
 
 
 const header = document.querySelector('.header-wrapper')
@@ -55,7 +64,7 @@ let offsetNew
 document.addEventListener('scroll', function(){
 	offsetNew = window.pageYOffset;
 	if ((offsetNew < offsetOld) && offsetOld != undefined) {
-		console.log('Шапка появилась')
+		// console.log('Шапка появилась')
 		setTimeout(function(){
 			header.classList.remove('header--hidden')
 			header.classList.add('header--visible')
@@ -66,6 +75,13 @@ document.addEventListener('scroll', function(){
 			header.classList.add('header--hidden')
 		}, 100)
 	}
+
+	if (offsetNew < 1000) {
+		document.querySelector('.scroll-to-top').classList.add('hidden');
+	} else {
+		document.querySelector('.scroll-to-top').classList.remove('hidden');
+	}
+
 	offsetOld = window.pageYOffset;
 })
 
@@ -73,33 +89,92 @@ document.addEventListener('scroll', function(){
 
 
 setTimeout(() => {
-	let phoneInput = [...document.querySelectorAll('.input--phone')];
 
-	phoneInput.map(item => {
-		item.addEventListener('keydown', function(event){
-			if (!(event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace' || event.key == 'Tab')) {
-				event.preventDefault()
-			}
-			let mask = '+7 (111) 111-11-11';
-			if (/[0-9\+\ \-\(\)]/.test(event.key)) {
-				let currentString = this.value;
-				let currentLength = currentString.length;
-				if (/[0-9]/.test(event.key)) {
-					if (mask[currentLength] == '1') {
-						this.value = currentString + event.key;
-					} else {
-						for (let i = currentLength; i < mask.length; i++) {
-							if (mask[i] == '1') {
-								this.value = currentString + event.key;
-								break;
-							}
-							currentString += mask[i]
-						}
-					}
-				}
-			}
-		})
-	})
+const input = [...document.querySelectorAll(".input--phone")];
+
+const prefixNumber = (str) => {
+  if (str === "7") {
+    return "7 (";
+  }
+  if (str === "8") {
+    return "7 (8";
+  }
+  if (str === "9") {
+    return "7 (9";
+  }
+  return "7 (";
+};
+
+// ======================================
+
+input.map(function(item){
+
+	item.addEventListener("input", (e) => {
+  // TODO CROSS ????
+  // if (e.inputType === "deleteContentBackward") {
+  //   return;
+  // }
+
+  // console.log(input.value);
+  // if (input.value.includes("@")) {
+  //   const value = input.value.replace(/[+)()\s]/g, "");
+  //   input.value = value;
+  //   return;
+  // }
+  //replace('/[^\d-]+/'
+  let result = "+";
+  const value = item.value.replace(/\D+/g, "");
+  const numberLength = 11;
+  //
+  for (let i = 0; i < value.length && i < numberLength; i++) {
+    switch (i) {
+      case 0:
+        result += prefixNumber(value[i]);
+        continue;
+      case 4:
+        result += ") ";
+        break;
+      case 7:
+        result += "-";
+        break;
+      case 9:
+        result += "-";
+        break;
+      default:
+        break;
+    }
+    result += value[i];
+  }
+  //
+  item.value = result;
+});
+})
+// ======================================
+	// phoneInput.map(item => {
+	//   item.addEventListener('keydown', function(event){
+	//     if (!(event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace' || event.key == 'Tab')) {
+	//       event.preventDefault()
+	//     }
+	//     let mask = '+7 (111) 111-11-11';
+	//     if (/[0-9\+\ \-\(\)]/.test(event.key)) {
+	//       let currentString = this.value;
+	//       let currentLength = currentString.length;
+	//       if (/[0-9]/.test(event.key)) {
+	//         if (mask[currentLength] == '1') {
+	//           this.value = currentString + event.key;
+	//         } else {
+	//           for (let i = currentLength; i < mask.length; i++) {
+	//             if (mask[i] == '1') {
+	//               this.value = currentString + event.key;
+	//               break;
+	//             }
+	//             currentString += mask[i]
+	//           }
+	//         }
+	//       }
+	//     }
+	//   })
+	// })
 }, 3000)
 
 
