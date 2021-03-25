@@ -2,7 +2,7 @@ if (window.innerWidth < 1200){
 	let burger = document.querySelector('.burger');
 	let burgerMenu = document.querySelector('.burger-menu');
 	let isBurgerShown = false;
-	let burgerContent = ['.socials', '.header-email', '.header-phone', '.header_get-consult', '.header-logo-descriptor'];
+	let burgerContent = ['.socials', '.header-email', '.header-phone', '.hero-learning'];
 
 	document.querySelector('.burger-nav').appendChild(document.querySelector('.nav-list'))
 	burgerContent.map(item => {
@@ -33,12 +33,12 @@ if (window.innerWidth < 1200){
 	})
 }
 
-popa({
-	clickTrigger: '.header_get-consult',
-	popWrap: '.consult-pop-wrap',
-	pop: '.consult-pop',
-	popCloser: '.pop-closer',
-})
+// popa({
+//   clickTrigger: '.header_get-consult',
+//   popWrap: '.consult-pop-wrap',
+//   pop: '.consult-pop',
+//   popCloser: '.pop-closer',
+// })
 popa({
 	clickTrigger: '.footer_get-contacts',
 	popWrap: '.consult-pop-wrap',
@@ -72,33 +72,35 @@ document.addEventListener('scroll', function(){
 
 
 
-let phoneInput = [...document.querySelectorAll('.input--phone')];
+setTimeout(() => {
+	let phoneInput = [...document.querySelectorAll('.input--phone')];
 
-phoneInput.map(item => {
-	item.addEventListener('keydown', function(event){
-		if (!(event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace' || event.key == 'Tab')) {
-			event.preventDefault()
-		}
-		let mask = '+7 (111) 111-11-11';
-		if (/[0-9\+\ \-\(\)]/.test(event.key)) {
-			let currentString = this.value;
-			let currentLength = currentString.length;
-			if (/[0-9]/.test(event.key)) {
-				if (mask[currentLength] == '1') {
-					this.value = currentString + event.key;
-				} else {
-					for (let i = currentLength; i < mask.length; i++) {
-						if (mask[i] == '1') {
-							this.value = currentString + event.key;
-							break;
+	phoneInput.map(item => {
+		item.addEventListener('keydown', function(event){
+			if (!(event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace' || event.key == 'Tab')) {
+				event.preventDefault()
+			}
+			let mask = '+7 (111) 111-11-11';
+			if (/[0-9\+\ \-\(\)]/.test(event.key)) {
+				let currentString = this.value;
+				let currentLength = currentString.length;
+				if (/[0-9]/.test(event.key)) {
+					if (mask[currentLength] == '1') {
+						this.value = currentString + event.key;
+					} else {
+						for (let i = currentLength; i < mask.length; i++) {
+							if (mask[i] == '1') {
+								this.value = currentString + event.key;
+								break;
+							}
+							currentString += mask[i]
 						}
-						currentString += mask[i]
 					}
 				}
 			}
-		}
+		})
 	})
-})
+}, 3000)
 
 
 

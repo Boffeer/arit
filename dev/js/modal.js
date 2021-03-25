@@ -23,13 +23,26 @@ function popToggle($popWrap, $pop){
 	isPopHidden
 		? showPop(popWrap, pop)
 		: closePop(popWrap, pop)
-	console.log($popWrap, $pop, 'toggled')
+
+	// let form_status = opener.getAttribute('data-form-name');
+	// if (form_status != null){
+	//   let form_name_val = popWrap.querySelector('form input[name="arit_formname"]').getAttribute('value');
+	//   popWrap.querySelector('form input[name="arit_formname"]').value = `form_name_val ${form_status}`
+	// }
+
+
+	// console.log($popWrap, $pop, 'toggled')
 }
 
 
 function popaAddClasses($popWrap, $pop) {
-	$popWrap.classList.add('pop-wrap')
-	$pop.classList.add('pop')
+	if ($popWrap != null || $popWrap != undefined) {
+		(!$popWrap.classList.contains('pop-wrap')) ? $popWrap.classList.add('pop-wrap') : false ;
+	}
+	if ($pop != null || $pop != undefined) {
+		(!$pop.classList.contains('pop')) ? $pop.classList.add('pop') : false ;
+	}
+		
 }
 
 function popa(data){
@@ -38,9 +51,10 @@ function popa(data){
 
 	let popWrap = document.querySelector( data.popWrap );
 	let pop = document.querySelector( data.pop );
-	popaAddClasses(popWrap, pop)
 	let opener = document.querySelector(data.clickTrigger);
 	let closer = document.querySelector( data.popCloser );
+
+	popaAddClasses(popWrap, pop)
 	
 	popWrap.removeAttribute('hidden');
 	
@@ -60,6 +74,7 @@ if ( document.querySelector('.hero-cta') != null ) {
 		popCloser: '.pop-closer',
 	})
 }
+
 //
 //     } else {
 //         document.addEventListener('DOMContentLoaded', fn);

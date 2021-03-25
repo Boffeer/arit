@@ -27,7 +27,7 @@ mixin ResoursesItem(data)
 			h3.resourses-item__name= data.name
 
 mixin meetupNext(data)
-	div.meetup-next-item
+	div.meetup-next-item(data-date= data.date data-src= data.src data-address= data.address)
 		//- div.meetup-next-item-due(class= date.classes)
 		div.meetup-next-item-due(class= data.classes)
 			div.meetup-next-item__date= data.date

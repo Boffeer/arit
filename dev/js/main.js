@@ -1,4 +1,5 @@
 const isHereChecker = (elementClass, callback) => {
+
 	if (document.querySelector(elementClass) != null) {
 		callback()
 	} else {
@@ -8,10 +9,10 @@ const isHereChecker = (elementClass, callback) => {
 
 
 
-
 const selector = (className) => {
 	return document.querySelector(className)
 }
+
 
 // sliders
 	const teachersSlider = new Swiper('.teachers-slider-wrap',{
@@ -99,3 +100,4 @@ if (window.innerWidth < 1200){
 			},
 	})
 }
+

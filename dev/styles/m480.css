@@ -63,6 +63,7 @@
 	}
 	.header__logo img {
 		width: 100%;
+		margin-right: 30px;
 	}
 
 	.socials,
@@ -287,7 +288,7 @@
 
 	.about-wrap {
 		margin-bottom: 0;
-		padding-bottom: 30px;
+		padding-bottom: 0;
 	}
 	.about-container {
 		flex-direction: column;
@@ -505,7 +506,7 @@
 	}
 	.testimonial__picture {
 		position: absolute;
-		top: -5px;
+		top: -12px;
 		left: 0;
 		width: 75px;
 	}

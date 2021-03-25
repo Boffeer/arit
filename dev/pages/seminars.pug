@@ -24,7 +24,9 @@ block content
 						status: 'Семинар начался',
 						topic: '7-модульный сертификационный курс по диетологии и тутрициологии',
 						speakers: 'Ирышкин О.Е.',
-						classes: ' meetup-next-item-due--current'
+						classes: ' meetup-next-item-due--current',
+						address: 'г. Москва, ул. Пушкина 15',
+						src: 'img/pages/news/news-4.png',
 					})
 					+meetupNext({
 						date: '01/03',
@@ -86,6 +88,9 @@ block content
 					itemsToShow: 3,
 					initialShow: 3,
 					currentItem: 0,
+				})
+				showMeetup({
+					items: '.meetup-next-item',
 				})
 
 block scripts

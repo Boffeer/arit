@@ -178,6 +178,10 @@ button {
   transform: translateY(-3px);
 }
 
+a.primary-button.cta-link-button:hover {
+  color: #fff;
+}
+
 .secondary-button {
   font: 14px/1 var(--ff-bold);
   padding: 18px 20px;
@@ -208,6 +212,7 @@ button {
   color: grey;
   color: var(--color-text-secondary);
   position: relative;
+  font-size: 14px;
 }
 
 .thirdly-button:after {
@@ -708,6 +713,18 @@ p {
   margin-bottom: 10px;
 }
 
+.breadcrumbs-container {
+  margin-top: 150px;
+  margin-bottom: -120px;
+}
+
+@media (max-width:1200px) {
+  .breadcrumbs-container {
+    margin-top: 50px;
+    margin-bottom: -100px;
+  }
+}
+
 .header {
   padding: 20px 0 24px;
   display: flex;
@@ -776,6 +793,10 @@ p {
 .header__logo {
   display: flex;
   align-items: center;
+}
+
+.header__logo img {
+  margin-right: 100px;
 }
 
 .header-logo-descriptor {
@@ -948,7 +969,7 @@ p {
 }
 
 .hero-wrapper {
-  margin-top: 156px;
+  margin-top: 116px;
   background: url(../img/1-hero/hero-bg.png) 0 0/cover;
   height: 680px;
   margin-bottom: 65px;
@@ -1390,6 +1411,10 @@ p {
   overflow: hidden;
 }
 
+.meetups__picture img {
+  height: 250px;
+}
+
 .meetup-info {
   background: #fff;
   padding: 25px 20px;
@@ -1428,6 +1453,7 @@ p {
 .meetup-buttons {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .meetup__primary-button {
@@ -1476,8 +1502,13 @@ p {
   background: var(--color-surface-dark);
 }
 
+.news__picture img {
+  height: 280px;
+}
+
 .news__picture {
   overflow: hidden;
+  height: 250px;
 }
 
 .news__picture:hover img {
@@ -2422,9 +2453,17 @@ p {
   }
 }
 
+.meetup__title {
+  display: block;
+}
+
 .meetups-preview {
   max-width: 417px;
   margin-right: 59px;
+}
+
+.meetups-next-list {
+  width: 100%;
 }
 
 .meetups-page-container {
@@ -2472,6 +2511,7 @@ p {
   background: #f9fafa;
   box-sizing: border-box;
   padding: 20px 20px 20px 31px;
+  width: 100%;
 }
 
 .meetup-next-item-info__topic {
@@ -2498,7 +2538,7 @@ p {
 }
 
 .meetup-next-item-info__speakers:before {
-  content: "Спикеры";
+  content: "Спикеры:";
   position: absolute;
   left: 0;
   top: 0;
@@ -2589,6 +2629,14 @@ p {
 
 .archieve-wrapper--webinars .archieve-item {
   background: #f9fafa;
+}
+
+.archieve__picture {
+  height: 210px;
+}
+
+.archieve__picture img {
+  height: 100%;
 }
 
 .archieve-item-picture {
@@ -2823,6 +2871,7 @@ p {
 
 .learning-page-info-wrapper {
   display: flex;
+  max-width: 70%;
 }
 
 .learning-page-number {
@@ -2891,6 +2940,10 @@ p {
 }
 
 @media (max-width:1200px) {
+  .learning-page-info-wrapper {
+    max-width: 100%;
+  }
+
   .skillup-page .featuers {
     padding-top: 40px;
   }
@@ -2960,7 +3013,10 @@ p {
   color: var(--color-text-regular);
 }
 
-.paper b i {
+.paper b i,
+.paper em strong,
+.paper i b,
+.paper strong em {
   background: var(--color-primary);
   font-style: normal;
   color: #fff;
@@ -2972,7 +3028,12 @@ p {
   max-width: 70%;
 }
 
-.paper h3 {
+.paper h1,
+.paper h2,
+.paper h3,
+.paper h4,
+.paper h5,
+.paper h6 {
   font: 30px var(--ff-extra);
   margin-top: 40px;
   margin-bottom: 25px;
@@ -3487,6 +3548,13 @@ p {
   display: flex;
   flex-direction: column;
   max-width: 100%;
+  width: 100%;
+}
+
+.news__picture img {
+  width: 100%;
+  height: 100%;
+  object-fite: cover;
 }
 
 .news-latest-one {
@@ -3794,6 +3862,7 @@ p {
 
   .header__logo img {
     width: 100%;
+    margin-right: 30px;
   }
 
   .header-email,
@@ -4033,7 +4102,7 @@ p {
 
   .about-wrap {
     margin-bottom: 0;
-    padding-bottom: 30px;
+    padding-bottom: 0;
   }
 
   .about-container {
@@ -4275,7 +4344,7 @@ p {
 
   .testimonial__picture {
     position: absolute;
-    top: -5px;
+    top: -12px;
     left: 0;
     width: 75px;
   }
@@ -4457,5 +4526,9 @@ p {
   .nav-list:before {
     display: none;
   }
+}
+
+.hidden {
+  display: none!important;
 }
 /*# sourceMappingURL=style.css.map */

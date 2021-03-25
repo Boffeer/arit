@@ -21,18 +21,21 @@ if ((skillupTabHandler != null ) && (retrainTab != null)) {
 	})
 }
 
-showmore({
-	items: '.learning-tab--skillup .learning-tab-list-item',
-	initialShow: 6,
-	itemsToShow: 6,
-	currentItem: 0,
-	clickHandler: '.learning-more--skillup'
-})
 
-showmore({
-	items: '.learning-tab--retrain .learning-tab-list-item',
-	initialShow: 6,
-	itemsToShow: 6,
-	currentItem: 0,
-	clickHandler: '.learning-more--retrain'
-})
+if (window.innerWidth < 1200){
+	showmore({
+		items: '.learning-tab--skillup .learning-tab-list-item',
+		initialShow: 6,
+		itemsToShow: 6,
+		currentItem: 0,
+		clickHandler: '.learning-more--skillup'
+	})
+
+	showmore({
+		items: '.learning-tab--retrain .learning-tab-list-item',
+		initialShow: 6,
+		itemsToShow: 6,
+		currentItem: 0,
+		clickHandler: '.learning-more--retrain'
+	})
+}

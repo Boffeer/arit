@@ -1,10 +1,12 @@
 mixin SeminarItem()
 	.meetups-item.meetups-item--seminar
-		+pic({
-			pictureClass: 'meetups__picture',
-			ext: 'png',
-			src: 'img/6-meetups/seminar'
-		})
+		picture.meetups__picture
+			img(src="img/6-meetups/webinar.png")
+		//- +pic({
+		//-   pictureClass: 'meetups__picture',
+		//-   ext: 'png',
+		//-   src: 'img/6-meetups/seminar'
+		//- })
 		.meetup-info
 			h3.meetup__title Название мероприятия
 			.meetup-about
@@ -21,11 +23,13 @@ mixin SeminarItem()
 
 mixin WebinarItem()
 	.meetups-item.meetups-item--webinar
-		+pic({
-			pictureClass: 'meetups__picture',
-			ext: 'png',
-			src: 'img/6-meetups/webinar'
-		})
+		picture.meetups__picture
+			img(src="img/6-meetups/webinar.png")
+		//- +pic({
+		//-   pictureClass: 'meetups__picture',
+		//-   ext: 'png',
+		//-   src: 'img/6-meetups/webinar'
+		//- })
 		.meetup-info
 			h3.meetup__title Название мероприятия
 			.meetup-about

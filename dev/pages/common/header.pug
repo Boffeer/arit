@@ -4,7 +4,7 @@
 		header.header
 			a(href="https://арит.рф").header__logo
 				img(src="img/0-common/logo.svg", alt="logo")
-				p.header-logo-descriptor Дополнительное профессиональное образование. Лицензия №12 от 25.10.2013
+				//- p.header-logo-descriptor Дополнительное профессиональное образование. Лицензия №12 от 25.10.2013
 			.header-search
 				input(
 					type="text"
@@ -27,7 +27,8 @@
 				.header-email
 					//- p.header__name Наша почта
 					a(href=`mailto:${email}`).header__contact #{email}
-			button.header_get-consult.secondary-button Получить консультацию 
+			//- button.header_get-consult.secondary-button Получить консультацию
+			a(target="_blank" href="https://dpoarit.ispringlearn.ru").secondary-button.hero-learning Учебный портал
 			.burger-clickable
 				.burger
 					span

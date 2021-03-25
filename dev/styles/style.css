@@ -191,6 +191,16 @@
 
 @import './generals.css';
 
+.breadcrumbs-container {
+	margin-top: 150px;
+	margin-bottom: -120px;
+}
+@media (max-width: 1200px) {
+	.breadcrumbs-container {
+		margin-top: 50px;
+		margin-bottom: -100px;
+	}
+}
 /* 
  * ==========
  * 2. Components
@@ -263,6 +273,9 @@
 	.header__logo {
 		display: flex;
 		align-items: center;
+	}
+	.header__logo img {
+		margin-right: 100px;
 	}
 	.header-logo-descriptor {
 		font-size: 12px;
@@ -428,7 +441,7 @@
 		/* background-size: cover; */
 	}	
 	.hero-wrapper {
-		margin-top: 156px;
+		margin-top: 116px;
 		background: url(../img/1-hero/hero-bg.png) 0 0/cover;
 		height: 680px;
 		margin-bottom: 65px;
@@ -834,6 +847,9 @@
 		border-radius: 7px 7px 0 0;
 		overflow: hidden;
 	}
+	.meetups__picture img {
+		height: 250px;
+	}
 	.meetup-info {
 		padding-top: 25px;
 		padding-left: 20px;
@@ -869,6 +885,7 @@
 	.meetup-buttons {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 	}
 	.meetup__primary-button {
 		width: 100%;
@@ -941,8 +958,12 @@
 		/* width: 320px; */
 		background-color: var(--color-surface-dark);
 	}
+	.news__picture img {
+		height: 280px;
+	}
 	.news__picture {
 		overflow: hidden;
+		height: 250px;
 	}
 	.news__picture:hover img{
 			transition: all 0.3s;	
@@ -1466,3 +1487,6 @@
 @import './pages.css';
 @import './m480.css';
 
+.hidden {
+	display: none !important;
+}
