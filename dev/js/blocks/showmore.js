@@ -47,7 +47,7 @@ const showMeetup = ($) => {
 	let itemsDue = [...document.querySelectorAll('.meetup-next-item-due')]
 	let currentItem = document.querySelector('.meetups-item');
 
-	console.log(items);
+	// console.log(items);
 	items.map(item => {
 		item.addEventListener('click', () => {
 			itemsDue.map($ => $.classList.remove('meetup-next-item-due--current'));
@@ -74,17 +74,19 @@ const showMeetup = ($) => {
 			} else {
 				currentItem.querySelector('.meetup-time').classList.add('hidden')
 			}
-			console.log(meetupDate)
+			// console.log(meetupDate)
 			currentItem.querySelector('.meetup__title').innerText = meetupTopic;
 			currentItem.querySelector('.meetups__picture img').setAttribute('src', meetupPic);
-			currentItem.querySelector('.meetup__secondary-button').setAttribute('href', meetupUrl);
+			// currentItem.querySelector('.meetup__secondary-button').setAttribute('href', meetupUrl);
 			currentItem.querySelector('.primary-button').setAttribute('data-form-name', meetupFormName);
-			currentItem.querySelector('.meetup__title').setAttribute('href', meetupUrl);
+			currentItem.querySelector('.meetup__title--link').setAttribute('href', meetupUrl);
 
-			document.querySelector('.section__title').scrollIntoView({
-				behavior: 'smooth',
-				block: 'start'
-			})
+			if (window.innerWidth < 1300) {
+				document.querySelector('.section__title').scrollIntoView({
+					behavior: 'smooth',
+					block: 'start'
+				})
+			}
 			
 		})
 	})
